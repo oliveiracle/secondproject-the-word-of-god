@@ -121,9 +121,6 @@ button:hover {
         flex-direction: column;
         justify-content: center;
         padding: 20px 15px;
-        /*Prevents the subtle fade-in and fade-out effect
-         when scrolling the wallpaper in the mobile version of site*/
-        background-attachment: scroll;
     }
 
     h1 {
