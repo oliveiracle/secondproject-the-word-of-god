@@ -76,7 +76,7 @@ button:hover {
     line-height: 1.6;
 }
 
-
+/* O estado inicial dos botões: invisíveis e ligeiramente para baixo */
 #category-buttons {
     opacity: 0;
     transform: translateY(20px);
@@ -85,10 +85,11 @@ button:hover {
     pointer-events: none; 
 }
 
+/* O estado final: visível e na sua posição original */
 #category-buttons.visible {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto; 
+    pointer-events: auto; /* Permite que os botões sejam clicados */
 }
 
 #start-btn {
