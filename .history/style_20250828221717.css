@@ -103,18 +103,8 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Media Queries for displays from 601px to 992px */
-@media (max-width: 922px) {
-    h1 {
-        font-size: 4.5rem;
-    }
-    #start-btn {
-        font-size: 2.2rem;
-    }
-    }
 
-
-/* Media Queries for displays up to 600px */
+/* Media Queries */
 @media (max-width: 600px) {
     body {
         padding-top: 25px
