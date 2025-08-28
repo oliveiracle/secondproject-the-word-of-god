@@ -124,6 +124,9 @@ button:hover {
         padding: 20px 15px;
     }
 
+    header, main {
+        flex-shrink: 0;
+    }
     h1 {
         font-size: 3.2rem;
         margin-bottom: 10px;
@@ -135,9 +138,9 @@ button:hover {
     }
 
     #start-btn {
-        font-size: 1.9rem;
-        padding: 18px 25px;
-        margin-top: 25px;
+        font-size: 2rem;
+        padding: 20px 25px;
+        margin-top: 0px;
         background-color: rgba(255, 255, 255, 0.9);
         box-shadow:(0,0,0,0.15);
     }

@@ -124,6 +124,9 @@ button:hover {
         padding: 20px 15px;
     }
 
+    header, main {
+        flex-shrink: 0;
+    }
     h1 {
         font-size: 3.2rem;
         margin-bottom: 10px;
