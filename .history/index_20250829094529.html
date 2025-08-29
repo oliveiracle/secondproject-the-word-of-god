@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace in the Word</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tela inicial -->
+  <button id="startBtn">How are you feeling today?</button>
+
+  <!-- Primeira escolha (emoções) -->
+  <div id="emotions" class="hidden">
+    <button id="angryBtn">Angry</button>
+  </div>
+
+  <!-- Sub-botões de "Angry" -->
+  <div id="angryOptions" class="hidden">
+    <button class="subBtn" data-verse="Proverbs 15:1 - A gentle answer turns away wrath.">Critical</button>
+    <button class="subBtn" data-verse="James 3:16 - For where you have envy...">Jealous</button>
+    <button class="subBtn" data-verse="Psalm 37:8 - Refrain from anger and turn from wrath.">Frustrated</button>
+    <button class="subBtn" data-verse="Ephesians 4:26 - Do not let the sun go down while you are still angry.">Hurt</button>
+  </div>
+
+  <!-- Onde aparece o versículo -->
+  <div id="verseDisplay" class="hidden verse"></div>
+
+</body>
+</html>

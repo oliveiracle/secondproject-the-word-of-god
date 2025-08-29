@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 
+main{
+    position: relative;
+}
+
 body {
     font-family: 'Gloria Hallelujah', cursive;
     background-image: url('./assets/images/background3.png');
@@ -13,11 +17,12 @@ body {
     text-align: center;
     margin: 0;
     padding: 40px 20px;
+    
 }
 
 /* Peace in the Word Title */  
 h1 {
-    font-size: 5.2rem;
+    font-size: 9.2rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -37,9 +42,10 @@ h3 {
     padding-bottom: 5px;
 }
 
-/* Your Word is a lamp to my feet and a light to my path*/
+/* Find comfort and direction in His scripture.
+ Your journey begins with a single question..*/
 .subtitle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
     margin-top: 0;
 }
@@ -76,20 +82,6 @@ button:hover {
 }
 
 
-#category-buttons {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    /* Garante que, mesmo invisível, não possa ser clicado */
-    pointer-events: none; 
-}
-
-#category-buttons.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto; 
-}
-
 #start-btn {
     font-family: 'Quicksand', cursive;
     font-size: 2.5rem;
@@ -110,6 +102,24 @@ button:hover {
     color: #333;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#category-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    
+}
+
+#category-buttons.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 /* Media Queries for displays from 601px to 992px */

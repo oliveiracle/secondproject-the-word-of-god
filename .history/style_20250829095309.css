@@ -17,7 +17,7 @@ body {
 
 /* Peace in the Word Title */  
 h1 {
-    font-size: 5.2rem;
+    font-size: 9.2rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -75,19 +75,8 @@ button:hover {
     line-height: 1.6;
 }
 
-
-#category-buttons {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    /* Garante que, mesmo invisível, não possa ser clicado */
-    pointer-events: none; 
-}
-
-#category-buttons.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto; 
+.hidden {
+    display: none;
 }
 
 #start-btn {

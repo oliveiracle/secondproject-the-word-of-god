@@ -17,7 +17,7 @@ body {
 
 /* Peace in the Word Title */  
 h1 {
-    font-size: 5.2rem;
+    font-size: 9.2rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -37,9 +37,10 @@ h3 {
     padding-bottom: 5px;
 }
 
-/* Your Word is a lamp to my feet and a light to my path*/
+/* Find comfort and direction in His scripture.
+ Your journey begins with a single question..*/
 .subtitle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
     margin-top: 0;
 }
@@ -63,31 +64,20 @@ button:hover {
     transform: scale(1.05);
 }
 
-#verses-area {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 400;
-    min-height: 100px;
-    line-height: 1.6;
+#verse-display {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'Your Chosen Font', sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  line-height: 1.6;
 }
 
-
-#category-buttons {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    /* Garante que, mesmo invisível, não possa ser clicado */
-    pointer-events: none; 
-}
-
-#category-buttons.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto; 
+.hidden {
+    display: none;
 }
 
 #start-btn {
@@ -111,6 +101,21 @@ button:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+/* Esconde todos os grupos de subcategorias */
+.subcategory-group {
+  display: none;
+}
+
+/* Mostra apenas o grupo que tiver a classe 'active' */
+.subcategory-group.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+
 
 /* Media Queries for displays from 601px to 992px */
 @media (max-width: 922px) {

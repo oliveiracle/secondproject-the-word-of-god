@@ -17,7 +17,7 @@ body {
 
 /* Peace in the Word Title */  
 h1 {
-    font-size: 5.2rem;
+    font-size: 9.2rem;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -37,9 +37,10 @@ h3 {
     padding-bottom: 5px;
 }
 
-/* Your Word is a lamp to my feet and a light to my path*/
+/* Find comfort and direction in His scripture.
+ Your journey begins with a single question..*/
 .subtitle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
     margin-top: 0;
 }
@@ -75,19 +76,8 @@ button:hover {
     line-height: 1.6;
 }
 
-
-#category-buttons {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-    /* Garante que, mesmo invisível, não possa ser clicado */
-    pointer-events: none; 
-}
-
-#category-buttons.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto; 
+.hidden {
+    display: none;
 }
 
 #start-btn {
@@ -111,6 +101,21 @@ button:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+#passage-display {
+    display: none;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #2b2d42;
+    transition: none; /* Evita conflitos com animações JS */
+}
+
 
 /* Media Queries for displays from 601px to 992px */
 @media (max-width: 922px) {

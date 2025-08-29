@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace in the Word - Versículo</title>
+    <style>
+        body {
+            font-family: 'Your Chosen Font', sans-serif;
+            background: url('Your_Background_Image.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+        }
+        .verse-container {
+            max-width: 800px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        #verse-text {
+            font-size: 1.8em;
+            line-height: 1.6;
+            color: #333;
+        }
+        .back-button {
+            margin-top: 30px;
+            padding: 10px 25px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            background-color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="verse-container">
+        <p id="verse-text">Carregando versículo...</p>
+        <a href="index.html" class="back-button">Voltar</a>
+    </div>
+
+    <script>
+        const verseTextElement = document.getElementById('verse-text');
+        
+        // Objeto que guarda os versículos (tem que ser o mesmo do outro arquivo!)
+        const verses = {
+            'Angry': "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
+            'Critical': "Do not judge, or you too will be judged. (Matthew 7:1)",
+            'Jealous': "Love is patient, love is kind. It does not envy... (1 Corinthians 13:4)",
+            // Adicione todos os seus versículos aqui, exatamente como no outro arquivo
+        };
+
+        // Pega o nome do sentimento da URL (o endereço da página)
+        const urlParams = new URLSearchParams(window.location.search);
+        const feeling = urlParams.get('feeling');
+
+        // Se encontrou o sentimento na URL, mostra o versículo correspondente
+        if (feeling && verses[feeling]) {
+            verseTextElement.innerText = verses[feeling];
+        } else {
+            verseTextElement.innerText = "Sentimento não encontrado ou versículo não disponível.";
+        }
+    </script>
+</body>
+</html>
