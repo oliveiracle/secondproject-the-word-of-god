@@ -59,7 +59,6 @@ main {
 
 #feeling-btn:hover {
     background-color: rgba(255, 255, 255, 1);
-    transition: background-color 0.3s ease;
 }
 
 /* Box of Bible Verses */
@@ -117,12 +116,12 @@ main {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border: 1px solid #ddd;
     /* Para o efeito de digitação */
-    min-height: 10px;
+    min-height: 250px;
 }
 
 /* Estilo para cada parágrafo de versículo */
 .verse-item {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 /* Opcional: Para telas menores (mobile) */

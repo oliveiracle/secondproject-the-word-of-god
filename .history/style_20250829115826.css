@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+body {
+    font-family: 'Your Chosen Font', sans-serif; /* Certifique-se de que esta fonte existe ou use uma padrão como 'Arial, sans-serif' */
+    background: url(assets/images/bg.png) no-repeat center center fixed; /* Sua imagem de fundo */
+    background-size: cover;
+    margin: 0;
+    padding: 0; /* Remove padding padrão do body */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    text-align: center; /* Centraliza o texto */
+    color: #333; /* Cor padrão do texto */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    margin-bottom: 40px; /* Espaço abaixo do cabeçalho */
+    padding-top: 50px; /* Espaço acima do header */
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 4em; /* Tamanho maior para o título principal */
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.subtitle {
+    font-size: 1.5em; /* Tamanho para o subtítulo do versículo */
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Estilo para o main content que centraliza tudo */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Limita a largura do conteúdo principal */
+    padding: 20px;
+}
+
+/* Estilo do botão inicial "How are you feeling today?" */
+#feeling-btn {
+    padding: 15px 30px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente para destaque */
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px; /* Espaço abaixo do botão inicial */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s ease;
+}
+
+#feeling-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Contêiner para os botões de sentimento */
+#feelings-container {
+    display: none; /* ESCONDIDO POR PADRÃO */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease; /* Animação para aparecer */
+    transform: translateY(20px); /* Começa ligeiramente para baixo */
+}
+
+/* Quando visível, ele aparece e se move para cima */
+#feelings-container.visible {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo para cada botão de sentimento */
+.feeling-btn {
+    width: 180px; /* Largura um pouco maior */
+    height: 60px; /* Altura um pouco maior */
+    padding: 10px 20px;
+    border: 2px solid #bbb;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    color: #444;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feeling-btn:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px); /* Efeito de "elevar" ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Área de exibição dos versículos */
+#verse-display {
+    margin-top: 80px; /* Espaço do topo para afastar dos botões */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.95); /* Quase opaco para o texto ser bem legível */
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.6em; /* Tamanho bom para o versículo */
+    line-height: 1.8; /* Espaçamento entre as linhas */
+    color: #222;
+    max-width: 800px; /* Limita a largura para melhor leitura */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    border: 1px solid #ddd; /* Borda sutil */
+    /* Garante que ele fique visível e com espaço */
+    min-height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para cada parágrafo de versículo */
+.verse-item {
+    opacity: 0; /* Começa invisível */
+    /* Remove transição de opacidade aqui, será controlada pelo JS para o efeito type-writer */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0 10px; /* Espaço lateral dentro da caixa do versículo */
+}
+
+/* Animação para o cursor da máquina de escrever (opcional, mas interessante) */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; } /* Cor do cursor */
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 4.8rem;
+    }
+    .subtitle {
+        font-size: 2.5rem;
+    }
+    #feeling-btn {
+        font-size: 2.8rem;
+        padding: 10px 22px;
+    }
+    #feelings-container {
+        gap: 10px;
+    }
+    #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
+        font-size: 18px;
+        padding: 8px 18px;
+    }
+    #start-btn {
+        font-size: 2.3rem;
+        padding: 12px 28px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+    .subtitle {
+        font-size: 2.2rem;
+    }
+    #feeling-btn {
+        font-size: 2.5rem;
+        padding: 8px 20px;
+    }
+    #feelings-container {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    #start-btn {
+        font-size: 2.2rem;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 15px;
+        background-attachment: scroll;
+    }
+    h1 {
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+    }
+    .subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    #feeling-btn {
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+    #feelings-container {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
+        font-size: 16px;
+        padding: 8px 15px;
+        width: 80%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    #start-btn {
+        font-size: 1.9rem;
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    }
+    #verses-area {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+}

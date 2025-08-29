@@ -1,4 +1,3 @@
-// Get references to DOM elements
 const startButton = document.getElementById('feeling-btn');
 const feelingsContainer = document.getElementById('feelings-container');
 const feelingButtons = document.querySelectorAll('.feeling-btn');
@@ -50,33 +49,19 @@ const verses = {
     ]
 };
 
-// Show/hide feelings container and reset verse display
+// Toggle the visibility of the feelings container when the start button is clicked
 startButton.addEventListener('click', () => {
     feelingsContainer.classList.toggle('visible');
-    verseDisplay.innerHTML = '';
-    verseDisplay.style.display = 'none';
 });
 
-// Animate start button on click
-startButton.addEventListener('click', () => {
-    startButton.style.transform = 'scale(1.2)';
-    startButton.style.transition = 'transform 6s';
-});
-
-// Animate feelings container on click
-feelingsContainer.addEventListener('click', () => {
-    feelingsContainer.style.transform = 'scale(1.2)';
-    feelingsContainer.style.transition = 'transform 6s';
-});
-
-// Handle feeling button clicks and display verses
+// Add click event listeners to each feeling button
 feelingButtons.forEach(button => {
     button.addEventListener('click', () => {
-        verseDisplay.style.display = 'block';
-        const feeling = button.innerText.split(' ')[0];
+        const feeling = button.innerText.split(' ')[0]; // Get the feeling from button text
         const verseArray = verses[feeling];
         verseDisplay.innerHTML = '';
         if (verseArray) {
+            // Display each verse with typing effect
             verseArray.forEach((verse, index) => {
                 const verseParagraph = document.createElement('p');
                 verseParagraph.classList.add('verse-item');
@@ -89,19 +74,15 @@ feelingButtons.forEach(button => {
     });
 });
 
-let userLetterDelay = 60;
-const speedControl = document.getElementById('typing-speed');
-// Allow user to control typing speed
-if (speedControl) {
-    speedControl.addEventListener('input', (e) => {
-        userLetterDelay = parseInt(e.target.value, 10);
-    });
-}
-
-// Type out each verse letter by letter with delay
+/**
+ * Types out a verse letter by letter with a delay between each verse.
+ * @param {string} text - The verse text to display.
+ * @param {HTMLElement} element - The paragraph element to type into.
+ * @param {number} delayIndex - The index for staggering multiple verses.
+ */
 function typeVerse(text, element, delayIndex) {
-    const initialDelay = delayIndex * 4500;
-    const letterDelay = userLetterDelay;
+    const initialDelay = delayIndex * 1500; // Delay between verses
+    const letterDelay = 70; // Delay between each letter
     setTimeout(() => {
         let i = 0;
         element.style.opacity = 1;

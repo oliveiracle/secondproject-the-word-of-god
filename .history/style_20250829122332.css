@@ -122,7 +122,7 @@ main {
 
 /* Estilo para cada parágrafo de versículo */
 .verse-item {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 /* Opcional: Para telas menores (mobile) */

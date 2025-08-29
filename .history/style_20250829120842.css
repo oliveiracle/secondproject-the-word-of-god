@@ -49,7 +49,7 @@ main {
     border-radius: 30px;
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.9);
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #333;
     font-weight: bold;
     margin-bottom: 30px;
@@ -59,10 +59,8 @@ main {
 
 #feeling-btn:hover {
     background-color: rgba(255, 255, 255, 1);
-    transition: background-color 0.3s ease;
 }
 
-/* Box of Bible Verses */
 #feelings-container {
     display: none;
     flex-wrap: wrap;
@@ -92,8 +90,7 @@ main {
     font-size: 1.1em;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 4ms ease; /* Speed of button hover effect */
-
+    transition: all 4ms ease;
 }
 
 .feeling-btn:hover {
@@ -102,13 +99,11 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for verse display */
 #verse-display {
-    font-family: 'Courier New', Courier, monospace;
-    margin-top: 40px; 
+    margin-top: 50px; 
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 45px;
+    border-radius: 15px;
     text-align: center;
     font-size: 1.5em;
     line-height: 1.6;
@@ -117,12 +112,12 @@ main {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border: 1px solid #ddd;
     /* Para o efeito de digitação */
-    min-height: 10px;
+    min-height: 250px;
 }
 
 /* Estilo para cada parágrafo de versículo */
 .verse-item {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 /* Opcional: Para telas menores (mobile) */
@@ -142,7 +137,4 @@ main {
         font-size: 1.2em;
         margin-top: 30px;
     }
-    .verse-item {
-    margin-bottom: 15px;
-}
 }

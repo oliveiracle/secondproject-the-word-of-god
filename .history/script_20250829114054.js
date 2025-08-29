@@ -1,10 +1,13 @@
-// Get references to DOM elements
+// Pega o botão inicial e o contêiner dos botões de sentimento
 const startButton = document.getElementById('feeling-btn');
 const feelingsContainer = document.getElementById('feelings-container');
+
+// Pega todos os botões de sentimento
 const feelingButtons = document.querySelectorAll('.feeling-btn');
+// Pega a área onde os versículos serão exibidos
 const verseDisplay = document.getElementById('verse-display');
 
-// Bible verses categorized by feeling
+// Objeto que agora guarda ARRAYS de 5 versículos para cada sentimento
 const verses = {
     'Angry': [
         "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
@@ -50,68 +53,33 @@ const verses = {
     ]
 };
 
-// Show/hide feelings container and reset verse display
+// Adiciona um 'escutador' de clique para o botão inicial
 startButton.addEventListener('click', () => {
     feelingsContainer.classList.toggle('visible');
-    verseDisplay.innerHTML = '';
-    verseDisplay.style.display = 'none';
 });
 
-// Animate start button on click
-startButton.addEventListener('click', () => {
-    startButton.style.transform = 'scale(1.2)';
-    startButton.style.transition = 'transform 6s';
-});
-
-// Animate feelings container on click
-feelingsContainer.addEventListener('click', () => {
-    feelingsContainer.style.transform = 'scale(1.2)';
-    feelingsContainer.style.transition = 'transform 6s';
-});
-
-// Handle feeling button clicks and display verses
+// Adiciona um 'escutador' de clique para cada botão de sentimento
 feelingButtons.forEach(button => {
     button.addEventListener('click', () => {
-        verseDisplay.style.display = 'block';
+        // Pega o nome do botão (ex: "Angry 😡") e remove o emoji
         const feeling = button.innerText.split(' ')[0];
+
+        // Pega o array de versículos correspondente
         const verseArray = verses[feeling];
+
+        // Limpa o conteúdo da área de exibição para novos versículos
         verseDisplay.innerHTML = '';
+
+        // Se o array de versículos existir
         if (verseArray) {
-            verseArray.forEach((verse, index) => {
+            // Para cada versículo no array, cria um novo parágrafo e o adiciona
+            verseArray.forEach(verse => {
                 const verseParagraph = document.createElement('p');
-                verseParagraph.classList.add('verse-item');
+                verseParagraph.innerText = verse;
                 verseDisplay.appendChild(verseParagraph);
-                typeVerse(verse, verseParagraph, index);
             });
         } else {
             verseDisplay.innerText = "Versículos não encontrados.";
         }
     });
 });
-
-let userLetterDelay = 60;
-const speedControl = document.getElementById('typing-speed');
-// Allow user to control typing speed
-if (speedControl) {
-    speedControl.addEventListener('input', (e) => {
-        userLetterDelay = parseInt(e.target.value, 10);
-    });
-}
-
-// Type out each verse letter by letter with delay
-function typeVerse(text, element, delayIndex) {
-    const initialDelay = delayIndex * 4500;
-    const letterDelay = userLetterDelay;
-    setTimeout(() => {
-        let i = 0;
-        element.style.opacity = 1;
-        const typingInterval = setInterval(() => {
-            if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-            } else {
-                clearInterval(typingInterval);
-            }
-        }, letterDelay);
-    }, initialDelay);
-}

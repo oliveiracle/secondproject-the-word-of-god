@@ -1,10 +1,13 @@
-// Get references to DOM elements
+// Pega o botão inicial e o contêiner dos botões de sentimento
 const startButton = document.getElementById('feeling-btn');
 const feelingsContainer = document.getElementById('feelings-container');
+
+// Pega todos os botões de sentimento
 const feelingButtons = document.querySelectorAll('.feeling-btn');
+// Pega a área onde os versículos serão exibidos
 const verseDisplay = document.getElementById('verse-display');
 
-// Bible verses categorized by feeling
+// Objeto que guarda ARRAYS de 5 versículos para cada sentimento
 const verses = {
     'Angry': [
         "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
@@ -50,37 +53,30 @@ const verses = {
     ]
 };
 
-// Show/hide feelings container and reset verse display
+// Adiciona um 'escutador' de clique para o botão inicial
 startButton.addEventListener('click', () => {
     feelingsContainer.classList.toggle('visible');
     verseDisplay.innerHTML = '';
-    verseDisplay.style.display = 'none';
+    verseDisplay.style.display = 'none'; // Esconde completamente a área de versículos
 });
 
-// Animate start button on click
-startButton.addEventListener('click', () => {
-    startButton.style.transform = 'scale(1.2)';
-    startButton.style.transition = 'transform 6s';
-});
-
-// Animate feelings container on click
-feelingsContainer.addEventListener('click', () => {
-    feelingsContainer.style.transform = 'scale(1.2)';
-    feelingsContainer.style.transition = 'transform 6s';
-});
-
-// Handle feeling button clicks and display verses
+// Adiciona um 'escutador' de clique para cada botão de sentimento
 feelingButtons.forEach(button => {
     button.addEventListener('click', () => {
+        // Torna a caixa de versículos visível antes de começar
         verseDisplay.style.display = 'block';
+
         const feeling = button.innerText.split(' ')[0];
         const verseArray = verses[feeling];
+        
         verseDisplay.innerHTML = '';
+
         if (verseArray) {
             verseArray.forEach((verse, index) => {
                 const verseParagraph = document.createElement('p');
                 verseParagraph.classList.add('verse-item');
                 verseDisplay.appendChild(verseParagraph);
+                
                 typeVerse(verse, verseParagraph, index);
             });
         } else {
@@ -89,19 +85,16 @@ feelingButtons.forEach(button => {
     });
 });
 
-let userLetterDelay = 60;
-const speedControl = document.getElementById('typing-speed');
-// Allow user to control typing speed
-if (speedControl) {
-    speedControl.addEventListener('input', (e) => {
-        userLetterDelay = parseInt(e.target.value, 10);
-    });
-}
-
-// Type out each verse letter by letter with delay
+/**
+ * Função que cria o efeito de máquina de escrever
+ * @param {string} text O texto do versículo
+ * @param {HTMLElement} element O elemento onde o texto será digitado
+ * @param {number} delayIndex O índice para criar um atraso entre os versículos
+ */
 function typeVerse(text, element, delayIndex) {
-    const initialDelay = delayIndex * 4500;
-    const letterDelay = userLetterDelay;
+    const initialDelay = delayIndex * 1500;
+    const letterDelay = 20;
+
     setTimeout(() => {
         let i = 0;
         element.style.opacity = 1;
