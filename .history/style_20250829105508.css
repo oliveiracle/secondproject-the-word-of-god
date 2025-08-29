@@ -111,30 +111,6 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 1200px) {
-    h1 {
-        font-size: 4.8rem;
-    }
-    .subtitle {
-        font-size: 2.5rem;
-    }
-    #feeling-btn {
-        font-size: 2.8rem;
-        padding: 10px 22px;
-    }
-    #feelings-container {
-        gap: 10px;
-    }
-    #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
-        font-size: 18px;
-        padding: 8px 18px;
-    }
-    #start-btn {
-        font-size: 2.3rem;
-        padding: 12px 28px;
-    }
-}
-
 @media (max-width: 992px) {
     h1 {
         font-size: 4.5rem;
@@ -147,8 +123,8 @@ button:hover {
         padding: 8px 20px;
     }
     #feelings-container {
-        gap: 8px;
-        flex-wrap: wrap;
+        gap: 8px; /* Reduzido para evitar aperto */
+        flex-wrap: wrap; /* Permite quebra de linha se necessário */
     }
     #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
         font-size: 16px;
@@ -160,7 +136,11 @@ button:hover {
     }
 }
 
-@media (max-width: 768px) {
+
+
+
+
+@media (max-width: 600px) {
     body {
         min-height: 95vh;
         display: flex;
@@ -178,20 +158,20 @@ button:hover {
         margin-bottom: 20px;
     }
     #feeling-btn {
-        font-size: 2rem;
+        font-size: 2rem; /* Reduz o tamanho do botão principal */
         padding: 10px 20px;
     }
     #feelings-container {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: column; /* Alinha botões verticalmente */
+        gap: 10px; /* Espaço entre botões */
         margin-top: 10px;
     }
     #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
-        font-size: 16px;
+        font-size: 16px; /* Tamanho menor para botões */
         padding: 8px 15px;
-        width: 80%;
-        max-width: 200px;
-        margin: 0 auto;
+        width: 80%; /* Garante que os botões ocupem a largura disponível */
+        max-width: 200px; /* Limita a largura máxima */
+        margin: 0 auto; /* Centraliza os botões */
     }
     #start-btn {
         font-size: 1.9rem;
@@ -203,5 +183,5 @@ button:hover {
     #verses-area {
         font-size: 1.2rem;
         padding: 15px;
-    }   
+    }
 }

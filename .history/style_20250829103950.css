@@ -1,5 +1,7 @@
+/*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 
 body {
     font-family: 'Gloria Hallelujah', cursive;
@@ -13,6 +15,7 @@ body {
     padding: 40px 20px;
 }
 
+/* Peace in the Word Title */  
 h1 {
     font-size: 5.2rem;
     font-weight: 700;
@@ -34,12 +37,14 @@ h3 {
     padding-bottom: 5px;
 }
 
+/* Your Word is a lamp to my feet and a light to my path*/
 .subtitle {
     font-size: 3rem;
     font-weight: 300;
     margin-top: 0;
 }
 
+/* How are you feeling today Button */ 
 button {
     font-family: 'quicksand', cursive;
     background-color: rgba(255, 255, 255, 0.8);
@@ -70,23 +75,20 @@ button:hover {
     line-height: 1.6;
 }
 
+
 #feelings-container {
     display: flex;
-    flex-direction: row;
-    gap:10px;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    gap: 5px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os botões (opcional) */
+    align-items: center; /* Alinha verticalmente (opcional) */
 }
 
+/* Estilo opcional para os botões */
 #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
-    font-family: 'Quicksand', cursive;
-    padding: 30px 40px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-#feeling-btn:hover, #angry-btn:hover, #peaceful-btn:hover, #strong-btn:hover, #happy-btn:hover {
-    transform: scale(1.05); 
+    padding: 30px 40px; /* Ajuste o padding conforme necessário */
+    font-size: 22px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de clique */
 }
 
 #start-btn {
@@ -111,97 +113,45 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 1200px) {
-    h1 {
-        font-size: 4.8rem;
-    }
-    .subtitle {
-        font-size: 2.5rem;
-    }
-    #feeling-btn {
-        font-size: 2.8rem;
-        padding: 10px 22px;
-    }
-    #feelings-container {
-        gap: 10px;
-    }
-    #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
-        font-size: 18px;
-        padding: 8px 18px;
-    }
-    #start-btn {
-        font-size: 2.3rem;
-        padding: 12px 28px;
-    }
-}
-
-@media (max-width: 992px) {
+/* Media Queries for displays from 601px to 992px */
+@media (max-width: 922px) {
     h1 {
         font-size: 4.5rem;
     }
-    .subtitle {
-        font-size: 2.2rem;
-    }
-    #feeling-btn {
-        font-size: 2.5rem;
-        padding: 8px 20px;
-    }
-    #feelings-container {
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-    #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
-        font-size: 16px;
-        padding: 8px 15px;
-    }
     #start-btn {
         font-size: 2.2rem;
-        padding: 12px 25px;
     }
-}
+    }
 
-@media (max-width: 768px) {
+
+/* Media Queries for displays up to 600px */
+@media (max-width: 600px) {
     body {
         min-height: 95vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 20px 15px;
+        /*Prevents the subtle fade-in and fade-out effect
+         when scrolling the wallpaper in the mobile version of site*/
         background-attachment: scroll;
     }
+
     h1 {
         font-size: 3.2rem;
         margin-bottom: 10px;
     }
+
     .subtitle {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
     }
-    #feeling-btn {
-        font-size: 2rem;
-        padding: 10px 20px;
-    }
-    #feelings-container {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-    #angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
-        font-size: 16px;
-        padding: 8px 15px;
-        width: 80%;
-        max-width: 200px;
-        margin: 0 auto;
-    }
+
     #start-btn {
         font-size: 1.9rem;
-        padding: 10px 20px;
-        margin-top: 20px;
+        padding: 18px 25px;
+        margin-top: 25px;
         background-color: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+        box-shadow:(0,0,0,0.15);
     }
-    #verses-area {
-        font-size: 1.2rem;
-        padding: 15px;
-    }   
 }
