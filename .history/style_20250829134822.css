@@ -28,6 +28,12 @@ h1 {
     color: #222;
 }
 
+.subtitle {
+    font-size: 1.5em;
+    margin: 0 0 20px 0;
+    color: #555;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -36,7 +42,6 @@ main {
     max-width: 900px;
     padding: 20px;
 }
-
 
 #feeling-btn {
     padding: 15px 30px;
@@ -64,10 +69,10 @@ main {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-    padding: 40px;
+    padding: 20px;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 0.9s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 #feelings-container.visible {
@@ -142,15 +147,4 @@ main {
     .verse-item {
     margin-bottom: 15px;
 }
-
-.feeling-btn {
-        width: 120px; 
-        height: 40px; 
-        font-size: 0.9em; /* Reduz o tamanho do texto */
-    }
-
-    #feelings-container {
-        gap: 10px; /* Reduz o espaço entre os botões */
-        padding: 10px; /* Reduz o espaço interno */
-    }
 }

@@ -156,7 +156,8 @@ startButton.addEventListener('click', () => {
 
 // Animate feelings container on click
 feelingsContainer.addEventListener('click', () => {
-    feelingsContainer.style.transition = 'transform 9s';
+    feelingsContainer.style.transform = 'scale(1.2)';
+    feelingsContainer.style.transition = 'transform 6s';
 });
 
 // Handle feeling button clicks and display verses

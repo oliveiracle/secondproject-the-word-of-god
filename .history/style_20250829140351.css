@@ -144,8 +144,8 @@ main {
 }
 
 .feeling-btn {
-        width: 120px; 
-        height: 40px; 
+        width: 120px; /* Reduz a largura dos botões */
+        height: 40px; /* Reduz a altura dos botões */
         font-size: 0.9em; /* Reduz o tamanho do texto */
     }
 

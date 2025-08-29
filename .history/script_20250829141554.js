@@ -151,12 +151,13 @@ startButton.addEventListener('click', () => {
 // Volta ao tamanho original após a animação
     setTimeout(() => {
         startButton.style.transform = "scale(1)";
-        startButton.style.zIndex = "1"; // Restaura o z-index original
+        startButton.style.yIndex = "1"; // Restaura o z-index original
     }, 200);
 
 // Animate feelings container on click
 feelingsContainer.addEventListener('click', () => {
-    feelingsContainer.style.transition = 'transform 9s';
+    feelingsContainer.style.transform = 'scale(1.2)';
+    feelingsContainer.style.transition = 'transform 6s';
 });
 
 // Handle feeling button clicks and display verses

@@ -64,7 +64,7 @@ main {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-    padding: 40px;
+    padding: 20px;
     overflow: hidden;
     opacity: 0;
     transition: opacity 0.9s ease-in-out;
@@ -144,8 +144,8 @@ main {
 }
 
 .feeling-btn {
-        width: 120px; 
-        height: 40px; 
+        width: 120px; /* Reduz a largura dos botões */
+        height: 40px; /* Reduz a altura dos botões */
         font-size: 0.9em; /* Reduz o tamanho do texto */
     }
 
