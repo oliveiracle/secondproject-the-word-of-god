@@ -79,7 +79,7 @@ button:hover {
 #feelings-container {
     display: flex;
     flex-direction: row; /* Alinha os botões horizontalmente */
-    gap: 5px; /* Espaço entre os botões */
+    gap: 10px; /* Espaço entre os botões */
     justify-content: center; /* Centraliza os botões (opcional) */
     align-items: center; /* Alinha verticalmente (opcional) */
 }

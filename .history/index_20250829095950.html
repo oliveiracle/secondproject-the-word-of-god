@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace in the Word</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Peace in the Word</h1>
+        <h2 class="subtitle">Your word is a lamp to my feet and a light to my path.. (Psalm 119:105)</h2>
+    </header>
+
+     <!-- tela inicial -->
+<section id="landing" class="center-wrap">
+  <button id="startBtn" class="btn btn-primary btn-main"
+          aria-controls="emotions" aria-expanded="false">
+    How are you feeling today?
+  </button>
+</section>
+
+<!-- primeira escolha (emoções) -->
+<section id="emotions" class="hidden" aria-hidden="true">
+  <div class="choices">
+    <button id="angryBtn" class="btn btn-danger btn-main"
+            aria-controls="angryOptions" aria-expanded="false">
+      😡 Angry
+    </button>
+  </div>
+</section>
+
+<!-- sub-opções de "Angry" -->
+<section id="angryOptions" class="hidden" aria-hidden="true">
+  <div class="sub-buttons" role="group" aria-label="Sub feelings for Angry">
+    <button class="subBtn" data-verse="Proverbs 15:1 — A gentle answer turns away wrath.">Critical</button>
+    <button class="subBtn" data-verse="James 3:16 — Where there is envy and selfish ambition, there is disorder.">Jealous</button>
+    <button class="subBtn" data-verse="Psalm 37:7 — Be still before the Lord and wait patiently for him.">Frustrated</button>
+    <button class="subBtn" data-verse="Psalm 34:18 — The Lord is close to the brokenhearted.">Hurt</button>
+  </div>
+</section>
+
+<!-- onde o(s) versículo(s) aparecem -->
+<div id="verseDisplay" class="hidden verse" aria-live="polite"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

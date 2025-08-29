@@ -79,15 +79,15 @@ button:hover {
 #feelings-container {
     display: flex;
     flex-direction: row; /* Alinha os botões horizontalmente */
-    gap: 5px; /* Espaço entre os botões */
+    gap: 10px; /* Espaço entre os botões */
     justify-content: center; /* Centraliza os botões (opcional) */
     align-items: center; /* Alinha verticalmente (opcional) */
 }
 
 /* Estilo opcional para os botões */
-#angry-btn, #peaceful-btn, #strong-btn, #happy-btn, #afraid-btn, #sad-btn {
+#angry-btn, #peaceful-btn, #strong-btn, #happy-btn {
     padding: 10px 20px; /* Ajuste o padding conforme necessário */
-    font-size: 22px; /* Tamanho da fonte */
+    font-size: 16px; /* Tamanho da fonte */
     cursor: pointer; /* Cursor de clique */
 }
 

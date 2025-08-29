@@ -2,13 +2,12 @@
 document.getElementById("feeling-btn").addEventListener("click", function() {
   // Seleciona todos os botões de sentimento
   const feelingButtons = [
-    document.getElementById("afraid-btn"),
-    document.getElementById("sad-btn"),
     document.getElementById("angry-btn"),
     document.getElementById("peaceful-btn"),
     document.getElementById("strong-btn"),
     document.getElementById("happy-btn")
-    
+    document.getElementById("afraid-btn"),
+    document.getElementById("sad-btn"),
   ];
 
   // Verifica se os botões de sentimento estão visíveis
