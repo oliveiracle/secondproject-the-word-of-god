@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-/* ========================================= */
-/* BASE & LAYOUT STYLES                      */
-/* ========================================= */
-
 body {
     font-family: "Gloria Hallelujah", cursive;
     background: url('assets/images/bg.png') no-repeat center center fixed;
@@ -15,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
     min-height: 100vh;
     text-align: center;
     color: #333;
@@ -41,9 +37,6 @@ main {
     padding: 20px;
 }
 
-/* ========================================= */
-/* COMPONENT STYLES                          */
-/* ========================================= */
 
 #feeling-btn {
     padding: 15px 30px;
@@ -61,17 +54,29 @@ main {
 
 #feeling-btn:hover {
     background-color: rgba(255, 255, 255, 1);
+    transition: background-color 0.3s ease;
 }
 
+/* Box of Bible Verses */
 #feelings-container {
-    /* This container is hidden by default, shown with JS */
     display: none;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    padding: 40px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.9s ease-in-out;
 }
 
+#feelings-container.visible {
+    display: flex;
+    opacity: 1;
+}
+
+
+/* Style for feeling buttons */
 .feeling-btn {
     width: 180px;
     height: 60px;
@@ -84,7 +89,8 @@ main {
     font-size: 1.1em;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in-out;
+    transition: all 4ms ease; /* Speed of button hover effect */
+
 }
 
 .feeling-btn:hover {
@@ -93,14 +99,13 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Style for verse display */
 #verse-display {
-    /* This is hidden by default, shown with JS */
-    display: none;
-    font-family: 'Quicksand', sans-serif; /* A more readable font for verses */
+    font-family: 'Courier New', Courier, monospace;
     margin-top: 40px; 
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
+    border-radius: 45px;
     text-align: center;
     font-size: 1.5em;
     line-height: 1.6;
@@ -108,30 +113,18 @@ main {
     max-width: 800px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border: 1px solid #ddd;
+    /* Para o efeito de digitação */
+    min-height: 10px;
 }
 
-/* Base style for each verse paragraph */
+/* Estilo para cada parágrafo de versículo */
 .verse-item {
-    /* Initial state for animation: invisible and slightly moved down */
-    opacity: 0;
-    transform: translateY(15px);
-    /* Animation definition: smooth, 0.6s duration */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-/* Final state for animation: fully visible and in original position */
-.verse-item.fade-in {
-    opacity: 1;
-    transform: translateY(0);
+    margin-bottom: 15px;
 }
 
 
-/* ========================================= */
-/* RESPONSIVE DESIGN (BREAKPOINTS)           */
-/* ========================================= */
-
-/* --- Styles for TABLETS --- */
-/* Applies to screens with a max-width of 992px */
+/* --- Estilos para TABLETS --- */
+/* Aplica-se a ecrãs com largura máxima de 992px */
 @media (max-width: 992px) {
     h1 {
         font-size: 3.2em;
@@ -144,9 +137,8 @@ main {
         padding: 12px 25px;
     }
     .feeling-btn {
-        width: 170px;
-        height: 45px;
-        font-size: 1em;
+        width: 160px;
+        height: 55px;
     }
     #verse-display {
         font-size: 1.4em;
@@ -154,35 +146,36 @@ main {
     }
 }
 
-/* --- Styles for MOBILE PHONES --- */
-/* Applies to screens with a max-width of 600px */
+/* --- Estilos para TELEMÓVEIS --- */
+/* Aplica-se a ecrãs com largura máxima de 600px */
 @media (max-width: 600px) {
     body {
-        /* Prevents background judder on mobile scroll */
+        /* Garante que o fundo não treme no scroll em alguns telemóveis */
         background-attachment: scroll; 
     }
     h1 {
-        font-size: 2.5em;
+        font-size: 3.5em;
     }
     .subtitle {
         font-size: 1.2em;
     }
     #feeling-btn {
-        font-size: 1.8em;
-        width: 90%;
+        font-size: 3.1em;
+        width: 90%; /* Ocupa quase a largura toda */
     }
     #feelings-container {
-        gap: 10px;
-        width: 100%;
+        gap: 15px;
     }
     .feeling-btn {
         width: 130px;
         height: 45px;
-        font-size: 0.9em;
+        font-size: 1em;
+    
     }
     #verse-display {
         font-size: 1.2em;
+        margin-top: 2px;
         padding: 20px;
-        width: 90%;
+        width: 100%;
     }
 }

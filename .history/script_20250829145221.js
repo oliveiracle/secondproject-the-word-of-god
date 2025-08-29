@@ -1,14 +1,10 @@
-// ===================================================================================
-//  1. GET HTML ELEMENTS
-// ===================================================================================
+// Pegar os elementos da página
 const startButton = document.getElementById('feeling-btn');
 const feelingsContainer = document.getElementById('feelings-container');
 const feelingButtons = document.querySelectorAll('.feeling-btn');
 const verseDisplay = document.getElementById('verse-display');
 
-// ===================================================================================
-//  2. VERSE LIBRARY (COMPLETE)
-// ===================================================================================
+// Versículos bíblicos por sentimento
 const verses = {
     'Angry': [
         "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
@@ -138,51 +134,34 @@ const verses = {
     ]
 };
 
-// ===================================================================================
-//  3. CLICK LOGIC (BASIC VERSION)
-// ===================================================================================
-
-// --- What happens when the MAIN BUTTON is clicked ---
+// Quando clicar no botão principal, mostrar ou esconder os botões de sentimentos
 startButton.addEventListener('click', () => {
-    // Show the container with the feeling buttons.
-    feelingsContainer.style.display = 'flex';
-    
-    // Hide the verse display box, in case it was open.
-    verseDisplay.style.display = 'none';
+    if (feelingsContainer.style.display === 'none') {
+        feelingsContainer.style.display = 'block'; // Mostra os botões
+        verseDisplay.innerHTML = ''; // Limpa os versículos
+        verseDisplay.style.display = 'none'; // Esconde os versículos
+    } else {
+        feelingsContainer.style.display = 'none'; // Esconde os botões
+    }
 });
 
-
-// --- What happens when one of the FEELING BUTTONS is clicked ---
-
-// We use a classic 'for' loop, which is one of the first concepts you learn.
-for (let i = 0; i < feelingButtons.length; i++) {
-    const button = feelingButtons[i];
-
+// Quando clicar em um botão de sentimento, mostrar os versículos
+feelingButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // 1. Get the feeling name from the button's text.
-        const feeling = button.innerText.split(' ')[0];
+        const feeling = button.innerText; // Pega o texto do botão
+        const verseArray = verses[feeling]; // Pega os versículos para esse sentimento
+        verseDisplay.innerHTML = ''; // Limpa os versículos anteriores
+        verseDisplay.style.display = 'block'; // Mostra a área de versículos
 
-        // 2. Look in our library for the corresponding list of verses.
-        const verseArray = verses[feeling];
-
-        // 3. Show the verseDisplay box.
-        verseDisplay.style.display = 'block';
-
-        // 4. Hide the container of feeling buttons for a cleaner screen.
-        feelingsContainer.style.display = 'none';
-
-        // 5. Check if we found a list of verses.
         if (verseArray) {
-            // Join all verses from the list into a single block of text,
-            // separated by two line breaks (<br><br>).
-            const formattedVerses = verseArray.join('<br><br>');
-
-            // Put the entire block of text at once inside the display box.
-            verseDisplay.innerHTML = formattedVerses;
-
+            // Adiciona cada versículo como um parágrafo
+            verseArray.forEach(verse => {
+                const verseParagraph = document.createElement('p');
+                verseParagraph.innerText = verse;
+                verseDisplay.appendChild(verseParagraph);
+            });
         } else {
-            // If no verses are found, show an error message.
-            verseDisplay.innerText = "No verses found for this feeling.";
+            verseDisplay.innerText = "Nenhum versículo encontrado.";
         }
     });
-}
+});

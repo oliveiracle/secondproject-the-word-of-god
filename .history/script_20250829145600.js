@@ -1,14 +1,20 @@
 // ===================================================================================
-//  1. GET HTML ELEMENTS
+//  1. GET HTML ELEMENTS (THE "ACTORS" OF OUR PAGE)
 // ===================================================================================
-const startButton = document.getElementById('feeling-btn');
-const feelingsContainer = document.getElementById('feelings-container');
-const feelingButtons = document.querySelectorAll('.feeling-btn');
-const verseDisplay = document.getElementById('verse-display');
+// We store the HTML elements we will use in variables for easy access.
+
+const startButton = document.getElementById('feeling-btn');         // The main "How are you feeling today?" button
+const feelingsContainer = document.getElementById('feelings-container'); // The container that groups the feeling buttons
+const feelingButtons = document.querySelectorAll('.feeling-btn');       // A LIST of ALL the feeling buttons
+const verseDisplay = document.getElementById('verse-display');       // The box where the verses will appear
+
 
 // ===================================================================================
-//  2. VERSE LIBRARY (COMPLETE)
+//  2. VERSE LIBRARY
 // ===================================================================================
+// An object that works like our "encyclopedia" of verses.
+// The "key" (e.g., 'Angry') matches the button text, and the "value" is a list of verses.
+
 const verses = {
     'Angry': [
         "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
@@ -138,51 +144,55 @@ const verses = {
     ]
 };
 
+
 // ===================================================================================
-//  3. CLICK LOGIC (BASIC VERSION)
+//  3. CLICK LOGIC (THE "BRAIN" OF THE PAGE)
 // ===================================================================================
 
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener('click', () => {
-    // Show the container with the feeling buttons.
-    feelingsContainer.style.display = 'flex';
-    
-    // Hide the verse display box, in case it was open.
+    // Every time we click, we clear the verse display and hide it.
+    verseDisplay.innerHTML = '';
     verseDisplay.style.display = 'none';
+
+    // Check if the feelings container is already visible or not.
+    if (feelingsContainer.classList.contains('visible')) {
+        // If it IS already visible, we hide it.
+        feelingsContainer.classList.remove('visible');
+        // And we smoothly scroll the page back to the top.
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        // If it is NOT visible, we show it.
+        feelingsContainer.classList.add('visible');
+        // And we smoothly scroll to it so the user can see it.
+        setTimeout(() => {
+            feelingsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+    }
 });
 
 
 // --- What happens when one of the FEELING BUTTONS is clicked ---
-
-// We use a classic 'for' loop, which is one of the first concepts you learn.
-for (let i = 0; i < feelingButtons.length; i++) {
-    const button = feelingButtons[i];
-
+feelingButtons.forEach(button => {
     button.addEventListener('click', () => {
+
         // 1. Get the feeling name from the button's text.
         const feeling = button.innerText.split(' ')[0];
 
-        // 2. Look in our library for the corresponding list of verses.
+        // 2. Look in our verse library for the corresponding list of verses.
         const verseArray = verses[feeling];
 
-        // 3. Show the verseDisplay box.
+        // 3. Show the verse display box and clear any old text.
         verseDisplay.style.display = 'block';
+        verseDisplay.innerHTML = '';
 
-        // 4. Hide the container of feeling buttons for a cleaner screen.
-        feelingsContainer.style.display = 'none';
-
-        // 5. Check if we found a list of verses.
+        // 4. If we found verses for that feeling...
         if (verseArray) {
-            // Join all verses from the list into a single block of text,
-            // separated by two line breaks (<br><br>).
-            const formattedVerses = verseArray.join('<br><br>');
-
-            // Put the entire block of text at once inside the display box.
-            verseDisplay.innerHTML = formattedVerses;
-
-        } else {
-            // If no verses are found, show an error message.
-            verseDisplay.innerText = "No verses found for this feeling.";
-        }
-    });
-}
+            // Loop through EACH verse in the array.
+            verseArray.forEach((verse, index) => {
+                // For each verse, create a new paragraph element.
+                const verseParagraph = document.createElement('p');
+                verseParagraph.classList.add('verse-item'); // Add class for styling from CSS.
+                verseDisplay.appendChild(verseParagraph); // Add the new paragraph to our display box.
+                // Display each verse with the typing effect, one after the other.
+                type
