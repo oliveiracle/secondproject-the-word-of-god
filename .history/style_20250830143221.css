@@ -48,12 +48,11 @@ main {
 /* This is the How are you Feeling Today Button */
 #feeling-btn {
     padding: 15px 30px;
-    box-sizing: border-box;
-    border: 2px solid rgb(238, 229, 218);
+    border: 2px solid #ccc;
     border-radius: 30px;
     cursor: pointer;
-    background: rgb(238, 229, 218);
-    font-size: 3.5em;   
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 2.5em;
     color: #333;
     font-weight: bold;
     margin-bottom: 30px;
@@ -125,21 +124,6 @@ main {
 .verse-item.fade-in {
     opacity: 1;
     transform: translateY(0);
-}
-
-
-#random-verse-btn {
-    margin-top: 15px;
-    color: #444;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.1em;
-    text-decoration: none; /* Tira o sublinhado padrão */
-    transition: all 0.3s ease;
-}
-
-#random-verse-btn:hover {
-    color: #000;
-    text-decoration: underline; /* Adiciona sublinhado ao passar o rato */
 }
 
 

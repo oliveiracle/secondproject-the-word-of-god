@@ -143,7 +143,6 @@ const verses = {
 //  3. CLICK LOGIC (BASIC VERSION)
 // ===================================================================================
 
-
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener('click', () => {
     // Show the container with the feeling buttons.
@@ -187,6 +186,4 @@ for (let i = 0; i < feelingButtons.length; i++) {
             verseDisplay.innerText = "No verses found for this feeling.";
         }
     });
-
-    
 }

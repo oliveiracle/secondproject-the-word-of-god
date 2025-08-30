@@ -143,7 +143,6 @@ const verses = {
 //  3. CLICK LOGIC (BASIC VERSION)
 // ===================================================================================
 
-
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener('click', () => {
     // Show the container with the feeling buttons.
@@ -157,36 +156,38 @@ startButton.addEventListener('click', () => {
 // --- What happens when one of the FEELING BUTTONS is clicked ---
 
 // We use a classic 'for' loop, which is one of the first concepts you learn.
-for (let i = 0; i < feelingButtons.length; i++) {
-    const button = feelingButtons[i];
+// SUBSTITUA O CONTEÚDO DO SEU 'addEventListener' POR ISTO:
 
     button.addEventListener('click', () => {
-        // 1. Get the feeling name from the button's text.
+        // 1. Pega o nome do sentimento.
         const feeling = button.innerText.split(' ')[0];
 
-        // 2. Look in our library for the corresponding list of verses.
+        // 2. Procura na nossa biblioteca pela lista de versículos.
         const verseArray = verses[feeling];
 
-        // 3. Show the verseDisplay box.
+        // 3. Mostra a caixa de versículos.
         verseDisplay.style.display = 'block';
 
-        // 4. Hide the container of feeling buttons for a cleaner screen.
+        // 4. Esconde o container dos botões de sentimento.
         feelingsContainer.style.display = 'none';
 
-        // 5. Check if we found a list of verses.
+        // 5. Verifica se encontrámos uma lista de versículos.
         if (verseArray) {
-            // Join all verses from the list into a single block of text,
-            // separated by two line breaks (<br><br>).
+            // Junta todos os versículos num único bloco de texto.
             const formattedVerses = verseArray.join('<br><br>');
 
-            // Put the entire block of text at once inside the display box.
+            // Coloca os versículos na caixa de exibição.
             verseDisplay.innerHTML = formattedVerses;
 
+            // *** A MÁGICA ESTÁ AQUI ***
+            // Adiciona o elemento do botão "Voltar" de volta ao final da caixa.
+            // Isto o move sem perder a sua funcionalidade.
+            verseDisplay.appendChild(backButton);
+
         } else {
-            // If no verses are found, show an error message.
+            // Se não encontrarmos versículos, mostra uma mensagem de erro.
             verseDisplay.innerText = "No verses found for this feeling.";
         }
     });
 
-    
 }

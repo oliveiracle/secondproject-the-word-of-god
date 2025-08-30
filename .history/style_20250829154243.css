@@ -45,15 +45,13 @@ main {
 /* COMPONENT STYLES                          */
 /* ========================================= */
 
-/* This is the How are you Feeling Today Button */
 #feeling-btn {
     padding: 15px 30px;
-    box-sizing: border-box;
-    border: 2px solid rgb(238, 229, 218);
+    border: 2px solid #ccc;
     border-radius: 30px;
     cursor: pointer;
-    background: rgb(238, 229, 218);
-    font-size: 3.5em;   
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 2.5em;
     color: #333;
     font-weight: bold;
     margin-bottom: 30px;
@@ -127,21 +125,12 @@ main {
     transform: translateY(0);
 }
 
-
-#random-verse-btn {
-    margin-top: 15px;
-    color: #444;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.1em;
-    text-decoration: none; /* Tira o sublinhado padrão */
-    transition: all 0.3s ease;
+#back-btn {
+    margin-top: 30px; /* Espaço entre os versículos e o botão */
+    background-color: #e9e9e9; /* Uma cor de fundo ligeiramente diferente */
+    border-color: #aaa;
+    width: 280px; /* Um pouco mais largo para acomodar o texto */
 }
-
-#random-verse-btn:hover {
-    color: #000;
-    text-decoration: underline; /* Adiciona sublinhado ao passar o rato */
-}
-
 
 /* ========================================= */
 /* RESPONSIVE DESIGN (BREAKPOINTS)           */

@@ -143,13 +143,15 @@ const verses = {
 //  3. CLICK LOGIC (BASIC VERSION)
 // ===================================================================================
 
-
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener('click', () => {
-    // Show the container with the feeling buttons.
+    // This button will now always do two simple things:
+    
+    // 1. Show the list of feelings.
     feelingsContainer.style.display = 'flex';
     
-    // Hide the verse display box, in case it was open.
+    // 2. Hide the verse display, in case it was open.
+    // This makes the button work like a "Start Over" button.
     verseDisplay.style.display = 'none';
 });
 
@@ -188,5 +190,5 @@ for (let i = 0; i < feelingButtons.length; i++) {
         }
     });
 
-    
+        
 }

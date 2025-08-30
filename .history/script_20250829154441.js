@@ -143,7 +143,6 @@ const verses = {
 //  3. CLICK LOGIC (BASIC VERSION)
 // ===================================================================================
 
-
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener('click', () => {
     // Show the container with the feeling buttons.

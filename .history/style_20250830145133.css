@@ -26,10 +26,24 @@ header {
     max-width: 800px;
 }
 
-h1 {
+#fear-btn {
     font-size: 4em;
     margin: 0 0 10px 0;
     color: #222;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border: 2px solid rgb(238, 229, 218);
+    border-radius: 30px;
+    cursor: pointer;
+    background: rgb(238, 229, 218);
+    font-size: 3.5em;   
+    filter: blur(1px);
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
 }
 
 main {
@@ -54,6 +68,7 @@ main {
     cursor: pointer;
     background: rgb(238, 229, 218);
     font-size: 3.5em;   
+    filter: blur(1px);
     color: #333;
     font-weight: bold;
     margin-bottom: 30px;
@@ -125,21 +140,6 @@ main {
 .verse-item.fade-in {
     opacity: 1;
     transform: translateY(0);
-}
-
-
-#random-verse-btn {
-    margin-top: 15px;
-    color: #444;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.1em;
-    text-decoration: none; /* Tira o sublinhado padrão */
-    transition: all 0.3s ease;
-}
-
-#random-verse-btn:hover {
-    color: #000;
-    text-decoration: underline; /* Adiciona sublinhado ao passar o rato */
 }
 
 

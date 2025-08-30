@@ -143,7 +143,6 @@ const verses = {
 //  3. CLICK LOGIC (BASIC VERSION)
 // ===================================================================================
 
-
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener('click', () => {
     // Show the container with the feeling buttons.
@@ -188,5 +187,15 @@ for (let i = 0; i < feelingButtons.length; i++) {
         }
     });
 
-    
+    // --- O que acontece quando o BOTÃO "VOLTAR" é clicado ---
+backButton.addEventListener('click', () => {
+    // 1. Esconde a caixa de versículos.
+    verseDisplay.style.display = 'none';
+
+    // 2. Mostra novamente o container com os botões de sentimento.
+    feelingsContainer.style.display = 'flex';
+
+    // 3. (Boa prática) Limpa o conteúdo da caixa de versículos.
+    verseDisplay.innerHTML = '<button id="back-btn" class="feeling-btn">← Choose Another Feeling</button>';
+});
 }
