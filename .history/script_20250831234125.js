@@ -123,7 +123,7 @@ const verses = {
         "When anxiety was great within me, your consolation brought me joy. (Psalm 94:19)",
         "The Lord is my helper; I will not be afraid. What can mere mortals do to me? (Hebrews 13:6)",
         "Peace I leave with you; my peace I give you. (John 14:27)"
-    ],
+    ]
     'Sad': [
         "He heals the brokenhearted and binds up their wounds. (Psalm 147:3)",
         "The Lord is close to the brokenhearted and saves those who are crushed in spirit. (Psalm 34:18)",

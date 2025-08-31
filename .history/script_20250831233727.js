@@ -10,7 +10,6 @@ const randomVerseButton = document.getElementById('random-verse-btn');// Button 
 // ===================================================================================
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
-// List of verses categorized by feelings
 const verses = {
     'Angry': [
         "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
@@ -40,90 +39,6 @@ const verses = {
         "For where your treasure is, there your heart will be also. (Matthew 6:21)",
         "The fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness. (Galatians 5:22)"
     ],
-    'Discouraged': [
-        "So do not fear, for I am with you; do not be dismayed, for I am your God. (Isaiah 41:10)",
-        "When you pass through the waters, I will be with you; and when you pass through the rivers, they will not sweep over you. (Isaiah 43:2)",
-        "Cast all your anxiety on him because he cares for you. (1 Peter 5:7)",
-        "The Lord is close to the brokenhearted and saves those who are crushed in spirit. (Psalm 34:18)",
-        "I can do all this through him who gives me strength. (Philippians 4:13)"
-    ],
-    'Forgiving': [
-        "For if you forgive other people when they sin against you, your heavenly Father will also forgive you. (Matthew 6:14)",
-        "And forgive us our debts, as we also have forgiven our debtors. (Matthew 6:12)",
-        "Be kind and compassionate to one another, forgiving each other, just as in Christ God forgave you. (Ephesians 4:32)",
-        "Forgive as the Lord forgave you. (Colossians 3:13)",
-        "But if you do not forgive others their sins, your Father will not forgive your sins. (Matthew 6:15)"
-    ],
-    'Confused': [
-        "For God is not the author of confusion, but of peace. (1 Corinthians 14:33)",
-        "Trust in the Lord with all your heart and lean not on your own understanding. (Proverbs 3:5)",
-        "The Lord will fight for you; you need only to be still. (Exodus 14:14)",
-        "If any of you lacks wisdom, you should ask God, who gives generously to all without finding fault. (James 1:5)",
-        "He guides the humble in what is right and teaches them his way. (Psalm 25:9)"
-    ],
-    'Content': [
-        "I have learned to be content whatever the circumstances. (Philippians 4:11)",
-        "Keep your lives free from the love of money and be content with what you have. (Hebrews 13:5)",
-        "But godliness with contentment is great gain. (1 Timothy 6:6)",
-        "The Lord is my shepherd, I lack nothing. (Psalm 23:1)",
-        "A heart at peace gives life to the body, but envy rots the bones. (Proverbs 14:30)"
-    ],
-    'Proud': [
-        "When pride comes, then comes disgrace, but with humility comes wisdom. (Proverbs 11:2)",
-        "God opposes the proud but shows favor to the humble. (James 4:6)",
-        "Pride goes before destruction, a haughty spirit before a fall. (Proverbs 16:18)",
-        "Humble yourselves before the Lord, and he will lift you up. (James 4:10)",
-        "Let another praise you, and not your own mouth; a stranger, and not your own lips. (Proverbs 27:2)"
-    ],
-    'Tired': [
-        "Come to me, all you who are weary and burdened, and I will give you rest. (Matthew 11:28)",
-        "He gives strength to the weary and increases the power of the weak. (Isaiah 40:29)",
-        "My flesh and my heart may fail, but God is the strength of my heart and my portion forever. (Psalm 73:26)",
-        "The Lord is my strength and my shield; my heart trusts in him, and he helps me. (Psalm 28:7)",
-        "In peace I will lie down and sleep, for you alone, Lord, make me dwell in safety. (Psalm 4:8)"
-    ],
-    'Jealous': [
-        "For you shall worship no other god, for the Lord, whose name is Jealous, is a jealous God. (Exodus 34:14)",
-        "A heart at peace gives life to the body, but envy rots the bones. (Proverbs 14:30)",
-        "Do not let your hearts be troubled. You believe in God; believe also in me. (John 14:1)",
-        "Resentment kills a fool, and envy slays the simple. (Job 5:2)",
-        "Love is patient, love is kind. It does not envy. (1 Corinthians 13:4)"
-    ],
-    'Loved': [
-        "We love because he first loved us. (1 John 4:19)",
-        "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you. (Zephaniah 3:17)",
-        "I have loved you with an everlasting love; I have drawn you with unfailing kindness. (Jeremiah 31:3)",
-        "As a father has compassion on his children, so the Lord has compassion on those who fear him. (Psalm 103:13)",
-        "Nothing will be able to separate us from the love of God that is in Christ Jesus our Lord. (Romans 8:38-39)"
-    ],
-    'Weak': [
-        "He gives strength to the weary and increases the power of the weak. (Isaiah 40:29)",
-        "My flesh and my heart may fail, but God is the strength of my heart and my portion forever. (Psalm 73:26)",
-        "But he said to me, 'My grace is sufficient for you, for my power is made perfect in weakness.' (2 Corinthians 12:9)",
-        "The Lord is my strength and my shield; my heart trusts in him, and he helps me. (Psalm 28:7)",
-        "I can do all this through him who gives me strength. (Philippians 4:13)"
-    ],
-    'Guilty': [
-        "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness. (1 John 1:9)",
-        "Therefore, there is now no condemnation for those who are in Christ Jesus. (Romans 8:1)",
-        "Create in me a pure heart, O God, and renew a steadfast spirit within me. (Psalm 51:10)",
-        "As far as the east is from the west, so far has he removed our transgressions from us. (Psalm 103:12)",
-        "For all have sinned and fall short of the glory of God. (Romans 3:23)"
-    ],
-    'Hopeful': [
-        "May the God of hope fill you with all joy and peace as you trust in him. (Romans 15:13)",
-        "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future. (Jeremiah 29:11)",
-        "Be strong and take heart, all you who hope in the Lord. (Psalm 31:24)",
-        "The Lord is good to those whose hope is in him, to the one who seeks him. (Lamentations 3:25)",
-        "But those who hope in the Lord will renew their strength. (Isaiah 40:31)"
-    ],
-    'Anxious': [
-        "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. (Philippians 4:6)",
-        "Cast all your anxiety on him because he cares for you. (1 Peter 5:7)",
-        "When anxiety was great within me, your consolation brought me joy. (Psalm 94:19)",
-        "The Lord is my helper; I will not be afraid. What can mere mortals do to me? (Hebrews 13:6)",
-        "Peace I leave with you; my peace I give you. (John 14:27)"
-    ],
     'Sad': [
         "He heals the brokenhearted and binds up their wounds. (Psalm 147:3)",
         "The Lord is close to the brokenhearted and saves those who are crushed in spirit. (Psalm 34:18)",
@@ -138,7 +53,7 @@ const verses = {
         "The Lord is with me; I will not be afraid. What can mere mortals do to me? (Psalm 118:6)",
         "The Lord is my light and my salvation—whom shall I fear? (Psalm 27:1)"
     ],
-    
+    // NOTA: Adicionei alguns exemplos. Você pode adicionar as outras categorias aqui, seguindo o mesmo formato.
     'Lonely': [
         "Be strong and courageous. Do not be afraid... for the Lord your God goes with you; he will never leave you nor forsake you. (Deuteronomy 31:6)",
         "The Lord is a refuge for the oppressed, a stronghold in times of trouble. (Psalm 9:9)",
