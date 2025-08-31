@@ -112,23 +112,35 @@ main {
     border: 1px solid #ddd;
 }
 
-#random-verse-btn {
+/* Base style for each verse paragraph */
+.verse-item {
+    /* Initial state for animation: invisible and slightly moved down */
+    opacity: 0;
+    transform: translateY(15px);
+    /* Animation definition: smooth, 0.6s duration */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Final state for animation: fully visible and in original position */
+.verse-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+#randomverse-btn {
     margin-top: 25px;
     margin: bottom 40px; ;
     color: #444;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.1em;
     text-decoration: none; /* Tira o sublinhado padrão */
-    transition: all 0.9s ease;
-    
-    
+    transition: all 0.3s ease;
 }
 
-#random-verse-btn:hover {
+#randomverse-btn:hover {
     color: #000;
     text-decoration: underline; /* Adiciona sublinhado ao passar o rato */
-    transform: translateY(-2px);
-    
 }
 
 

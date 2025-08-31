@@ -112,7 +112,7 @@ main {
     border: 1px solid #ddd;
 }
 
-#random-verse-btn {
+#randomverse-btn {
     margin-top: 25px;
     margin: bottom 40px; ;
     color: #444;
@@ -124,7 +124,7 @@ main {
     
 }
 
-#random-verse-btn:hover {
+#randomverse-btn:hover {
     color: #000;
     text-decoration: underline; /* Adiciona sublinhado ao passar o rato */
     transform: translateY(-2px);

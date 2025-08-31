@@ -112,7 +112,7 @@ main {
     border: 1px solid #ddd;
 }
 
-#random-verse-btn {
+#randomverse-btn {
     margin-top: 25px;
     margin: bottom 40px; ;
     color: #444;
@@ -120,15 +120,17 @@ main {
     font-size: 1.1em;
     text-decoration: none; /* Tira o sublinhado padrão */
     transition: all 0.9s ease;
-    
-    
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-#random-verse-btn:hover {
+#randomverse-btn:hover {
     color: #000;
     text-decoration: underline; /* Adiciona sublinhado ao passar o rato */
-    transform: translateY(-2px);
-    
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
 }
 
 

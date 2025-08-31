@@ -68,7 +68,7 @@ const verses = {
         "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him. (Colossians 3:17)",
         "Every good and perfect gift is from above, coming down from the Father of the heavenly lights. (James 1:17)"
     ],
-
+    .
 };
 
 // ===================================================================================

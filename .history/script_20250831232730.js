@@ -68,7 +68,7 @@ const verses = {
         "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him. (Colossians 3:17)",
         "Every good and perfect gift is from above, coming down from the Father of the heavenly lights. (James 1:17)"
     ],
-
+    // ... complete com as outras categorias que você tem no seu HTML.
 };
 
 // ===================================================================================
@@ -91,27 +91,3 @@ for (let i = 0; i < feelingButtons.length; i++) {
         feelingsContainer.style.display = 'none';
 
         if (verseArray) {
-            const formattedVerses = verseArray.join('<br><br>');
-            verseDisplay.innerHTML = formattedVerses;
-        } else {
-            verseDisplay.innerText = "No verses found for this feeling.";
-        }
-    });
-}
-
-// --- What happens when the RANDOM VERSE button is clicked ---
-randomVerseButton.addEventListener('click', () => {
-    // 1. Hide the feeling buttons container, in case it was open
-    feelingsContainer.style.display = 'none';
-
-    // 2. Create one big list of all available verses
-    const allVerses = Object.values(verses).flat();
-
-    // 3. Pick a random index from that big list
-    const randomIndex = Math.floor(Math.random() * allVerses.length);
-    const randomVerse = allVerses[randomIndex];
-
-    // 4. Show the verse display and put the random verse inside it
-    verseDisplay.style.display = 'block';
-    verseDisplay.innerHTML = randomVerse;
-});
