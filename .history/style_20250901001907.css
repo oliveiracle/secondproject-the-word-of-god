@@ -152,7 +152,7 @@ position: absolute;
 #prayer-btn:hover {
   background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-3px);
-    box-shadow: purple 0 6px 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ========================================= */

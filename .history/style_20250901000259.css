@@ -118,41 +118,39 @@ main {
     color: #444;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.1em;
-    text-decoration: none;
+    text-decoration: none; /* Tira o sublinhado padrão */
     transition: all 0.9s ease;
     
 }
 
 #random-verse-btn:hover {
     color: #000;
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona sublinhado ao passar o rato */
     transform: translateY(-2px);
     
 }
 
-/* Request a prayer button */
 #prayer-btn {
-top: 5%;
-position: absolute;
-    right: 5%;
-    width: 200px;
-    height: 60px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: 2px solid #bbb;
     border-radius: 30px;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
     color: #444;
     font-size: 1.1em;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
-    background-color: white;
+    top:1%;
+    right: 5%;
+       width:120px;
+       height:120px;
 }
 
 #prayer-btn:hover {
-  background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-3px);
-    box-shadow: purple 0 6px 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ========================================= */
@@ -181,12 +179,6 @@ position: absolute;
         font-size: 1.4em;
         padding: 25px;
     }
-
-    #prayer-btn {
-        font-size: 0.9em;
-        padding: 8px 18px;
-    }
-
 }
 
 /* --- Styles for MOBILE PHONES --- */
@@ -219,12 +211,5 @@ position: absolute;
         font-size: 1.2em;
         padding: 20px;
         width: 90%;
-    }
-
-    #prayer-btn {
-        font-size: 0.8em;
-        padding: 6px 15px;
-        width: 150px;
-        height: 50px;
     }
 }
