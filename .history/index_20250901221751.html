@@ -15,22 +15,14 @@
         <div>
           <button onclick="Popup()" role="button" id="prayer-btn">Request a prayer</button>
         </div>
- <div>
-    <button onclick="Popup()" role="button" id="prayer-btn">Request a prayer</button>
-  </div>
 
-  <!-- Popup escondido -->
-  <div id="prayer-popup">
-    <h3>Request a Prayer</h3>
-    <input type="text" id="prayer-name" placeholder="Your name">
-    <textarea id="prayer-text" placeholder="Write your prayer request..."></textarea>
-    <div class="popup-actions">
-      <button onclick="ClosePopup()">Close</button>
-      <button onclick="SendPrayer()">Send</button>
-    </div>
-  </div>
-      
-       
+        <div id="prayer-popup" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -30%); background:white; padding:20px; border:1px solid #ccc; border-radius:10px; box-shadow:0px 4px 10px rgba(0,0,0,0.2);">
+  <h3>Request a Prayer</h3>
+  <input type="text" id="prayer-name" placeholder="Your name" style="display:block; margin-bottom:10px; width:100%; padding:8px;">
+  <textarea id="prayer-text" placeholder="Write your prayer request..." style="display:block; margin-bottom:10px; width:100%; padding:8px;"></textarea>
+  <button onclick="ClosePopup()">Close</button>
+  <button onclick="SendPrayer()">Send</button>
+</div>
 
      <main>
         <div id="intro">

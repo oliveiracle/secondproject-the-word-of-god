@@ -6,33 +6,16 @@ const feelingsContainer = document.getElementById('feelings-container'); // Cont
 const feelingButtons = document.querySelectorAll('.feeling-btn');// All feeling buttons
 const verseDisplay = document.getElementById('verse-display');// Where the verses will be shown
 const randomVerseButton = document.getElementById('random-verse-btn');// Button to get a random verse
-const prayerButton = document.getElementById('prayer-btn'); //Request a prayer button
+const prayerButton = document.getElementById('prayer-btn');// Button to request a prayer
+const prayerModal = document.getElementById('prayer-modal');
+const closeModalButton = document.getElementById('close-modal-btn');
+const submitPrayerButton = document.getElementById('submit-prayer-btn');
+const prayerTextArea = document.getElementById('prayer-request-text');
+
+
 // ===================================================================================
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
-
-function Popup() {
-    document.getElementById("prayer-popup").style.display = "block";
-  }
-
-  function ClosePopup() {
-    document.getElementById("prayer-popup").style.display = "none";
-  }
-
-  function SendPrayer() {
-    let name = document.getElementById("prayer-name").value;
-    let prayer = document.getElementById("prayer-text").value;
-
-    if(name && prayer) {
-      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
-      ClosePopup();
-    } else {
-      alert("Please fill in your name and prayer request.");
-    }
-  }
-
-  
-
 // List of verses categorized by feelings
 const verses = {
     'Angry': [
@@ -201,6 +184,9 @@ startButton.addEventListener('click', () => {
     }
 });
 
+
+
+
 // --- What happens when one of the FEELING BUTTONS is clicked ---
 for (let i = 0; i < feelingButtons.length; i++) {
     const button = feelingButtons[i];
@@ -235,4 +221,64 @@ randomVerseButton.addEventListener('click', () => {
     verseDisplay.style.display = 'block';
     verseDisplay.innerHTML = randomVerse;
 
+
+
+// ===================================================================================
+//  4. LÓGICA DO FORMULÁRIO DE ORAÇÃO
+// ===================================================================================
+
+// Encontrar os novos elementos do formulário no HTML
+const prayerButton = document.getElementById('prayer-btn');
+const prayerModal = document.getElementById('prayer-modal');
+const closeModalButton = document.getElementById('close-modal-btn');
+const submitPrayerButton = document.getElementById('submit-prayer-btn');
+const prayerTextArea = document.getElementById('prayer-request-text');
+
+// --- O que acontece quando clicamos em "Request a Prayer" ---
+prayerButton.addEventListener('click', () => {
+    // Mostra o formulário pop-up
+    prayerModal.style.display = 'block';
+});
+
+// --- O que acontece quando clicamos no 'X' para fechar ---
+closeModalButton.addEventListener('click', () => {
+    // Esconde o formulário pop-up
+    prayerModal.style.display = 'none';
+});
+
+// --- O que acontece quando clicamos FORA do formulário (no fundo escuro) ---
+window.addEventListener('click', (event) => {
+    // Se o alvo do clique for o fundo escuro...
+    if (event.target == prayerModal) {
+        // ...esconde o formulário também.
+        prayerModal.style.display = 'none';
+    }
+});
+
+// --- O que acontece quando clicamos em "Send Prayer" ---
+submitPrayerButton.addEventListener('click', () => {
+    const prayerText = prayerTextArea.value;
+
+    // NOTA IMPORTANTE: Enviar um email de verdade requer um servidor (backend).
+    // Como estamos a trabalhar apenas com HTML/CSS/JS (frontend),
+    // vamos simular o envio mostrando uma mensagem de agradecimento.
+    
+    if (prayerText.trim() !== '') {
+        // Se o utilizador escreveu alguma coisa...
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.innerHTML = '<h2>Thank you!</h2><p>Your prayer has been received. God bless you.</p>';
+
+        // Esconde a mensagem e fecha o pop-up depois de 3 segundos
+        setTimeout(() => {
+            prayerModal.style.display = 'none';
+            // (Opcional: recarregar o conteúdo original do formulário para a próxima vez)
+            location.reload(); 
+        }, 3000);
+    } else {
+        // Se não escreveu nada, apenas fecha.
+        prayerModal.style.display = 'none';
+    }
+});
+
+    
 });

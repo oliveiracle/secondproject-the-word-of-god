@@ -6,33 +6,11 @@ const feelingsContainer = document.getElementById('feelings-container'); // Cont
 const feelingButtons = document.querySelectorAll('.feeling-btn');// All feeling buttons
 const verseDisplay = document.getElementById('verse-display');// Where the verses will be shown
 const randomVerseButton = document.getElementById('random-verse-btn');// Button to get a random verse
-const prayerButton = document.getElementById('prayer-btn'); //Request a prayer button
+const prayerButton = document.getElementById('btn-open'); //Request a prayer button
 // ===================================================================================
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
-
-function Popup() {
-    document.getElementById("prayer-popup").style.display = "block";
-  }
-
-  function ClosePopup() {
-    document.getElementById("prayer-popup").style.display = "none";
-  }
-
-  function SendPrayer() {
-    let name = document.getElementById("prayer-name").value;
-    let prayer = document.getElementById("prayer-text").value;
-
-    if(name && prayer) {
-      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
-      ClosePopup();
-    } else {
-      alert("Please fill in your name and prayer request.");
-    }
-  }
-
-  
-
+const openModal = document.querySelector('.btn-open');  
 // List of verses categorized by feelings
 const verses = {
     'Angry': [

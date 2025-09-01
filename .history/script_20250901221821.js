@@ -31,8 +31,6 @@ function Popup() {
     }
   }
 
-  
-
 // List of verses categorized by feelings
 const verses = {
     'Angry': [

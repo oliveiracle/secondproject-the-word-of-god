@@ -92,7 +92,7 @@ main {
 .feeling-btn:hover {
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-3px);
-   box-shadow: purple 0 6px 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #verse-display {
@@ -123,12 +123,10 @@ main {
     
 }
 
-/* Random Verse Link */
 #random-verse-btn:hover {
     color: #000;
     text-decoration: underline;
     transform: translateY(-2px);
-    box-shadow: purple 0 6px 12px;
     
 }
 
@@ -144,7 +142,7 @@ position: absolute;
     border-radius: 30px;
     cursor: pointer;
     color: #444;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
@@ -161,7 +159,7 @@ position: absolute;
 
 
 #prayer-popup {
-    display: flex; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -171,6 +169,16 @@ position: absolute;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+#prayer-popup .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /* ========================================= */
 /* RESPONSIVE DESIGN (BREAKPOINTS)           */

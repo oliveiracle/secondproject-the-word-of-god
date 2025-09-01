@@ -12,26 +12,12 @@ const prayerButton = document.getElementById('prayer-btn'); //Request a prayer b
 // ===================================================================================
 
 function Popup() {
-    document.getElementById("prayer-popup").style.display = "block";
-  }
-
-  function ClosePopup() {
-    document.getElementById("prayer-popup").style.display = "none";
-  }
-
-  function SendPrayer() {
-    let name = document.getElementById("prayer-name").value;
-    let prayer = document.getElementById("prayer-text").value;
-
-    if(name && prayer) {
-      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
-      ClosePopup();
-    } else {
-      alert("Please fill in your name and prayer request.");
-    }
-  }
-
-  
+    var MyDialog = document.createElement("dialog");
+    document.body = appendChild(MyDialog)
+    var text = document.createTextNode("This is a dialog box");
+    MyDialog.appendChild(text);
+    MyDialog.showModal();
+}
 
 // List of verses categorized by feelings
 const verses = {

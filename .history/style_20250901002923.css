@@ -92,7 +92,7 @@ main {
 .feeling-btn:hover {
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-3px);
-   box-shadow: purple 0 6px 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #verse-display {
@@ -123,12 +123,10 @@ main {
     
 }
 
-/* Random Verse Link */
 #random-verse-btn:hover {
     color: #000;
     text-decoration: underline;
     transform: translateY(-2px);
-    box-shadow: purple 0 6px 12px;
     
 }
 
@@ -144,7 +142,7 @@ position: absolute;
     border-radius: 30px;
     cursor: pointer;
     color: #444;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
@@ -157,19 +155,71 @@ position: absolute;
     box-shadow: purple 0 6px 12px;
 }
 
+/* --- Estilos do Formulário de Oração (Modal) --- */
 
-
-
-#prayer-popup {
-    display: flex; /* Hidden by default */
-    position: fixed;
-    z-index: 1000;
+/* O fundo escuro que cobre a página */
+#prayer-modal {
+    display: none; /* Começa escondido */
+    position: fixed; /* Fica fixo na tela, mesmo com scroll */
+    z-index: 100; /* Garante que fica por cima de tudo */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
 }
+
+/* A caixa branca do formulário no centro */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* O botão de fechar 'X' no canto */
+#close-modal-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#close-modal-btn:hover {
+    color: black;
+}
+
+/* A caixa de texto para a oração */
+#prayer-request-text {
+    width: 95%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+}
+
+/* O botão de envio */
+#submit-prayer-btn {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Gloria Hallelujah", cursive;
+}
+
 
 
 /* ========================================= */
@@ -241,7 +291,7 @@ position: absolute;
     #prayer-btn {
         font-size: 0.8em;
         padding: 6px 15px;
-        width: 170px;
+        width: 150px;
         height: 50px;
     }
 }

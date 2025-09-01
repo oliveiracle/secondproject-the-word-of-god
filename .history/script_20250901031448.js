@@ -10,29 +10,6 @@ const prayerButton = document.getElementById('prayer-btn'); //Request a prayer b
 // ===================================================================================
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
-
-function Popup() {
-    document.getElementById("prayer-popup").style.display = "block";
-  }
-
-  function ClosePopup() {
-    document.getElementById("prayer-popup").style.display = "none";
-  }
-
-  function SendPrayer() {
-    let name = document.getElementById("prayer-name").value;
-    let prayer = document.getElementById("prayer-text").value;
-
-    if(name && prayer) {
-      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
-      ClosePopup();
-    } else {
-      alert("Please fill in your name and prayer request.");
-    }
-  }
-
-  
-
 // List of verses categorized by feelings
 const verses = {
     'Angry': [
@@ -234,5 +211,12 @@ randomVerseButton.addEventListener('click', () => {
     // 4. Show the verse display and put the random verse inside it
     verseDisplay.style.display = 'block';
     verseDisplay.innerHTML = randomVerse;
+
+
+    //Prayer Button Request //
+    function ShowPrayerAlert() {
+            alert("Prayer request submitted!");
+          }
+          prayerButton.addEventListener('click', ShowPrayerAlert);
 
 });

@@ -6,33 +6,14 @@ const feelingsContainer = document.getElementById('feelings-container'); // Cont
 const feelingButtons = document.querySelectorAll('.feeling-btn');// All feeling buttons
 const verseDisplay = document.getElementById('verse-display');// Where the verses will be shown
 const randomVerseButton = document.getElementById('random-verse-btn');// Button to get a random verse
-const prayerButton = document.getElementById('prayer-btn'); //Request a prayer button
+// Find all the prayer form elements at the start
+const prayerModal = document.getElementById('prayer-modal');
+const closeModalButton = document.getElementById('close-modal-btn');
+const submitPrayerButton = document.getElementById('submit-prayer-btn');
+
 // ===================================================================================
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
-
-function Popup() {
-    document.getElementById("prayer-popup").style.display = "block";
-  }
-
-  function ClosePopup() {
-    document.getElementById("prayer-popup").style.display = "none";
-  }
-
-  function SendPrayer() {
-    let name = document.getElementById("prayer-name").value;
-    let prayer = document.getElementById("prayer-text").value;
-
-    if(name && prayer) {
-      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
-      ClosePopup();
-    } else {
-      alert("Please fill in your name and prayer request.");
-    }
-  }
-
-  
-
 // List of verses categorized by feelings
 const verses = {
     'Angry': [
@@ -234,5 +215,32 @@ randomVerseButton.addEventListener('click', () => {
     // 4. Show the verse display and put the random verse inside it
     verseDisplay.style.display = 'block';
     verseDisplay.innerHTML = randomVerse;
+});
 
+// --- What happens when we click "Request a Prayer" ---
+prayerButton.addEventListener('click', () => {
+    // Simply show the form
+    prayerModal.style.display = 'block';
+});
+
+// --- What happens when we click the 'X' to close ---
+closeModalButton.addEventListener('click', () => {
+    // Simply hide the form
+    prayerModal.style.display = 'none';
+});
+
+// --- What happens when we click "Send Prayer" ---
+submitPrayerButton.addEventListener('click', () => {
+    const modalContent = document.querySelector('.modal-content');
+    
+    // Show a "Thank you" message
+    modalContent.innerHTML = '<h2>Thank you!</h2><p>Your prayer has been received. God bless you.</p>';
+
+    // Hide the modal after 3 seconds
+    setTimeout(() => {
+        prayerModal.style.display = 'none';
+        // We reload the page to reset the form for the next use.
+        // This is a simple way to restore the form content.
+        location.reload(); 
+    }, 3000);
 });

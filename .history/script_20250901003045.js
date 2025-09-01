@@ -6,33 +6,16 @@ const feelingsContainer = document.getElementById('feelings-container'); // Cont
 const feelingButtons = document.querySelectorAll('.feeling-btn');// All feeling buttons
 const verseDisplay = document.getElementById('verse-display');// Where the verses will be shown
 const randomVerseButton = document.getElementById('random-verse-btn');// Button to get a random verse
-const prayerButton = document.getElementById('prayer-btn'); //Request a prayer button
+const prayerButton = document.getElementById('prayer-btn');// Button to request a prayer
+const prayerModal = document.getElementById('prayer-modal');
+const closeModalButton = document.getElementById('close-modal-btn');
+const submitPrayerButton = document.getElementById('submit-prayer-btn');
+const prayerTextArea = document.getElementById('prayer-request-text');
+
+
 // ===================================================================================
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
-
-function Popup() {
-    document.getElementById("prayer-popup").style.display = "block";
-  }
-
-  function ClosePopup() {
-    document.getElementById("prayer-popup").style.display = "none";
-  }
-
-  function SendPrayer() {
-    let name = document.getElementById("prayer-name").value;
-    let prayer = document.getElementById("prayer-text").value;
-
-    if(name && prayer) {
-      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
-      ClosePopup();
-    } else {
-      alert("Please fill in your name and prayer request.");
-    }
-  }
-
-  
-
 // List of verses categorized by feelings
 const verses = {
     'Angry': [
@@ -201,6 +184,33 @@ startButton.addEventListener('click', () => {
     }
 });
 
+
+// --- O que acontece quando clicamos em "Request a Prayer" ---
+prayerButton.addEventListener('click', () => {
+    // Mostra o formulário pop-up
+    prayerModal.style.display = 'block';
+});
+
+// --- O que acontece quando clicamos no 'X' para fechar ---
+closeModalButton.addEventListener('click', () => {
+    // Esconde o formulário pop-up
+    prayerModal.style.display = 'none';
+});
+
+// --- O que acontece quando clicamos FORA do formulário (no fundo escuro) ---
+window.addEventListener('click', (event) => {
+    // Se o alvo do clique for o fundo escuro...
+    if (event.target == prayerModal) {
+        // ...esconde o formulário também.
+        prayerModal.style.display = 'none';
+    }
+});
+
+// --- O que acontece quando clicamos em "Send Prayer" ---
+submitPrayerButton.addEventListener('click', () => {
+    const prayerText = prayerTextArea.value;
+
+
 // --- What happens when one of the FEELING BUTTONS is clicked ---
 for (let i = 0; i < feelingButtons.length; i++) {
     const button = feelingButtons[i];
@@ -234,5 +244,4 @@ randomVerseButton.addEventListener('click', () => {
     // 4. Show the verse display and put the random verse inside it
     verseDisplay.style.display = 'block';
     verseDisplay.innerHTML = randomVerse;
-
 });
