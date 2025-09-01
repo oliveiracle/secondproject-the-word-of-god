@@ -157,7 +157,9 @@ position: absolute;
     box-shadow: purple 0 6px 12px;
 }
 
-/* Set up for the prayer request popup */
+
+
+
 #prayer-popup {
     display: none; /* Hidden by default */
     position: absolute;

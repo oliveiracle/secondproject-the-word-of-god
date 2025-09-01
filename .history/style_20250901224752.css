@@ -157,10 +157,14 @@ position: absolute;
     box-shadow: purple 0 6px 12px;
 }
 
-/* Set up for the prayer request popup */
+
+
+
 #prayer-popup {
     display: none; /* Hidden by default */
     position: absolute;
+    left: 20%;
+    bottom: 20%;
     z-index: 1000;
     left: 0;
     top: 0;
@@ -170,7 +174,7 @@ position: absolute;
 
 }
 #prayer-text {
-    width: 100%;
+    width: 80%;
     max-width: 400px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -180,14 +184,13 @@ position: absolute;
 
 
 #prayer-name {
-    width: 100%;
-    max-width: 200px;
+    width: 80%;
+    max-width: 400px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-top: 10px;
 }
-
 
 /* ========================================= */
 /* RESPONSIVE DESIGN (BREAKPOINTS)           */
