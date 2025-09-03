@@ -496,13 +496,13 @@ main, .main-container {
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 90px;
-    height: 50px;
+    width: 150px;
+    height: 60px;
     color: #444;
-    font-size: 1em;
+    font-size: 1.2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
 }
 
 #prayer-btn:hover {

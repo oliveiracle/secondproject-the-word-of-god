@@ -124,13 +124,18 @@ main, .main-container {
 }
 
 #random-verse-btn {
-    margin-top: 25px;
-    margin-bottom: 40px;
-    color: #444;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.1em;
-    text-decoration: none;
-    transition: all 0.9s ease;
+     padding: 5px 10px;
+    box-sizing: border-box;
+    border: 2px solid rgb(238, 229, 218);
+    border-radius: 5px;
+    cursor: pointer;
+    background: white
+    font-size: 1em;   
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 /* Random Verse Link */
@@ -457,8 +462,8 @@ main, .main-container {
     }
 }
 
-/* SCREENS UP TO 380PX */
-@media (max-width: 380px) {
+/* SCREENS UP TO 320PX */
+@media (max-width: 320px) {
     body {
         background-attachment: scroll;
     }
@@ -496,13 +501,13 @@ main, .main-container {
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 90px;
-    height: 50px;
+    width: 150px;
+    height: 60px;
     color: #444;
-    font-size: 1em;
+    font-size: 1.2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
 }
 
 #prayer-btn:hover {
