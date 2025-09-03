@@ -491,15 +491,15 @@ main, .main-container {
 #prayer-btn {
     color:white;
     border:none;
-    padding: 6px 12px !important;
+    padding: 8px 16px;
     cursor: pointer;
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 80px !important;
-    height: 60px !important;
+    width: 90px !important;
+    height: 50px;
     color: #444;
-    font-size: 0.9em !important;
+    font-size: 1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
