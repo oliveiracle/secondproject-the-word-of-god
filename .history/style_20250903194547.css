@@ -229,18 +229,21 @@ main, .main-container {
     }
 
 #prayer-btn {
-    padding: 8px 16px;
-    cursor: pointer;
-    top: 10%;
+    top: 5%;
     position: absolute;
-    right: 15%; /* Keep this value 15% consistent with the design */
-    width: 150px;
-    height: 70px;
+    right: 5%;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border: 2px solid #bbb;
+    border-radius: 30px;
+    cursor: pointer;
     color: #444;
-    font-size: 1em;
+    font-size: 1.03em;
+    font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
+    background-color: white;
 }
 
 #prayer-btn:hover {
@@ -307,18 +310,21 @@ main, .main-container {
     }
     
 #prayer-btn {
-    padding: 8px 16px;
-    cursor: pointer;
-    top: 10%;
+    top: 5%;
     position: absolute;
-    right: 15%; /* Keep this value 15% consistent with the design */
+    right: 15%;
     width: 150px;
-    height: 70px;
+    height: 60px;
+    padding: 10px 20px;
+    border: 2px solid #bbb;
+    border-radius: 30px;
+    cursor: pointer;
     color: #444;
-    font-size: 1em;
+    font-size: 1.03em;
+    font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
+    background-color: white;
 }
 
 #prayer-btn:hover {
@@ -372,7 +378,6 @@ main, .main-container {
     #prayer-btn {
         padding: 6px 12px !important;
         font-size: 0.7em !important;
-        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
     }
     
     .main-container, main {
