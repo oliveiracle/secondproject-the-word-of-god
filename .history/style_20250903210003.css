@@ -200,7 +200,7 @@ main, .main-container {
 /* RESPONSIVE DESIGN (BREAKPOINTS)           */
 /* ========================================= */
 
-/* SCREENS UP TO 992PX */
+/* Applies to screens with a max-width of 992px */
 @media (max-width: 992px) {
     body {
         background-attachment: scroll;
@@ -284,95 +284,8 @@ main, .main-container {
         width: 90%;
     }
 }
-/* SCREENS UP TO 768PX */
+/* --- Styles for screens up to 768px --- */
 @media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-    }
-
-   /* FIXED MOBILE HEADER */
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 15px 20px 10px;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: none;
-    }
-
-    .title, h1 {
-        font-size: 1.8em !important;
-        font-weight: bold;
-        color: #2c3e50;
-        margin: 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-    
-#prayer-btn {
-    color:white;
-    border:none;
-    padding: 8px 16px;
-    cursor: pointer;
-    top: 10%;
-    position: absolute;
-    right: 15%; /*Keeps it within the screen on mobile*/
-    width: 150px;
-    height: 60px;
-    color: #444;
-    font-size: 1.2em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
-}
-
-#prayer-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    .main-container, main {
-        padding-top: 70px !important;
-    }
-
-   /* OTHER EXISTING MOBILE STYLES */
-    .subtitle {
-        font-size: 1.2em;
-    }
-    
-    #feeling-btn {
-        font-size: 1.8em;
-        width: 90%;
-    }
-    
-    #feelings-container {
-        gap: 10px;
-        width: 100%;
-    }
-
-    .feeling-btn {
-        display: grid;
-        gap: 10px;
-        max-height: 60vh;
-        overflow-y: auto;
-    }
-    
-    #verse-display {
-        font-size: 1.2em;
-        padding: 20px;
-        width: 90%;
-    }
-}
-
-
-/* SCREENS UP TO 600PX */
-@media (max-width: 600px) {
     body {
         background-attachment: scroll;
     }
@@ -413,7 +326,7 @@ main, .main-container {
     width: 100px;
     height: 60px;
     color: #444;
-    font-size: 1em;
+    font-size: 1.1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
@@ -457,7 +370,95 @@ main, .main-container {
     }
 }
 
-/* SCREENS UP TO 320PX */
+
+/* --- Styles for MOBILE PHONES --- */
+/* Applies to screens with a max-width of 600px */
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+
+   /* FIXED MOBILE HEADER */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 15px 20px 10px;
+        z-index: 1000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: none;
+    }
+
+    .title, h1 {
+        font-size: 1.8em !important;
+        font-weight: bold;
+        color: #2c3e50;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    
+#prayer-btn {
+    color:white;
+    border:none;
+    padding: 8px 16px;
+    cursor: pointer;
+    top: 10%;
+    position: absolute;
+    right: 15%; /*Keeps it within the screen on mobile*/
+    width: 100px;
+    height: 60px;
+    color: #444;
+    font-size: 1.1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+}
+
+#prayer-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .main-container, main {
+        padding-top: 70px !important;
+    }
+
+   /* OTHER EXISTING MOBILE STYLES */
+    .subtitle {
+        font-size: 1.2em;
+    }
+    
+    #feeling-btn {
+        font-size: 1.8em;
+        width: 90%;
+    }
+    
+    #feelings-container {
+        gap: 10px;
+        width: 100%;
+    }
+
+    .feeling-btn {
+        display: grid;
+        gap: 10px;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+    
+    #verse-display {
+        font-size: 1.2em;
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+/* === VERY SMALL MOBILE (320px) === */
 @media (max-width: 320px) {
     body {
         background-attachment: scroll;

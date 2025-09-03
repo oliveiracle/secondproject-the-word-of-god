@@ -371,7 +371,8 @@ main, .main-container {
 }
 
 
-/* SCREENS UP TO 600PX */
+/* SCREENS UP TO 600PX*/
+/* Applies to screens with a max-width of 600px */
 @media (max-width: 600px) {
     body {
         background-attachment: scroll;
@@ -457,7 +458,7 @@ main, .main-container {
     }
 }
 
-/* SCREENS UP TO 320PX */
+/* === VERY SMALL MOBILE (320px) === */
 @media (max-width: 320px) {
     body {
         background-attachment: scroll;

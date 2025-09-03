@@ -28,7 +28,7 @@ header {
 }
 
 .header {
-    /* Base header style (can be customized as needed) */
+    /* Base header style */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -200,13 +200,10 @@ main, .main-container {
 /* RESPONSIVE DESIGN (BREAKPOINTS)           */
 /* ========================================= */
 
-/* SCREENS UP TO 992PX */
+/* --- Styles for TABLETS --- */
+/* Applies to screens with a max-width of 992px */
 @media (max-width: 992px) {
-    body {
-        background-attachment: scroll;
-    }
-
-   /* FIXED MOBILE HEADER */
+    /* HEADER FIXO PARA TABLETS */
     .header {
         position: fixed;
         top: 0;
@@ -214,7 +211,7 @@ main, .main-container {
         right: 0;
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
-        padding: 15px 20px 10px;
+        padding: 18px 25px 12px;
         z-index: 1000;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         display: flex;
@@ -224,25 +221,23 @@ main, .main-container {
     }
 
     .title, h1 {
-        font-size: 1.8em !important;
+        font-size: 2.8em !important;
         font-weight: bold;
         color: #2c3e50;
         margin: 0;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
-    
+
 #prayer-btn {
-    color:white;
-    border:none;
     padding: 8px 16px;
     cursor: pointer;
     top: 10%;
     position: absolute;
-    right: 15%; /*Keeps it within the screen on mobile*/
+    right: 15%; /* Keep this value 15% consistent with the design */
     width: 150px;
-    height: 60px;
+    height: 70px;
     color: #444;
-    font-size: 1.2em;
+    font-size: 1em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
@@ -250,25 +245,22 @@ main, .main-container {
 
 #prayer-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    .main-container, main {
-        padding-top: 70px !important;
-    }
+    box-shadow: 0 5px 18px rgba(102, 126, 234, 0.4);
+}
 
+    .main-container, main {
+        padding-top: 85px !important;
+    }
+/* OTHER EXISTING TABLET STYLES */
     .subtitle {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
     
-    #feeling-btn {
+        #feeling-btn {
         font-size: 1.8em;
         width: 90%;
-    }
-    
-    #feelings-container {
-        gap: 10px;
-        width: 100%;
+        position: absolute;
+        bottom: 30;
     }
 
     .feeling-btn {
@@ -279,99 +271,50 @@ main, .main-container {
     }
     
     #verse-display {
-        font-size: 1.2em;
-        padding: 20px;
-        width: 90%;
-    }
-}
-/* SCREENS UP TO 768PX */
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;
-    }
-
-   /* FIXED MOBILE HEADER */
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 15px 20px 10px;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: none;
-    }
-
-    .title, h1 {
-        font-size: 1.8em !important;
-        font-weight: bold;
-        color: #2c3e50;
-        margin: 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-    
-#prayer-btn {
-    color:white;
-    border:none;
-    padding: 8px 16px;
-    cursor: pointer;
-    top: 10%;
-    position: absolute;
-    right: 15%; /*Keeps it within the screen on mobile*/
-    width: 150px;
-    height: 60px;
-    color: #444;
-    font-size: 1.2em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
-}
-
-#prayer-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    .main-container, main {
-        padding-top: 70px !important;
-    }
-
-   /* OTHER EXISTING MOBILE STYLES */
-    .subtitle {
-        font-size: 1.2em;
-    }
-    
-    #feeling-btn {
-        font-size: 1.8em;
-        width: 90%;
-    }
-    
-    #feelings-container {
-        gap: 10px;
-        width: 100%;
-    }
-
-    .feeling-btn {
-        display: grid;
-        gap: 10px;
-        max-height: 60vh;
-        overflow-y: auto;
-    }
-    
-    #verse-display {
-        font-size: 1.2em;
-        padding: 20px;
-        width: 90%;
+        font-size: 1.4em;
+        padding: 25px;
     }
 }
 
+/* === SMALL TABLETS (601–768px) === */
+/* COLOQUE ESTE BLOCO DEPOIS do @media (max-width: 992px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  /* se o botão estiver dentro do .header com flex, deixe o flex trabalhar */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 22px 10px;
+    gap: 12px;
+  }
 
-/* SCREENS UP TO 600PX */
+  .title, h1 {
+    font-size: 2.2em !important;
+  }
+
+  /* sobrescreve o absoluto do bloco de 992px */
+  #prayer-btn {
+    position: static;        /* tira do absoluto */
+    width: auto;
+    height: auto;
+    font-size: 0.95rem;
+    padding: 10px 18px;
+    margin-left: auto;       /* empurra para a direita no flex */
+    top: auto;               /* garantias */
+    right: auto;
+  }
+
+  .main-container, main {
+    padding-top: 80px !important;
+  }
+}
+
+
+
+
+
+/* --- Styles for MOBILE PHONES --- */
+/* Applies to screens with a max-width of 600px */
 @media (max-width: 600px) {
     body {
         background-attachment: scroll;
@@ -403,103 +346,15 @@ main, .main-container {
     }
     
 #prayer-btn {
-    color:white;
-    border:none;
     padding: 8px 16px;
     cursor: pointer;
     top: 10%;
     position: absolute;
-    right: 15%; /*Keeps it within the screen on mobile*/
-    width: 100px;
-    height: 60px;
+    right: 15%; /* Keep this value 15% consistent with the design */
+    width: 150px;
+    height: 70px;
     color: #444;
     font-size: 1em;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-}
-
-#prayer-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-    
-    .main-container, main {
-        padding-top: 70px !important;
-    }
-
-   /* OTHER EXISTING MOBILE STYLES */
-    .subtitle {
-        font-size: 1.2em;
-    }
-    
-    #feeling-btn {
-        font-size: 1.8em;
-        width: 90%;
-    }
-    
-    #feelings-container {
-        gap: 10px;
-        width: 100%;
-    }
-
-    .feeling-btn {
-        display: grid;
-        gap: 10px;
-        max-height: 60vh;
-        overflow-y: auto;
-    }
-    
-    #verse-display {
-        font-size: 1.2em;
-        padding: 20px;
-        width: 90%;
-    }
-}
-
-/* SCREENS UP TO 320PX */
-@media (max-width: 320px) {
-    body {
-        background-attachment: scroll;
-    }
-
-   /* FIXED MOBILE HEADER */
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 15px 20px 10px;
-        z-index: 1000;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: none;
-    }
-
-    .title, h1 {
-        font-size: 1.8em !important;
-        font-weight: bold;
-        color: #2c3e50;
-        margin: 0;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-    
-#prayer-btn {
-    color:white;
-    border:none;
-    padding: 8px 16px;
-    cursor: pointer;
-    top: 10%;
-    position: absolute;
-    right: 15%; /*Keeps it within the screen on mobile*/
-    width: 150px;
-    height: 60px;
-    color: #444;
-    font-size: 1.2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
@@ -519,11 +374,11 @@ main, .main-container {
         font-size: 1.2em;
     }
     
-    #feeling-btn {
+       #feeling-btn {
         font-size: 1.8em;
         width: 90%;
     }
-    
+
     #feelings-container {
         gap: 10px;
         width: 100%;
@@ -540,5 +395,46 @@ main, .main-container {
         font-size: 1.2em;
         padding: 20px;
         width: 90%;
+    }
+}
+
+/* === VERY SMALL MOBILE (320px) === */
+@media (max-width: 320px) {
+    .header {
+        padding: 12px 15px 8px;
+    }
+    
+    .title, h1 {
+        font-size: 1.5em !important;
+    }
+    
+    #prayer-btn {
+        padding: 6px 12px !important;
+        font-size: 0.7em !important;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
+    }
+    
+    .main-container, main {
+        padding-top: 65px !important;
+    }
+}
+
+/* === LANDSCAPE MOBILE === */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 10px 20px 8px;
+    }
+    
+    .title, h1 {
+        font-size: 1.4em !important;
+    }
+    
+    #prayer-btn {
+        padding: 6px 14px !important;
+        font-size: 0.7em !important;
+    }
+    
+    .main-container, main {
+        padding-top: 55px !important;
     }
 }

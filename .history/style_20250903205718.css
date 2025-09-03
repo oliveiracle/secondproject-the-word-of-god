@@ -200,7 +200,7 @@ main, .main-container {
 /* RESPONSIVE DESIGN (BREAKPOINTS)           */
 /* ========================================= */
 
-/* SCREENS UP TO 992PX */
+/* Applies to screens with a max-width of 992px */
 @media (max-width: 992px) {
     body {
         background-attachment: scroll;
@@ -284,7 +284,7 @@ main, .main-container {
         width: 90%;
     }
 }
-/* SCREENS UP TO 768PX */
+/* --- Styles for screens up to 768px --- */
 @media (max-width: 768px) {
     body {
         background-attachment: scroll;
@@ -371,7 +371,8 @@ main, .main-container {
 }
 
 
-/* SCREENS UP TO 600PX */
+/* --- Styles for MOBILE PHONES --- */
+/* Applies to screens with a max-width of 600px */
 @media (max-width: 600px) {
     body {
         background-attachment: scroll;
@@ -410,13 +411,13 @@ main, .main-container {
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 100px;
+    width:20px;
     height: 60px;
     color: #444;
-    font-size: 1em;
+    font-size: 1.2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
-   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+   background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
 }
 
 #prayer-btn:hover {
@@ -457,7 +458,7 @@ main, .main-container {
     }
 }
 
-/* SCREENS UP TO 320PX */
+/* === VERY SMALL MOBILE (320px) === */
 @media (max-width: 320px) {
     body {
         background-attachment: scroll;
