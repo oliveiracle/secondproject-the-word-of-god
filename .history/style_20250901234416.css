@@ -1,10 +1,13 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+<script src="script.js"></script>
 
 /* ========================================= */
 /* BASE & LAYOUT STYLES                      */
 /* ========================================= */
+
+
 
 body {
     font-family: "Gloria Hallelujah", cursive;
@@ -94,12 +97,10 @@ main {
     transform: translateY(-3px);
    box-shadow: purple 0 6px 12px;
 }
-
+/* If I remove this the verse box will not open */
 #verse-display {
     /* This is hidden by default, shown with JS */
-    display: none;
     font-family: 'Quicksand', sans-serif; /* A more readable font for verses */
-    margin-top: 40px; 
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
@@ -107,7 +108,6 @@ main {
     font-size: 1.5em;
     line-height: 1.6;
     color: #222;
-    max-width: 800px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border: 1px solid #ddd;
 }
@@ -157,6 +157,8 @@ position: absolute;
     box-shadow: purple 0 6px 12px;
 }
 
+
+
 /* Set up for the prayer request popup */
 #prayer-popup {
     display: none; /* Hidden by default */
@@ -171,7 +173,7 @@ position: absolute;
 }
 #prayer-text {
     width: 100%;
-    max-width: 400px;
+    max-width: 250px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -206,12 +208,10 @@ position: absolute;
         font-size: 2em;
         padding: 12px 25px;
     }
-    
     .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
+        width: 170px;
+        height: 45px;
+        font-size: 1em;
     }
     #verse-display {
         font-size: 1.4em;
@@ -246,13 +246,10 @@ position: absolute;
         gap: 10px;
         width: 100%;
     }
-
     .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
-       
+        width: 130px;
+        height: 45px;
+        font-size: 0.9em;
     }
     #verse-display {
         font-size: 1.2em;

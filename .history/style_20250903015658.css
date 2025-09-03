@@ -213,6 +213,7 @@ position: absolute;
        max-height: 60vh;
        overflow-y: auto; /* Enable scrolling if content exceeds max-height */
     }
+    
     #verse-display {
         font-size: 1.4em;
         padding: 25px;

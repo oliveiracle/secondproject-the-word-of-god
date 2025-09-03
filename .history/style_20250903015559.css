@@ -206,9 +206,8 @@ position: absolute;
         font-size: 2em;
         padding: 12px 25px;
     }
-    
-    .feeling-btn {
-        display: grid;
+
+    display: grid;
        gap: 10px;
        max-height: 60vh;
        overflow-y: auto; /* Enable scrolling if content exceeds max-height */

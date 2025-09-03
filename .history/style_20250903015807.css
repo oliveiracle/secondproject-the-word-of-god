@@ -50,7 +50,7 @@ main {
     padding: 15px 30px;
     box-sizing: border-box;
     border: 2px solid rgb(238, 229, 218);
-    border-radius: 30px;
+    border-radius: 500px;
     cursor: pointer;
     background: rgb(238, 229, 218);
     font-size: 3.5em;   

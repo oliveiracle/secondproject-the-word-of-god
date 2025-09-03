@@ -157,6 +157,8 @@ position: absolute;
     box-shadow: purple 0 6px 12px;
 }
 
+
+
 /* Set up for the prayer request popup */
 #prayer-popup {
     display: none; /* Hidden by default */
@@ -171,6 +173,7 @@ position: absolute;
 }
 #prayer-text {
     width: 100%;
+    margin-bottom: 30px;
     max-width: 400px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -206,12 +209,10 @@ position: absolute;
         font-size: 2em;
         padding: 12px 25px;
     }
-    
     .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
+        width: 170px;
+        height: 45px;
+        font-size: 1em;
     }
     #verse-display {
         font-size: 1.4em;
@@ -246,13 +247,10 @@ position: absolute;
         gap: 10px;
         width: 100%;
     }
-
     .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
-       
+        width: 130px;
+        height: 45px;
+        font-size: 0.9em;
     }
     #verse-display {
         font-size: 1.2em;

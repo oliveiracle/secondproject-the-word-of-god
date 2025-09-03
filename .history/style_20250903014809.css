@@ -178,7 +178,7 @@ position: absolute;
     margin-top: 10px;
 }
 
-
+/* Prayer Name Input */
 #prayer-name {
     width: 100%;
     max-width: 200px;
@@ -204,15 +204,21 @@ position: absolute;
     }
     #feeling-btn {
         font-size: 2em;
-        padding: 12px 25px;
+        padding:
+         12px 25px;
+    }
+
+     #feelings-container {
+        gap: 10px;
+        width: 100%;
+        /* Adicione estas linhas para o scroll em telemóveis */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cria 2 colunas de botões */
+        max-height: 60vh; /* Altura máxima de 60% da tela */
+        overflow-y: auto; /* Adiciona scroll se necessário */
+        padding: 10px;
     }
     
-    .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
-    }
     #verse-display {
         font-size: 1.4em;
         padding: 25px;
@@ -246,13 +252,14 @@ position: absolute;
         gap: 10px;
         width: 100%;
     }
-
-    .feeling-btn {
+   #feelings-container {
+        /* Adicione estas linhas para o scroll em tablets */
         display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
-       
+        grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de botões */
+        gap: 15px;
+        max-height: 50vh; /* Altura máxima de 50% da tela */
+        overflow-y: auto; /* Adiciona scroll se os botões ultrapassarem a altura */
+        padding: 15px;
     }
     #verse-display {
         font-size: 1.2em;

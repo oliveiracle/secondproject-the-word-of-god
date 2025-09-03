@@ -178,7 +178,7 @@ position: absolute;
     margin-top: 10px;
 }
 
-
+/* Prayer Name Input */
 #prayer-name {
     width: 100%;
     max-width: 200px;
@@ -205,17 +205,6 @@ position: absolute;
     #feeling-btn {
         font-size: 2em;
         padding: 12px 25px;
-    }
-    
-    .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
-    }
-    #verse-display {
-        font-size: 1.4em;
-        padding: 25px;
     }
 
     #prayer-btn {
@@ -246,14 +235,14 @@ position: absolute;
         gap: 10px;
         width: 100%;
     }
-
     .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
-       
+        display:grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 10px;
+        max-height: 60vh;
+        overflow-y: auto;
     }
+    
     #verse-display {
         font-size: 1.2em;
         padding: 20px;

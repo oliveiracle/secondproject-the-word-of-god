@@ -6,6 +6,49 @@
 /* BASE & LAYOUT STYLES                      */
 /* ========================================= */
 
+:root {
+    --btn-border: 2px solid #bbb;
+    --btn-border-alt: 2px solid rgb(238, 229, 218);
+    --btn-bg: rgba(255,255,255,0.8);
+    --btn-bg-alt: rgb(238,229,218);
+    --btn-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --btn-shadow-alt: 0 4px 10px rgba(0,0,0,0.1);
+    --btn-hover-shadow: purple 0 6px 12px;
+}
+
+#feeling-btn {
+    padding: 15px 30px;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    border: var(--btn-border-alt);
+    background-color: var(--btn-bg-alt);
+    box-shadow: var(--btn-shadow-alt);
+}
+
+.feeling-btn {
+    width: 180px;
+    height: 60px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: var(--btn-border);
+    background-color: var(--btn-bg);
+    box-shadow: var(--btn-shadow);
+}
+
+#prayer-btn {
+    top: 5%;
+    position: absolute;
+    right: 5%;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: var(--btn-border);
+    background-color: var(--btn-bg);
+    box-shadow: var(--btn-shadow);
+}
+
+
 body {
     font-family: "Gloria Hallelujah", cursive;
     background: url('assets/images/bg.png') no-repeat center center fixed;
@@ -49,16 +92,12 @@ main {
 #feeling-btn {
     padding: 15px 30px;
     box-sizing: border-box;
-    border: 2px solid rgb(238, 229, 218);
-    border-radius: 30px;
-    cursor: pointer;
-    background: rgb(238, 229, 218);
+    border: var(--btn-border-alt);
+    background: var(--btn-bg-alt);
     font-size: 3.5em;   
     color: #333;
-    font-weight: bold;
     margin-bottom: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
 }
 
 #feeling-btn:hover {
@@ -94,7 +133,7 @@ main {
     transform: translateY(-3px);
    box-shadow: purple 0 6px 12px;
 }
-
+/* If I remove this the verse box will not open */
 #verse-display {
     /* This is hidden by default, shown with JS */
     display: none;
@@ -157,6 +196,8 @@ position: absolute;
     box-shadow: purple 0 6px 12px;
 }
 
+
+
 /* Set up for the prayer request popup */
 #prayer-popup {
     display: none; /* Hidden by default */
@@ -171,7 +212,7 @@ position: absolute;
 }
 #prayer-text {
     width: 100%;
-    max-width: 400px;
+    max-width: 250px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -206,12 +247,10 @@ position: absolute;
         font-size: 2em;
         padding: 12px 25px;
     }
-    
     .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
+        width: 170px;
+        height: 45px;
+        font-size: 1em;
     }
     #verse-display {
         font-size: 1.4em;
@@ -246,13 +285,10 @@ position: absolute;
         gap: 10px;
         width: 100%;
     }
-
     .feeling-btn {
-        display: grid;
-       gap: 10px;
-       max-height: 60vh;
-       overflow-y: auto; /* Enable scrolling if content exceeds max-height */
-       
+        width: 130px;
+        height: 45px;
+        font-size: 0.9em;
     }
     #verse-display {
         font-size: 1.2em;
