@@ -185,7 +185,7 @@ const verses = {
 
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener('click', () => {
-
+    
     // First, always hide the verse display to clean up the screen.
     verseDisplay.style.display = 'none';
 

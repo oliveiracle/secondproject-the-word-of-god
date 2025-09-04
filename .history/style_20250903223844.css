@@ -138,6 +138,7 @@ main, .main-container {
     color: #000;
     text-decoration: underline;
     transform: translateY(-2px);
+    box-shadow: purple 0 6px 12px;
 }
 
 /* Request a prayer button - DESKTOP */
