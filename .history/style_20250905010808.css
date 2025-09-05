@@ -493,7 +493,7 @@ main, .main-container {
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 100px !important;
+    width: 90px !important;
     height: 60px !important;
     color: #444;
     font-size: 0.9em !important;

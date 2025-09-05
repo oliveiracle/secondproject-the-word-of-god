@@ -321,7 +321,7 @@ main, .main-container {
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 150px;
+    width: 1500px;
     height: 60px;
     color: #444;
     font-size: 1.2em;
@@ -404,12 +404,14 @@ main, .main-container {
     }
     
 #prayer-btn {
+    color:white;
+    border:none;
     padding: 8px 16px;
     cursor: pointer;
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 130px;
+    width: 100px;
     height: 60px;
     color: #444;
     font-size: 1em;
@@ -488,12 +490,14 @@ main, .main-container {
     }
     
 #prayer-btn {
+    color:white;
+    border:none;
     padding: 6px 12px !important;
     cursor: pointer;
     top: 10%;
     position: absolute;
     right: 15%; /*Keeps it within the screen on mobile*/
-    width: 100px !important;
+    width: 80px !important;
     height: 60px !important;
     color: #444;
     font-size: 0.9em !important;
