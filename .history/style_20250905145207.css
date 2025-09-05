@@ -357,7 +357,6 @@ main, .main-container {
 }
 
 /* SPECIFIC OVERRIDES FOR SCREENS UP TO 420PX */
-/* I AM TESTING THIS SIZE IN MY GALAXY S3 ULTRA */
 @media (max-width: 420px) {
     #prayer-btn {
                 width: 90px !important;

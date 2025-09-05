@@ -11,35 +11,25 @@ const prayerButton = document.getElementById('prayer-btn'); //Request a prayer b
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
 
-// Prayer popup functions
-        function Popup() {
-            document.getElementById('prayer-popup').style.display = 'block';
-        }
+function Popup() {
+    document.getElementById("prayer-popup").style.display = "block";
+  }
 
-        function ClosePopup() {
-            document.getElementById('prayer-popup').style.display = 'none';
-        }
+  function ClosePopup() {
+    document.getElementById("prayer-popup").style.display = "none";
+  }
 
-        function SendPrayer() {
-            const name = document.getElementById('prayer-name').value;
-            const prayer = document.getElementById('prayer-text').value;
-            
-            if (prayer.trim()) {
-                alert('Your prayer request has been received. May God bless you!');
-                ClosePopup();
-                document.getElementById('prayer-name').value = '';
-                document.getElementById('prayer-text').value = '';
-            } else {
-                alert('Please enter your prayer request.');
-            }
-        }
+  function SendPrayer() {
+    let name = document.getElementById("prayer-name").value;
+    let prayer = document.getElementById("prayer-text").value;
 
-        // Close popup when clicking outside
-        document.getElementById('prayer-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                ClosePopup();
-            }
-        });
+    if(name && prayer) {
+      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
+      ClosePopup();
+    } else {
+      alert("Please fill in your name and prayer request.");
+    }
+  }
 
   
 
@@ -245,11 +235,22 @@ randomVerseButton.addEventListener('click', () => {
     verseDisplay.style.display = 'block';
     verseDisplay.innerHTML = randomVerse;
 
-    const feelingBtn = document.getElementById('feeling-btn');
+    // Get the button and light elements
+const feelingBtn = document.getElementById('feeling-btn');
 const jesusLight = document.getElementById('jesus-light');
 
+// Event listener for click
 feelingBtn.addEventListener('click', () => {
-    jesusLight.classList.toggle('on'); // Toggles the light on/off
+    // Reset any previous classes
+    jesusLight.classList.remove('descending', 'fade-out');
+    
+    // Trigger descent
+    jesusLight.classList.add('descending');
+    
+    // Optional: Fade out after 2 seconds (descent duration)
+    setTimeout(() => {
+        jesusLight.classList.add('fade-out');
+    }, 2000); // Matches animation duration
 });
 
 });

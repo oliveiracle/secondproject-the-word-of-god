@@ -7,39 +7,31 @@ const feelingButtons = document.querySelectorAll('.feeling-btn');// All feeling 
 const verseDisplay = document.getElementById('verse-display');// Where the verses will be shown
 const randomVerseButton = document.getElementById('random-verse-btn');// Button to get a random verse
 const prayerButton = document.getElementById('prayer-btn'); //Request a prayer button
+const feelingBtn = document.getElementById('feeling-btn');
+const jesusLight = document.getElementById('jesus-light');
 // ===================================================================================
 //  2. VERSE LIBRARY (CORRECTLY STRUCTURED)
 // ===================================================================================
 
-// Prayer popup functions
-        function Popup() {
-            document.getElementById('prayer-popup').style.display = 'block';
-        }
+function Popup() {
+    document.getElementById("prayer-popup").style.display = "block";
+  }
 
-        function ClosePopup() {
-            document.getElementById('prayer-popup').style.display = 'none';
-        }
+  function ClosePopup() {
+    document.getElementById("prayer-popup").style.display = "none";
+  }
 
-        function SendPrayer() {
-            const name = document.getElementById('prayer-name').value;
-            const prayer = document.getElementById('prayer-text').value;
-            
-            if (prayer.trim()) {
-                alert('Your prayer request has been received. May God bless you!');
-                ClosePopup();
-                document.getElementById('prayer-name').value = '';
-                document.getElementById('prayer-text').value = '';
-            } else {
-                alert('Please enter your prayer request.');
-            }
-        }
+  function SendPrayer() {
+    let name = document.getElementById("prayer-name").value;
+    let prayer = document.getElementById("prayer-text").value;
 
-        // Close popup when clicking outside
-        document.getElementById('prayer-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                ClosePopup();
-            }
-        });
+    if(name && prayer) {
+      alert("Thank you " + name + "! Your prayer request was sent:\n" + prayer);
+      ClosePopup();
+    } else {
+      alert("Please fill in your name and prayer request.");
+    }
+  }
 
   
 
@@ -245,8 +237,6 @@ randomVerseButton.addEventListener('click', () => {
     verseDisplay.style.display = 'block';
     verseDisplay.innerHTML = randomVerse;
 
-    const feelingBtn = document.getElementById('feeling-btn');
-const jesusLight = document.getElementById('jesus-light');
 
 feelingBtn.addEventListener('click', () => {
     jesusLight.classList.toggle('on'); // Toggles the light on/off

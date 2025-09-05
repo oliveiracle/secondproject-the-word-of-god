@@ -324,14 +324,19 @@ main, .main-container {
 
     /* Base mobile style for prayer button */
     #prayer-btn {
-                position: absolute;
-                top: 15px;
-                right: 90px; /*Adjust the position of the button */
-                width: 120px;
-                height: 50px;
-                padding: 8px 16px;
-                font-size: 0.9em;
-            }
+        position: absolute;
+        top: 10%;
+        right: 15%;
+        width: 150px;
+        height: 60px;
+        padding: 8px 16px;
+        color: white;
+        border: none;
+        font-size: 1.2em;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%) !important;
+    }
 
     #prayer-btn:hover {
         transform: translateY(-2px);
@@ -342,27 +347,26 @@ main, .main-container {
 /* SPECIFIC OVERRIDES FOR SCREENS UP TO 768PX */
 @media (max-width: 768px) {
     #feeling-btn {
-                font-size: 2em;
-                position: relative;
-                top: 20px;
-            }
+        font-size: 2em;
+        position: relative;
+        top: 20px;
+    }
 }
 
 /* SPECIFIC OVERRIDES FOR SCREENS UP TO 600PX */
 @media (max-width: 600px) {
-      #prayer-btn {
-                width: 100px;
-                font-size: 0.8em;
-            }
+    #prayer-btn {
+        width: 130px;
+        font-size: 1em;
+    }
 }
 
 /* SPECIFIC OVERRIDES FOR SCREENS UP TO 420PX */
-/* I AM TESTING THIS SIZE IN MY GALAXY S3 ULTRA */
 @media (max-width: 420px) {
     #prayer-btn {
-                width: 90px !important;
-                height: 55px !important;
+                width: 80px !important;
+                height: 45px !important;
                 padding: 6px 12px !important;
-                font-size: 0.9em !important;
+                font-size: 0.7em !important;
             }
 }
