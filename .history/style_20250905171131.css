@@ -7,11 +7,6 @@
 /* ========================================= */
 
 /* BASE STYLES */
-
-html, body {
-    overflow-x: hidden;
-}
-
 body {
   font-family: "Gloria Hallelujah", cursive;
   background: url("assets/images/bg.png") no-repeat center center fixed;
