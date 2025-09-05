@@ -6,7 +6,6 @@
 /* BASE & LAYOUT STYLES (DESKTOP-FIRST)      */
 /* ========================================= */
 
-/* BASE STYLES */
 body {
     font-family: "Gloria Hallelujah", cursive;
     background: url('assets/images/bg.png') no-repeat center center fixed;
@@ -20,6 +19,26 @@ body {
     min-height: 100vh;
     text-align: center;
     color: #333;
+}
+
+#divine-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#divine-light h2 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    color: #222;
+}
+
+#divine-light p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
 }
 
 /* HEADER (DESKTOP) */

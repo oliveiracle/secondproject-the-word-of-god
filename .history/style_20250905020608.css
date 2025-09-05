@@ -6,7 +6,6 @@
 /* BASE & LAYOUT STYLES (DESKTOP-FIRST)      */
 /* ========================================= */
 
-/* BASE STYLES */
 body {
     font-family: "Gloria Hallelujah", cursive;
     background: url('assets/images/bg.png') no-repeat center center fixed;
@@ -188,6 +187,46 @@ main, .main-container {
 
 #prayer-name {
     max-width: 200px;
+}
+
+/* ========================================= */
+/* EFEITO DE LUZ SIMPLES - ON/OFF           */
+/* ========================================= */
+
+/* Container da luz - inicialmente invisível */
+.divine-light-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Container ativo - luz acesa */
+.divine-light-container.light-on {
+    opacity: 1;
+}
+
+/* Feixe de luz amarela em V */
+.divine-light-beam {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    height: 100vh;
+    background: linear-gradient(180deg, 
+        rgba(255, 215, 0, 0.6) 0%,
+        rgba(255, 223, 51, 0.4) 30%,
+        rgba(255, 235, 102, 0.2) 60%,
+        transparent 100%
+    );
+    clip-path: polygon(40% 0%, 10% 100%, 90% 100%, 60% 0%);
+    filter: blur(3px);
 }
 
 /* ======================================================= */

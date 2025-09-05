@@ -6,7 +6,6 @@
 /* BASE & LAYOUT STYLES (DESKTOP-FIRST)      */
 /* ========================================= */
 
-/* BASE STYLES */
 body {
     font-family: "Gloria Hallelujah", cursive;
     background: url('assets/images/bg.png') no-repeat center center fixed;
@@ -20,6 +19,40 @@ body {
     min-height: 100vh;
     text-align: center;
     color: #333;
+}
+
+#divine-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at center, 
+        rgba(255, 245, 200, 0.7) 0%,  /* Amarelo/dourado bem claro e suave no centro */
+        rgba(255, 245, 200, 0.5) 20%, /* A luz se expande um pouco */
+        rgba(255, 255, 255, 0) 60%   /* Fica totalmente transparente nas bordas */
+    );
+    
+    /* Estado Inicial: Invisível e não interfere com cliques */
+    opacity: 0;
+    pointer-events: none; /* Impede que o div bloqueie cliques nos outros botões */
+    z-index: -1; /* MUITO IMPORTANTE: Coloca a luz atrás de todo o seu conteúdo */
+    
+    /* Animação: Faz a transição de opacidade ser suave */
+    transition: opacity 2.5s ease-in-out;
+}
+
+
+#divine-light h2 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    color: #222;
+}
+
+#divine-light p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #555;
 }
 
 /* HEADER (DESKTOP) */

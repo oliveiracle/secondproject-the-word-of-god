@@ -6,7 +6,6 @@
 /* BASE & LAYOUT STYLES (DESKTOP-FIRST)      */
 /* ========================================= */
 
-/* BASE STYLES */
 body {
     font-family: "Gloria Hallelujah", cursive;
     background: url('assets/images/bg.png') no-repeat center center fixed;
@@ -189,6 +188,8 @@ main, .main-container {
 #prayer-name {
     max-width: 200px;
 }
+
+
 
 /* ======================================================= */
 /* RESPONSIVE DESIGN - MOBILE & TABLET STYLES              */
