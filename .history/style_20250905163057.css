@@ -56,7 +56,7 @@ main, .main-container {
 /* COMPONENT STYLES                          */
 /* ========================================= */
 
-/* HOW ARE YOU FEELING  */
+/* HOW ARE YOU FEELING BUTTON  */
 #feeling-btn {
     padding: 15px 30px;
     box-sizing: border-box;
@@ -99,6 +99,9 @@ main, .main-container {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
     font-family: 'Quicksand', sans-serif;
+    box-shadow: lightblue 0px 14px 22px;
+        font-family: 'Quicksand', sans-serif;
+    }
 }
 
 .feeling-btn:hover {

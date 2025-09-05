@@ -326,7 +326,7 @@ main, .main-container {
         padding: 8px 16px;
         font-size: 0.9em;
         border: none;
-        box-shadow: lightblue 0px 14px 22px;
+        box-shadow: lightblue 0 20px 32px;
         font-family: 'Quicksand', sans-serif;
     }
 
