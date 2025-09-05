@@ -56,7 +56,7 @@ main, .main-container {
 /* COMPONENT STYLES                          */
 /* ========================================= */
 
-/* HOW ARE YOU FEELING  */
+/* HOW ARE YOU FEELING BUTTON */
 #feeling-btn {
     padding: 15px 30px;
     box-sizing: border-box;
@@ -74,7 +74,7 @@ main, .main-container {
 #feeling-btn:hover {
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-1px);
-    box-shadow: lightblue 0 10px 18px;
+    box-shadow: purple 0 6px 10px;
 }
 
 #feelings-container {
@@ -104,7 +104,7 @@ main, .main-container {
 .feeling-btn:hover {
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-3px);
-    box-shadow: lightblue 0 10px 18px;
+    box-shadow: purple 0 6px 30px;
 }
 
 #verse-display {
@@ -141,28 +141,28 @@ main, .main-container {
 
 /* Request a prayer button - DESKTOP */
 #prayer-btn {
-    top: 5%;
     position: fixed;
-    right: 5%;
-    width: 200px;
-    height: 60px;
-    padding: 10px 20px;
-    border: 2px solid #bbb;
-    border-radius: 30px;
-    cursor: pointer;
-    color: #444;
-    font-size: 1.03em;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease-in-out;
-    background-color: white;
-    font-family: 'Quicksand', sans-serif;
+  top: 32px;
+  right: 48px;
+  z-index: 2000;
+  background: #fbf6f1;               /* warm beige */
+  color: #222;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 26px;
+  border-radius: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .22s cubic-bezier(.2,.8,.2,1),
+              box-shadow .22s ease,
+              background .2s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #prayer-btn:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    transform: translateY(-3px);
-    box-shadow: lightblue 0 10px 18px;
+   hover: hover) and (pointer: fine) {
+  .prayer-btn:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.12); }
+}
 }
 
 /* Prayer request popup */
@@ -205,7 +205,7 @@ main, .main-container {
 
 #prayer-text:focus, #prayer-name:focus {
     outline: none;
-    border-color: lightblue;
+    border-color: #667eea;
 }
 
 #prayer-text {

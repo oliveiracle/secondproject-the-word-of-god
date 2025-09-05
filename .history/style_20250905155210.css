@@ -56,13 +56,14 @@ main, .main-container {
 /* COMPONENT STYLES                          */
 /* ========================================= */
 
-/* HOW ARE YOU FEELING  */
+/* How are you Feeling Today Button */
 #feeling-btn {
     padding: 15px 30px;
     box-sizing: border-box;
     border: 2px solid rgb(238, 229, 218);
     border-radius: 20px;
     cursor: pointer;
+
     font-size: 3.5em;   
     color: #333;
     font-weight: bold;
@@ -72,9 +73,7 @@ main, .main-container {
 }
 
 #feeling-btn:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    transform: translateY(-1px);
-    box-shadow: lightblue 0 10px 18px;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #feelings-container {
@@ -98,13 +97,12 @@ main, .main-container {
     font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
-    font-family: 'Quicksand', sans-serif;
 }
 
 .feeling-btn:hover {
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-3px);
-    box-shadow: lightblue 0 10px 18px;
+    box-shadow: purple 0 6px 12px;
 }
 
 #verse-display {
@@ -142,7 +140,7 @@ main, .main-container {
 /* Request a prayer button - DESKTOP */
 #prayer-btn {
     top: 5%;
-    position: fixed;
+    position: absolute;
     right: 5%;
     width: 200px;
     height: 60px;
@@ -156,13 +154,12 @@ main, .main-container {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
     background-color: white;
-    font-family: 'Quicksand', sans-serif;
 }
 
 #prayer-btn:hover {
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateY(-3px);
-    box-shadow: lightblue 0 10px 18px;
+    box-shadow: purple 0 6px 12px;
 }
 
 /* Prayer request popup */
@@ -200,12 +197,12 @@ main, .main-container {
     font-family: 'Quicksand', sans-serif;
     font-size: 1em;
     transition: border-color 0.3s ease;
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Adicionado para consistência */
 }
 
 #prayer-text:focus, #prayer-name:focus {
     outline: none;
-    border-color: lightblue;
+    border-color: #667eea;
 }
 
 #prayer-text {
@@ -327,7 +324,6 @@ main, .main-container {
         font-size: 0.9em;
         border: none;
         background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
-        font-family: 'Quicksand', sans-serif;
     }
 
     #prayer-btn:hover {
