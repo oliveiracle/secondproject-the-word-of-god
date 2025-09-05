@@ -239,15 +239,7 @@ main, .main-container {
             background: #bbb;
         }
 
-        .popup-actions button:last-child {
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
 
-        .popup-actions button:last-child:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
 
 
 

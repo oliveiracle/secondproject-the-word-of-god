@@ -366,8 +366,8 @@ main, .main-container {
                 height: 55px !important;
                 padding: 6px 12px !important;
                 font-size: 0.9em !important;
-                background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
-                border: none;
+                background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
             }
 
 

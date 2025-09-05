@@ -370,5 +370,14 @@ main, .main-container {
                 border: none;
             }
 
+            #prayer-text, #prayer-name {
+            width: 100%;
+            padding: 2px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 10px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
 
 }

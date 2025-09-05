@@ -8,7 +8,7 @@ const verseDisplay = document.getElementById('verse-display');// Where the verse
 const randomVerseButton = document.getElementById('random-verse-btn');// Button to get a random verse
 const prayerButton = document.getElementById('prayer-btn'); //Request a prayer button
 // ===================================================================================
-//  2. POPUP LOGIC ADJUSTMENTS
+//  2. POPUP LOGIC
 // ===================================================================================
 
 // Prayer popup functions
@@ -43,10 +43,7 @@ const prayerButton = document.getElementById('prayer-btn'); //Request a prayer b
 
   
 
-// ===================================================================================
-//  3. BIBLE VERSES DATA
-// ===================================================================================
-
+// List of verses categorized by feelings
 const verses = {
     'Angry': [
         "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
@@ -193,7 +190,7 @@ const verses = {
 };
 
 // ===================================================================================
-//  4. CLICK LOGIC (BASIC VERSION)
+//  3. CLICK LOGIC (BASIC VERSION)
 // ===================================================================================
 
 // --- What happens when the MAIN BUTTON is clicked ---

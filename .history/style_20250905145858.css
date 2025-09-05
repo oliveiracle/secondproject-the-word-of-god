@@ -331,7 +331,6 @@ main, .main-container {
                 height: 50px;
                 padding: 8px 16px;
                 font-size: 0.9em;
-                background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
             }
 
     #prayer-btn:hover {
@@ -369,6 +368,5 @@ main, .main-container {
                 background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
                 border: none;
             }
-
 
 }

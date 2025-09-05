@@ -331,7 +331,6 @@ main, .main-container {
                 height: 50px;
                 padding: 8px 16px;
                 font-size: 0.9em;
-                background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
             }
 
     #prayer-btn:hover {
@@ -354,7 +353,6 @@ main, .main-container {
       #prayer-btn {
                 width: 100px;
                 font-size: 0.8em;
-                background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
             }
 }
 
@@ -366,9 +364,11 @@ main, .main-container {
                 height: 55px !important;
                 padding: 6px 12px !important;
                 font-size: 0.9em !important;
-                background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
-                border: none;
             }
 
 
+    #prayer-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
 }

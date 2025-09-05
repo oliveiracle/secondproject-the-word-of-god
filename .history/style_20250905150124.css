@@ -195,7 +195,7 @@ main, .main-container {
             border-radius: 10px;
             margin-top: 15px;
             font-family: 'Quicksand', sans-serif;
-            font-size: 1em;
+            font-size: 18em;
             transition: border-color 0.3s ease;
         }
 
@@ -369,6 +369,5 @@ main, .main-container {
                 background: linear-gradient(45deg, rgb(102, 126, 234) 0%, rgb(118, 75, 162) 100%);
                 border: none;
             }
-
 
 }
