@@ -194,7 +194,7 @@ main, .main-container {
 #prayer-text, #prayer-name {
     width: 100%;
     padding: 15px;
-    border: 2px solid lightblue;
+    border: 2px solid rgba(102, 126, 234, 0.3);
     border-radius: 10px;
     margin-top: 15px;
     font-family: 'Quicksand', sans-serif;
@@ -240,7 +240,7 @@ main, .main-container {
 
 .popup-actions button:last-child {
     background: lightblue;
-    color: #333;
+    color: white;
 }
 
 .popup-actions button:last-child:hover {

@@ -147,13 +147,13 @@ main, .main-container {
     width: 200px;
     height: 60px;
     padding: 10px 20px;
-    border: 1px solid lightblue;
+    border: 2px solid lightblue;
     border-radius: 30px;
     cursor: pointer;
     color: #444;
     font-size: 1.03em;
     font-weight: bold;
-    box-shadow: 0 1px 5px lightblue;
+    box-shadow: 0 2px 5px lightblue;
     transition: all 0.2s ease-in-out;
     background-color: #F8FEFF;  
     font-family: 'Quicksand', sans-serif;
@@ -194,7 +194,7 @@ main, .main-container {
 #prayer-text, #prayer-name {
     width: 100%;
     padding: 15px;
-    border: 2px solid lightblue;
+    border: 2px solid rgba(102, 126, 234, 0.3);
     border-radius: 10px;
     margin-top: 15px;
     font-family: 'Quicksand', sans-serif;
@@ -239,13 +239,13 @@ main, .main-container {
 }
 
 .popup-actions button:last-child {
-    background: lightblue;
-    color: #333;
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
 
 .popup-actions button:last-child:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px lightblue;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
 /* ======================================================= */
