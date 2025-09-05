@@ -138,7 +138,6 @@ main, .main-container {
     color: #000;
     text-decoration: underline;
     transform: translateY(-2px);
-
 }
 
 /* Request a prayer button - DESKTOP */
@@ -345,13 +344,10 @@ main, .main-container {
     .subtitle {
         font-size: 1.2em;
     }
-
-    /* This rule makes the feeling button more prominent */
+    
     #feeling-btn {
-        font-size: 2em;
+        font-size: 1.8em;
         width: 90%;
-        position:relative;
-        top: 20px;
     }
     
     #feelings-container {
@@ -525,6 +521,7 @@ main, .main-container {
     #feeling-btn {
         font-size: 1.8em;
         width: 90%;
+    padding: 15px 30px;
     }
     
     #feelings-container {

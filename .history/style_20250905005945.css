@@ -345,13 +345,12 @@ main, .main-container {
     .subtitle {
         font-size: 1.2em;
     }
-
-    /* This rule makes the feeling button more prominent */
+    
     #feeling-btn {
-        font-size: 2em;
+        font-size: 1.8em;
         width: 90%;
         position:relative;
-        top: 20px;
+        bottom: 20px;
     }
     
     #feelings-container {

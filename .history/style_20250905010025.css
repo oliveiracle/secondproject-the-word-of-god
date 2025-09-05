@@ -348,10 +348,10 @@ main, .main-container {
 
     /* This rule makes the feeling button more prominent */
     #feeling-btn {
-        font-size: 2em;
+        font-size: 1.8em;
         width: 90%;
         position:relative;
-        top: 20px;
+        top: 30px;
     }
     
     #feelings-container {
