@@ -359,13 +359,6 @@ main, .main-container {
         font-size: 0.9em !important;
     }
 
-    .feeling-btn {
-        width: 180px !important;
-        height: 50px !important;
-        font-size: 1em !important;
-    }
-    
-
     @media (max-width: 400px) {
         #prayer-btn {
             position:absolute !important;
@@ -376,18 +369,17 @@ main, .main-container {
         }
 
         #feeling-btn {
-            font-size: 1.5em !important;
-            padding: 10px 15px !important;
-        }
-
-        #random-verse-btn {
-            padding: 10px 15px !important;
-            font-size: 0.9em !important;
-        }
-    .feeling-btn {
-        width: 140px !important;
-        height: 50px !important;
-        font-size: 0.9em !important;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border: 2px solid rgb(238, 229, 218);
+    border-radius: 30px;
+    cursor: pointer;
+    background: rgb(238, 229, 218);
+    font-size: 3.5em;   
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
     }
-}
 }

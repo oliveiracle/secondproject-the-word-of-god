@@ -359,13 +359,6 @@ main, .main-container {
         font-size: 0.9em !important;
     }
 
-    .feeling-btn {
-        width: 180px !important;
-        height: 50px !important;
-        font-size: 1em !important;
-    }
-    
-
     @media (max-width: 400px) {
         #prayer-btn {
             position:absolute !important;
@@ -384,10 +377,13 @@ main, .main-container {
             padding: 10px 15px !important;
             font-size: 0.9em !important;
         }
-    .feeling-btn {
-        width: 140px !important;
-        height: 50px !important;
-        font-size: 0.9em !important;
-    }
+
+        #feelings-container {
+    display: none; /* Shown with JS */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150x;
+    margin-top: 20px;
 }
+    }
 }

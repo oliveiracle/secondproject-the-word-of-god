@@ -359,13 +359,6 @@ main, .main-container {
         font-size: 0.9em !important;
     }
 
-    .feeling-btn {
-        width: 180px !important;
-        height: 50px !important;
-        font-size: 1em !important;
-    }
-    
-
     @media (max-width: 400px) {
         #prayer-btn {
             position:absolute !important;
@@ -377,17 +370,7 @@ main, .main-container {
 
         #feeling-btn {
             font-size: 1.5em !important;
-            padding: 10px 15px !important;
+            padding: 12px 20px !important;
         }
-
-        #random-verse-btn {
-            padding: 10px 15px !important;
-            font-size: 0.9em !important;
-        }
-    .feeling-btn {
-        width: 140px !important;
-        height: 50px !important;
-        font-size: 0.9em !important;
     }
-}
 }
