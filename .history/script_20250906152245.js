@@ -207,7 +207,7 @@ const verses = {
 // --- What happens when the MAIN BUTTON is clicked ---
 startButton.addEventListener("click", () => {
   verseDisplay.style.display = "none";
-  const isVisible = feelingsContainer.style.display === "flex"; 
+  const isVisible = feelingsContainer.style.display === "flex"; // Note: your CSS might use 'grid'
   feelingsContainer.style.display = isVisible ? "none" : "flex"; // This is a ternary operator!
 });
 
