@@ -52,6 +52,7 @@ const verses = {
     "Do not be quickly provoked in your spirit, for anger resides in the lap of fools. (Ecclesiastes 7:9)",
     "My dear brothers and sisters, take note of this: Everyone should be quick to listen, slow to speak and slow to become angry, because human anger does not produce the righteousness that God desires. (James 1:19-20)",
     "A gentle answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1),"
+    "In your anger do not sin: Do not let the sun gow down while you are still angry". (Ephesians 4:26),
   ],
   Peaceful: [
     "Peace I leave with you; my peace I give you. (John 14:27)",
@@ -59,8 +60,6 @@ const verses = {
     "The Lord gives strength to his people; the Lord blesses his people with peace. (Psalm 29:11)",
     "You will go out in joy and be led forth in peace. (Isaiah 55:12)",
     "Let the peace of Christ rule in your hearts. (Colossians 3:15)",
-   "And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus. (Philippians 4:7)",
-   "If it is possible, as far as it depends on you, live at peace with everyone. (Romans 12:18),"
   ],
   Strong: [
     "I can do all this through him who gives me strength. (Philippians 4:13)",
@@ -68,8 +67,6 @@ const verses = {
     "The Lord is my strength and my shield; my heart trusts in him, and he helps me. (Psalm 28:7)",
     "The joy of the Lord is your strength. (Nehemiah 8:10)",
     "The Lord is my light and my salvation—whom shall I fear? (Psalm 27:1)",
-    "That is why, for Christ’s sake, I delight in weaknesses, in insults, in hardships, in persecutions, in difficulties. For when I am weak, then I am strong. (2 Corinthians 12:10)",
-    "God is our refuge and strength, an ever-present help in trouble. (Psalm 46:1),"
   ],
   Happy: [
     "Rejoice in the Lord always. I will say it again: Rejoice! (Philippians 4:4)",
@@ -77,9 +74,6 @@ const verses = {
     "A cheerful heart is good medicine. (Proverbs 17:22)",
     "For where your treasure is, there your heart will be also. (Matthew 6:21)",
     "The fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness. (Galatians 5:22)",
-    "This is the day that the Lord has made; let us rejoice and be glad in it. (Psalm 118:24)",
-    "Rejoice in the Lord always. I will say it again: Rejoice!. (Philippians 4:4)",
-    "So with you: Now is your time of grief, but I will see you again and you will rejoice, and no one will take away your joy. (John 16:22)",
   ],
   Discouraged: [
     "So do not fear, for I am with you; do not be dismayed, for I am your God. (Isaiah 41:10)",
@@ -87,10 +81,6 @@ const verses = {
     "Cast all your anxiety on him because he cares for you. (1 Peter 5:7)",
     "The Lord is close to the brokenhearted and saves those who are crushed in spirit. (Psalm 34:18)",
     "I can do all this through him who gives me strength. (Philippians 4:13)",
-    "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up. (Galatians 6:9)",
-    "The righteous cry out, and the Lord hears them; he delivers them from all their troubles. (Psalm 34:17)",
-
-    
   ],
   Forgiving: [
     "For if you forgive other people when they sin against you, your heavenly Father will also forgive you. (Matthew 6:14)",
