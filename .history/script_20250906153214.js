@@ -269,12 +269,6 @@ const verses = {
     "The Lord is my shepherd, I lack nothing. He makes me lie down in green pastures... he refreshes my soul. (Psalm 23:1-3)",
     "Weeping may stay for the night, but rejoicing comes in the morning. (Psalm 30:5)",
     "Come to me, all you who are weary and burdened, and I will give you rest. (Matthew 11:28)",
-    // New verses added below
-    "Blessed are those who mourn, for they will be comforted. (Matthew 5:4)",
-    "You, Lord, keep my lamp burning; my God turns my darkness into light. (Psalm 18:28)",
-    "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world. (John 16:33)",
-    "He will wipe every tear from their eyes. There will be no more death or mourning or crying or pain. (Revelation 21:4)",
-    "My soul is weary with sorrow; strengthen me according to your word. (Psalm 119:28)",
   ],
   Afraid: [
     "For God has not given us a spirit of fear, but of power and of love and of a sound mind. (2 Timothy 1:7)",
@@ -282,25 +276,14 @@ const verses = {
     "Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged... (Joshua 1:9)",
     "The Lord is with me; I will not be afraid. What can mere mortals do to me? (Psalm 118:6)",
     "The Lord is my light and my salvation—whom shall I fear? (Psalm 27:1)",
-    // New verses added below
-    "There is no fear in love. But perfect love drives out fear. (1 John 4:18)",
-    "So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you. (Isaiah 41:10)",
-    "Even though I walk through the darkest valley, I will fear no evil, for you are with me. (Psalm 23:4)",
-    "The Lord will fight for you; you need only to be still. (Exodus 14:14)",
-    "Peace I leave with you; my peace I give you. Do not let your hearts be troubled and do not be afraid. (John 14:27)",
   ],
+
   Lonely: [
     "Be strong and courageous. Do not be afraid... for the Lord your God goes with you; he will never leave you nor forsake you. (Deuteronomy 31:6)",
     "The Lord is a refuge for the oppressed, a stronghold in times of trouble. (Psalm 9:9)",
     "Turn to me and be gracious to me, for I am lonely and afflicted. (Psalm 25:16)",
     "I will not leave you as orphans; I will come to you. (John 14:18)",
     "And surely I am with you always, to the very end of the age. (Matthew 28:20)",
-    // New verses added below
-    "A father to the fatherless, a defender of widows, is God in his holy dwelling. God sets the lonely in families. (Psalm 68:5-6)",
-    "Though my father and mother forsake me, the Lord will receive me. (Psalm 27:10)",
-    "For where two or three gather in my name, there am I with them. (Matthew 18:20)",
-    "The Lord is close to the brokenhearted and saves those who are crushed in spirit. (Psalm 34:18)",
-    "Cast all your anxiety on him because he cares for you. (1 Peter 5:7)",
   ],
   Grateful: [
     "Give thanks in all circumstances; for this is God’s will for you in Christ Jesus. (1 Thessalonians 5:18)",
@@ -308,12 +291,6 @@ const verses = {
     "Enter his gates with thanksgiving and his courts with praise; give thanks to him and praise his name. (Psalm 100:4)",
     "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him. (Colossians 3:17)",
     "Every good and perfect gift is from above, coming down from the Father of the heavenly lights. (James 1:17)",
-    // New verses added below
-    "Praise the Lord, my soul, and forget not all his benefits. (Psalm 103:2)",
-    "I will give thanks to you, Lord, with all my heart; I will tell of all your wonderful deeds. (Psalm 9:1)",
-    "The Lord has done great things for us, and we are filled with joy. (Psalm 126:3)",
-    "Thanks be to God for his indescribable gift! (2 Corinthians 9:15)",
-    "Let the peace of Christ rule in your hearts... And be thankful. (Colossians 3:15)",
   ],
 };
 

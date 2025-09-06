@@ -44,6 +44,7 @@ document.getElementById("prayer-popup").addEventListener("click", function (e) {
 // ===================================================================================
 
 const verses = {
+  const verses = {
   Angry: [
     "A soft answer turns away wrath, but a harsh word stirs up anger. (Proverbs 15:1)",
     "In your anger do not sin: Do not let the sun go down while you are still angry. (Ephesians 4:26)",
@@ -59,9 +60,8 @@ const verses = {
     "Refrain from anger and turn from wrath; do not fret—it leads only to evil. (Psalm 37:8)",
     "But you, Lord, are a compassionate and gracious God, slow to anger, abounding in love and faithfulness. (Psalm 86:15)",
   ],
-  
   Peaceful: [
-     "Peace I leave with you; my peace I give you. (John 14:27)",
+    "Peace I leave with you; my peace I give you. (John 14:27)",
     "He will keep in perfect peace those whose minds are steadfast, because they trust in him. (Isaiah 26:3)",
     "The Lord gives strength to his people; the Lord blesses his people with peace. (Psalm 29:11)",
     "You will go out in joy and be led forth in peace. (Isaiah 55:12)",
@@ -75,7 +75,7 @@ const verses = {
     "May the God of hope fill you with all joy and peace as you trust in him. (Romans 15:13)",
     "Now may the Lord of peace himself give you peace at all times and in every way. (2 Thessalonians 3:16)",
   ],
-   Strong: [
+  Strong: [
     "I can do all this through him who gives me strength. (Philippians 4:13)",
     "Be strong and courageous. Do not be afraid... for the Lord your God goes with you. (Deuteronomy 31:6)",
     "The Lord is my strength and my shield; my heart trusts in him, and he helps me. (Psalm 28:7)",
