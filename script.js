@@ -7,6 +7,7 @@ const feelingButtons = document.querySelectorAll(".feeling-btn"); // All feeling
 const verseDisplay = document.getElementById("verse-display"); // Where the verses will be shown
 const randomVerseButton = document.getElementById("random-verse-btn"); // Button to get a random verse
 const prayerButton = document.getElementById("prayer-btn"); //Request a prayer button
+const dailyPrayerPopup = document.getElementById('daily-prayer-btn'); // Daily Prayer popup
 // ===================================================================================
 //  2. POPUP LOGIC ADJUSTMENTS
 // ===================================================================================
@@ -38,6 +39,8 @@ document.getElementById("prayer-popup").addEventListener("click", function (e) {
     ClosePopup();
   }
 });
+
+
 
 // ===================================================================================
 //  3. BIBLE VERSES DATA
@@ -317,8 +320,72 @@ const verses = {
   ],
 };
 
+// ========================================= 
+//4. DAILY PRAYER FUNCTIONALITY - 
+// ========================================= 
+
+// Array of daily prayers
+const dailyPrayers = [
+    " Dear Lord, Your Word says that when we wait on You, You will renew our strength. Although my strength is low, I am choosing to rest and spend time in Your presence. I refuse to run myself ragged, listening to the voice of the enemy that I should just try harder or work longer. I trust in Your infinite capacity of strength in my weakness. Thank You for working in my weakness and pouring Your strength into me. In Jesus’ name, amen",
+    " Dear God Almighty, today I faced things that felt like too much for me. And tomorrow I’m going to face more of the same things and probably new challenges as well. I need Your strength. I need You to hold me up and stand next to me in life’s storms. Perhaps I never really understood how literal Your promises are to give us strength for the day. Maybe tomorrow could be my opportunity to learn what that means on a deeper level. But right now, I am praying for supernatural healing to permeate every cell of my being so that I can find renewed strength beyond my natural ability. I know that this strength comes from You. In Jesus’ name, amen",
+    " Dear God, please help me. When I’m overwhelmed and tired, show me how to run to You. Give me the strength I need to endure whatever comes my way, relying on God's power. Take the weight of my concerns off of me, and help me to remember that You are always near. You will always protect and support me. In Jesus’ name, Amen",
+    " God, thank You for providing me with strength in every situation. Despite my efforts, I can do nothing on my own. Sometimes I let stress get the best of me and forget that You are in control. Fill me with Your strength and guide me one day at a time through this season, Christ Jesus. In Jesus’ name, Amen..",
+    "God, You call me to faithful and obedient living. Thank You for providing Your Word as a guide that helps me bring You glory. When I struggle to live as You call me to, please remind me of the eternity I get to spend with You. And as You do that, restore my strength and endurance. In Jesus’ name, Amen.",
+    " Dear Lord, I seek Your guidance and wisdom as I navigate the challenges of life. Help me to discern Your will and to follow Your path. Fill me with the Holy Spirit, that I may be empowered to live a life that is pleasing to You. Give me the courage to trust in Your goodness and to surrender to Your will. In Jesus’ name, I pray. Amen.",
+    "Lord Jesus Christ, I pray that You would give me the boldness and confidence to share Your love and message with others. Help me to be a witness to Your goodness and to proclaim Your gospel to a world in need. Fill me with Your Holy Spirit, that I may be empowered to speak Your words and to demonstrate Your love. Give me the heart of an evangelist, that I may be a messenger of Your hope and salvation. In Your name, I pray. Amen.",
+    " God, I feel weary and worn out, but I know You are my strength. Please renew my spirit and help me stand firm in faith, even when I feel weak. Fill me with Your peace, courage, and endurance to face whatever comes. I trust that You are with me and will carry me through. May this day bring healing to any pain you carry, and may you find strength in knowing that better days are ahead.In Jesus’ name, amen.",
+    " God, I feel worn out and unsure how to keep going. Please give me the strength I need to face today with courage and hope. Remind me that I don’t have to do this alone, that You are with me, holding me up. In Jesus’ name, amen.",
+    "Let gratitude be your attitude today. May you notice and appreciate the many gifts that surround you each moment."
+];
+
+// Function to get prayer based on current date
+function getDailyPrayer() {
+    const today = new Date();
+    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+    return dailyPrayers[dayOfYear % dailyPrayers.length];
+}
+
+// Function to open Daily Prayer popup
+function DailyPrayerPopup() {
+    console.log("Daily Prayer popup aberto");
+    
+    const popup = document.getElementById("daily-prayer-popup");
+    const prayerTextDisplay = document.getElementById("prayer-text-display");
+    
+    if (popup && prayerTextDisplay) {
+        // Get today's prayer
+        const todaysPrayer = getDailyPrayer();
+        console.log("Oração do dia:", todaysPrayer);
+        
+        prayerTextDisplay.textContent = todaysPrayer;
+        popup.style.display = "block";
+    } else {
+        console.log(":", {
+            popup: !!popup,
+            prayerTextDisplay: !!prayerTextDisplay
+        });
+    }
+}
+
+// Function to close Daily Prayer popup
+function CloseDailyPrayerPopup() {
+    console.log("Closing popup");
+    const popup = document.getElementById("daily-prayer-popup");
+    if (popup) {
+        popup.style.display = "none";
+    }
+}
+
+// Function to mark prayer as read
+function MarkPrayerRead() {
+    console.log("Marked as read");
+    const today = new Date().toDateString();
+    localStorage.setItem('lastPrayerReadDate', today);
+    alert("Prayer marked as read! Come back tomorrow for a new prayer.");
+}
+
 // ==================================================================================
-//  4. CLICK LOGIC (MODIFIED WITH IF / ELSE IF)
+//  5. CLICK LOGIC
 // ===================================================================================
 
 // --- What happens when the MAIN BUTTON is clicked ---
@@ -332,7 +399,7 @@ startButton.addEventListener("click", () => {
 feelingButtons.forEach(button => {
     button.addEventListener("click", () => {
         const feeling = button.innerText.split(" ")[0]; // Gets the feeling name, e.g., "Angry"
-        let verseArray = []; // Start with an empty array
+        let verseArray = []; 
 
         // This is the IF / ELSE IF structure to select the correct verse list
         if (feeling === 'Angry') {
@@ -401,4 +468,5 @@ randomVerseButton.addEventListener("click", (e) => {
   const randomVerse = allVerses[randomIndex];
   verseDisplay.style.display = "block";
   verseDisplay.innerHTML = `<p>${randomVerse}</p>`;
+
 });
