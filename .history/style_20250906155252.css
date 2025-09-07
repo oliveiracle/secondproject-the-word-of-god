@@ -36,11 +36,34 @@ header {
   padding: 20px;
 }
 
-h1,
-.title {
-  font-size: 4em;
+h1.title {
+  font-size: 9pem;
   margin: 0 0 10px 0;
   color: #222;
+  position: relative; /* Essencial para posicionar os pseudo-elementos */
+}
+
+/* A reflexão (o texto invertido) */
+h1.title::before {
+  content: attr(data-text); /* Copia o texto do atributo data-text */
+  position: absolute;
+  top: 100%; /* Posiciona abaixo do texto original */
+  left: 0;
+  width: 100%;
+  transform: scaleY(-1); /* Inverte o texto verticalmente */
+  color: #222; /* Mesma cor do texto */
+  opacity: 0.15; /* Deixa a reflexão bem sutil */
+}
+
+/* A máscara de gradiente para o efeito de desvanecimento */
+h1.title::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cobre a reflexão */
+  background: linear-gradient(to bottom, white 20%, transparent 80%); /* Gradiente do branco (ou cor de fundo do seu site) para transparente */
 }
 
 /* MAIN CONTAINER */
@@ -251,60 +274,6 @@ main,
   transform: translateY(-2px);
   box-shadow: 0 5px 15px lightblue;
 }
-
-#daily-prayer-btn {
-  top: 5%;
-  position: fixed;
-  left: 5%;
-  width: 200px;
-  height: 60px;
-  padding: 10px 20px;
-  border: 1px solid lightblue;
-  border-radius: 30px;
-  cursor: pointer;
-  color: #444;
-  font-size: 1.03em;
-  font-weight: bold;
-  box-shadow: 0 1px 5px lightblue;
-  transition: all 0.2s ease-in-out;
-  background-color: #f8feff;
-  font-family: "Quicksand", sans-serif;
-}
-
-#daily-prayer-btn:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  transform: translateY(-3px);
-  box-shadow: lightblue 0 10px 18px;
-}
-
-/* Daily Prayer popup */
-#daily-prayer-popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-}
-
-#daily-prayer-content {
-  margin: 20px 0;
-  padding: 20px;
-  background: rgba(173, 216, 230, 0.1);
-  border-radius: 10px;
-  border-left: 4px solid lightblue;
-}
-
-#prayer-text-display {
-  font-style: italic;
-  line-height: 1.6;
-  margin: 0;
-  color: #555;
-}
-
 
 /* ======================================================= */
 /* RESPONSIVE DESIGN - MOBILE & TABLET STYLES              */
