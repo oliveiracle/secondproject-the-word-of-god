@@ -307,7 +307,6 @@ main,
   font-family: 'Courier New', Courier, monospace;
 }
 
-
 /* ======================================================= */
 /* RESPONSIVE DESIGN - MOBILE & TABLET STYLES              */
 /* ======================================================= */
@@ -338,7 +337,7 @@ main,
   .title,
   h1 {
     display: none;
-    font-size: 1.8em !important;
+    font-size: 1.8em;
     font-weight: bold;
     color: #2c3e50;
     margin: 0;
@@ -379,7 +378,6 @@ main,
     width: 90%;
   }
 
-  /* Base mobile style for prayer button */
   #prayer-btn, #daily-prayer-btn{
     position: absolute;
     top: 15px;
@@ -416,48 +414,47 @@ main,
 }
 
 /* SPECIFIC OVERRIDES FOR SCREENS UP TO 420PX */
-/* I AM TESTING THIS SIZE ON MY GALAXY S3 ULTRA */
 @media (max-width: 420px) {
   #prayer-btn, #daily-prayer-btn{
-    width: 120px !important;
-    height: 60px !important;
-    padding: 6px 12px !important;
-    font-size: 1em !important;
+    width: 120px;
+    height: 60px;
+    padding: 6px 12px;
+    font-size: 1em;
   }
 
   .feeling-btn {
-    width: 180px !important;
-    height: 50px !important;
-    font-size: 1em !important;
+    width: 180px;
+    height: 50px;
+    font-size: 1em;
   }
-  
+
   #feeling-btn {
     margin-top: 50px;
   }
-  
-  @media (max-width: 400px) {
-    #prayer-btn, #daily-prayer-btn {
-      position: absolute !important;
-      width: 80px !important;
-      height: 50px !important;
-      padding: 4px 10px !important;
-      font-size: 0.8em !important;
-    }
+}
 
-    #feeling-btn {
-      font-size: 1.5em !important;
-      padding: 10px 15px !important;
-    }
+@media (max-width: 400px) {
+  #prayer-btn, #daily-prayer-btn {
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    padding: 4px 10px;
+    font-size: 0.8em;
+  }
 
-    #random-verse-btn {
-      padding: 10px 15px !important;
-      font-size: 0.9em !important;
-    }
+  #feeling-btn {
+    font-size: 1.5em;
+    padding: 10px 15px;
+  }
 
-    .feeling-btn {
-      width: 140px !important;
-      height: 50px !important;
-      font-size: 0.9em !important;
-    }
+  #random-verse-btn {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+
+  .feeling-btn {
+    width: 140px;
+    height: 50px;
+    font-size: 0.9em;
   }
 }
