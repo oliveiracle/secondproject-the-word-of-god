@@ -1,0 +1,8 @@
+# Peace in the Word Project
+
+## User Stories
+1. As a user feeling overwhelmed, I want to click the "How are you feeling today?" button, so that I can see my emotional options.
+2.As a user looking for a word of comfort, I want to click on one of the emotion buttons, so that a relevant Bible verse is displayed.
+3.As a user who wants daily spiritual inspiration, I want to click the "Today's Prayer" button, so that I can read a new prayer every day.
+4.As a user who wants a random message of hope, I want to click the "Or get a random verse for your day" link, so that a new verse is displayed.
+5.As a user in need of spiritual support, I want to fill out and submit the prayer request form, so that others can pray for me.
