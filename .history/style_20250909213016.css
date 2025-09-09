@@ -358,7 +358,6 @@ main,
     font-size: 1.8em;
     width: 90%;
     position: static;
-    margin-top: 50px;
   }
 
   #feelings-container {
@@ -399,7 +398,6 @@ main,
   #feeling-btn {
     font-size: 2em;
     position: relative;
-    margin-top: 50px;
   }
 }
 
@@ -408,10 +406,6 @@ main,
   #prayer-btn {
     width: 100px;
     font-size: 0.8em;
-  }
-
-  #feeling-btn {
-    margin-top:50px;
   }
 }
 
