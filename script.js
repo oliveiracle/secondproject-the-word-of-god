@@ -27,7 +27,7 @@ const markPrayerReadBtn = document.getElementById("mark-read-btn"); // Assuming 
 // ===================================================================================
 //  2. DATA: VERSES & PRAYERS
 // ===================================================================================
-// Centralize all text data in one place.
+// 
 
 const verses = {
   Angry: [
@@ -314,47 +314,30 @@ function toggleFeelingsContainer() {
  * @param {string} feeling - The feeling (e.g., 'Angry', 'Peaceful').
  */
 function displayVerseForFeeling(feeling) {
-    let verseArray = [];
-
-    // The if/else if structure decides which verse list to use.
-    if (feeling === 'Angry') { verseArray = verses.Angry; }
-    else if (feeling === 'Peaceful') { verseArray = verses.Peaceful; }
-    else if (feeling === 'Strong') { verseArray = verses.Strong; }
-    else if (feeling === 'Happy') { verseArray = verses.Happy; }
-    else if (feeling === 'Sad') { verseArray = verses.Sad; }
-    else if (feeling === 'Afraid') { verseArray = verses.Afraid; }
-    else if (feeling === 'Lonely') { verseArray = verses.Lonely; }
-    else if (feeling === 'Grateful') { verseArray = verses.Grateful; }
-    else if (feeling === 'Anxious') { verseArray = verses.Anxious; }
-    else if (feeling === 'Hopeful') { verseArray = verses.Hopeful; }
-    else if (feeling === 'Guilty') { verseArray = verses.Guilty; }
-    else if (feeling === 'Weak') { verseArray = verses.Weak; }
-    else if (feeling === 'Loved') { verseArray = verses.Loved; }
-    else if (feeling === 'Jealous') { verseArray = verses.Jealous; }
-    else if (feeling === 'Tired') { verseArray = verses.Tired; }
-    else if (feeling === 'Proud') { verseArray = verses.Proud; }
-    else if (feeling === 'Content') { verseArray = verses.Content; }
-    else if (feeling === 'Confused') { verseArray = verses.Confused; }
-    else if (feeling === 'Forgiving') { verseArray = verses.Forgiving; }
-    else if (feeling === 'Discouraged') { verseArray = verses.Discouraged; }
-    else {
+    // Direct object property access - much cleaner!
+    const verseArray = verses[feeling];
+    
+    // Check if the feeling exists in our verses object
+    if (!verseArray || verseArray.length === 0) {
         verseDisplay.innerHTML = "<p>Verses for this feeling are coming soon.</p>";
         verseDisplay.style.display = "block";
         feelingsContainer.style.display = "none";
         return;
     }
 
-    if (verseArray && verseArray.length > 0) {
-        const randomIndex = Math.floor(Math.random() * verseArray.length);
-        const randomVerse = verseArray[randomIndex];
-        verseDisplay.innerHTML = `<p>${randomVerse}</p>`;
-    } else {
-        verseDisplay.innerHTML = "<p>No verses found for this feeling.</p>";
-    }
-
+    // Get random verse
+    const randomIndex = Math.floor(Math.random() * verseArray.length);
+    const randomVerse = verseArray[randomIndex];
+    
+    // Display the verse
+    verseDisplay.innerHTML = `<p>${randomVerse}</p>`;
     verseDisplay.style.display = "block";
     feelingsContainer.style.display = "none";
 }
+
+    verseDisplay.style.display = "block";
+    feelingsContainer.style.display = "none";
+
 
 /**
  * Selects and displays a random verse from all categories.

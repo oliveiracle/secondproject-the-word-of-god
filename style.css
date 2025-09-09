@@ -1,17 +1,16 @@
-/* Import Google Fonts */
+/* =========================
+  GOOGLE FONTS
+========================= */
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-/* ========================================= */
-/* BASE & LAYOUT STYLES (DESKTOP-FIRST)      */
-/* ========================================= */
-
-
+/* =========================
+  BASE & LAYOUT (DESKTOP-FIRST)
+========================= */
 html, body {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
-/* BASE STYLES */
 body {
   font-family: "Gloria Hallelujah", cursive;
   background: url("assets/images/bg.png") no-repeat center center fixed;
@@ -27,7 +26,9 @@ body {
   color: #333;
 }
 
-/* HEADER (DESKTOP) */
+/* =========================
+  HEADER
+========================= */
 header {
   width: 100%;
   max-width: 800px;
@@ -49,7 +50,9 @@ h1,
   color: #222;
 }
 
-/* MAIN CONTAINER */
+/* =========================
+  MAIN CONTAINER
+========================= */
 main,
 .main-container {
   display: flex;
@@ -60,11 +63,11 @@ main,
   padding: 20px;
 }
 
-/* ========================================= */
-/* COMPONENT STYLES                          */
-/* ========================================= */
+/* =========================
+  COMPONENTS
+========================= */
 
-/* HOW ARE YOU FEELING  */
+/* --- How Are You Feeling Button --- */
 #feeling-btn {
   padding: 15px 30px;
   box-sizing: border-box;
@@ -85,8 +88,9 @@ main,
   box-shadow: lightblue 0 10px 18px;
 }
 
+/* --- Feelings Container --- */
 #feelings-container {
-  display: none; /* Shown with JS */
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
@@ -115,8 +119,9 @@ main,
   box-shadow: lightblue 0 10px 18px;
 }
 
+/* --- Verse Display --- */
 #verse-display {
-  display: none; /* Shown with JS */
+  display: none;
   font-family: "Quicksand", sans-serif;
   margin-top: 40px;
   padding: 40px;
@@ -131,6 +136,7 @@ main,
   border: 1px solid #ddd;
 }
 
+/* --- Random Verse Button --- */
 #random-verse-btn {
   margin-top: 25px;
   margin-bottom: 40px;
@@ -147,10 +153,10 @@ main,
   transform: translateY(-2px);
 }
 
-/* Request a prayer button - DESKTOP */
+/* --- Prayer Button (Desktop) --- */
 #prayer-btn {
-  top: 5%;
   position: fixed;
+  top: 5%;
   right: 5%;
   width: 200px;
   height: 60px;
@@ -173,7 +179,7 @@ main,
   box-shadow: lightblue 0 10px 18px;
 }
 
-/* Prayer request popup */
+/* --- Prayer Popup --- */
 #prayer-popup {
   display: none;
   position: fixed;
@@ -258,9 +264,10 @@ main,
   box-shadow: 0 5px 15px lightblue;
 }
 
+/* --- Daily Prayer Button (Desktop) --- */
 #daily-prayer-btn {
-  top: 5%;
   position: fixed;
+  top: 5%;
   left: 5%;
   width: 200px;
   height: 60px;
@@ -283,7 +290,7 @@ main,
   box-shadow: lightblue 0 10px 18px;
 }
 
-/* Daily Prayer popup */
+/* --- Daily Prayer Popup --- */
 #daily-prayer-popup {
   display: none;
   position: fixed;
@@ -312,157 +319,163 @@ main,
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* =========================
+  RESPONSIVE DESIGN
+========================= */
 
-/* ======================================================= */
-/* RESPONSIVE DESIGN - MOBILE & TABLET STYLES              */
-/* ======================================================= */
-
-/* STYLES FOR ALL SCREENS UP TO 992PX (TABLETS AND PHONES) */
+/* --- Up to 992px (Tablet & Phone) --- */
 @media (max-width: 992px) {
   body {
-    background-attachment: scroll;
+   background-attachment: scroll;
   }
 
-  /* FIXED MOBILE HEADER */
   .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 15px 20px 10px;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: rgba(255, 255, 255, 0.95);
+   backdrop-filter: blur(10px);
+   padding: 15px 20px 10px;
+   z-index: 1000;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: none;
   }
 
   .title,
   h1 {
-    display: none;
-    font-size: 1.8em !important;
-    font-weight: bold;
-    color: #2c3e50;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+   display: none;
+   font-size: 1.8em;
+   font-weight: bold;
+   color: #2c3e50;
+   margin: 0;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   .main-container,
   main {
-    padding-top: 70px;
+   padding-top: 70px;
   }
 
   .subtitle {
-    font-size: 1.2em;
+   font-size: 1.2em;
   }
 
   #feeling-btn {
-    font-size: 1.8em;
-    width: 90%;
-    position: static;
-    margin-top: 50px;
+   font-size: 1.8em;
+   width: 90%;
+   position: static;
+   margin-top: 50px;
   }
 
   #feelings-container {
-    gap: 10px;
-    width: 100%;
+   gap: 10px;
+   width: 100%;
   }
 
   .feeling-btn {
-    display: grid;
-    gap: 10px;
-    max-height: 60vh;
-    overflow-y: auto;
+   display: grid;
+   gap: 10px;
+   max-height: 60vh;
+   overflow-y: auto;
   }
 
   #verse-display {
-    font-size: 1.2em;
-    padding: 20px;
-    width: 90%;
+   font-size: 1.2em;
+   padding: 20px;
+   width: 90%;
   }
 
-  /* Base mobile style for prayer button */
-  #prayer-btn, #daily-prayer-btn{
-    position: absolute;
-    top: 15px;
-    right: 90px;
-    width: 120px;
-    height: 50px;
-    padding: 8px 16px;
-    font-size: 0.9em;
-    border: none;
-    box-shadow: lightblue 0px 14px 22px;
-    font-family: "Quicksand", sans-serif;
+  #prayer-btn,
+  #daily-prayer-btn {
+   position: absolute;
+   top: 15px;
+   right: 90px;
+   width: 120px;
+   height: 50px;
+   padding: 8px 16px;
+   font-size: 0.9em;
+   border: none;
+   box-shadow: lightblue 0px 14px 22px;
+   font-family: "Quicksand", sans-serif;
   }
 }
 
-/* SPECIFIC OVERRIDES FOR SCREENS UP TO 768PX */
+/* --- Up to 768px --- */
 @media (max-width: 768px) {
   #feeling-btn {
-    font-size: 2em;
-    position: relative;
-    margin-top: 50px;
+   font-size: 2em;
+   position: relative;
+   margin-top: 50px;
   }
 }
 
-/* SPECIFIC OVERRIDES FOR SCREENS UP TO 600PX */
+/* --- Up to 600px --- */
 @media (max-width: 600px) {
-  #prayer-btn, #daily-prayer-btn {
-    width: 120px;
-    font-size: 0.8em;
+  #prayer-btn,
+  #daily-prayer-btn {
+   width: 120px;
+   font-size: 0.8em;
   }
 
   #feeling-btn {
-    margin-top:50px;
+   margin-top: 50px;
   }
 }
 
-/* SPECIFIC OVERRIDES FOR SCREENS UP TO 420PX */
-/* I AM TESTING THIS SIZE ON MY GALAXY S3 ULTRA */
+/* --- Up to 420px (Galaxy S3 Ultra) --- */
 @media (max-width: 420px) {
-  #prayer-btn, #daily-prayer-btn{
-    width: 120px !important;
-    height: 60px !important;
-    padding: 6px 12px !important;
-    font-size: 1em !important;
+  #prayer-btn,
+  #daily-prayer-btn {
+   width: 120px;
+   height: 60px;
+   padding: 6px 12px;
+   font-size: 1em;
   }
 
   .feeling-btn {
-    width: 180px !important;
-    height: 50px !important;
-    font-size: 1em !important;
+   width: 180px;
+   height: 50px;
+   font-size: 1em;
   }
-  
+
   #feeling-btn {
-    margin-top: 50px;
+   margin-top: 50px;
   }
-  
+
+  /* --- Up to 400px --- */
   @media (max-width: 400px) {
-    #prayer-btn, #daily-prayer-btn {
-      position: absolute !important;
-      width: 80px !important;
-      height: 50px !important;
-      padding: 4px 10px !important;
-      font-size: 0.8em !important;
-    }
+   #prayer-btn,
+   #daily-prayer-btn {
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    padding: 4px 10px;
+    font-size: 0.8em;
+   }
 
-    #feeling-btn {
-      font-size: 1.5em !important;
-      padding: 10px 15px !important;
-    }
+   .title,
+   h1 {
+    display: none;
+   }
 
-    #random-verse-btn {
-      padding: 10px 15px !important;
-      font-size: 0.9em !important;
-    }
+   #feeling-btn {
+    font-size: 1.5em;
+    padding: 10px 15px;
+   }
 
-    .feeling-btn {
-      width: 140px !important;
-      height: 50px !important;
-      font-size: 0.9em !important;
-    }
+   #random-verse-btn {
+    padding: 10px 15px;
+    font-size: 0.9em;
+   }
+
+   .feeling-btn {
+    width: 140px;
+    height: 50px;
+    font-size: 0.9em;
+   }
   }
 }
