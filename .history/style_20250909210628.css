@@ -6,6 +6,14 @@
 /* BASE & LAYOUT STYLES (DESKTOP-FIRST)      */
 /* ========================================= */
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* BASE STYLES */
 body {
   font-family: "Gloria Hallelujah", cursive;
@@ -26,11 +34,11 @@ body {
 header {
   width: 100%;
   max-width: 800px;
-  height: 70px;
 }
 
 .header {
   width: 100%;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +47,7 @@ header {
 
 h1,
 .title {
+  display: none;
   font-size: 4em;
   margin: 0 0 10px 0;
   color: #222;
@@ -80,6 +89,7 @@ main,
   box-shadow: lightblue 0 10px 18px;
 }
 
+/* ===== DESKTOP - FEELINGS CONTAINER ===== */
 #feelings-container {
   display: none; /* Shown with JS */
   flex-wrap: wrap;
@@ -147,14 +157,16 @@ main,
   top: 5%;
   position: fixed;
   right: 5%;
-  width: 200px;
+  width: 15vw; /* Largura flexível */
+  max-width: 200px; /* Tamanho máximo */
+  min-width: 150px; /* Tamanho mínimo */
   height: 60px;
   padding: 10px 20px;
   border: 1px solid lightblue;
   border-radius: 30px;
   cursor: pointer;
   color: #444;
-  font-size: 1.03em;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem); /* Fonte responsiva */
   font-weight: bold;
   box-shadow: 0 1px 5px lightblue;
   transition: all 0.2s ease-in-out;
@@ -162,15 +174,29 @@ main,
   font-family: "Quicksand", sans-serif;
 }
 
-#prayer-btn:hover {
-  background-color: rgba(255, 255, 255, 0.95);
-  transform: translateY(-3px);
-  box-shadow: lightblue 0 10px 18px;
+#daily-prayer-btn {
+  top: 5%;
+  position: fixed;
+  left: 5%;
+  width: 15vw; /* Largura flexível */
+  max-width: 200px; /* Tamanho máximo */
+  min-width: 150px; /* Tamanho mínimo */
+  height: 60px;
+  padding: 10px 20px;
+  border: 1px solid lightblue;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #444;
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem); /* Fonte responsiva */
+  font-weight: bold;
+  box-shadow: 0 1px 5px lightblue;
+  transition: all 0.2s ease-in-out;
+  background-color: #f8feff;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Prayer request popup */
 #prayer-popup {
-  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -253,25 +279,6 @@ main,
   box-shadow: 0 5px 15px lightblue;
 }
 
-#daily-prayer-btn {
-  top: 5%;
-  position: fixed;
-  left: 5%;
-  width: 200px;
-  height: 60px;
-  padding: 10px 20px;
-  border: 1px solid lightblue;
-  border-radius: 30px;
-  cursor: pointer;
-  color: #444;
-  font-size: 1.03em;
-  font-weight: bold;
-  box-shadow: 0 1px 5px lightblue;
-  transition: all 0.2s ease-in-out;
-  background-color: #f8feff;
-  font-family: "Quicksand", sans-serif;
-}
-
 #daily-prayer-btn:hover {
   background-color: rgba(255, 255, 255, 0.95);
   transform: translateY(-3px);
@@ -307,91 +314,269 @@ main,
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* ========================================= */
+/* MEDIA QUERIES (RESPONSIVE STYLES)         */
+/* ========================================= */
 
-/* ======================================================= */
-/* RESPONSIVE DESIGN - MOBILE & TABLET STYLES              */
-/* ======================================================= */
+/* 1. DESKTOPS GRANDES (>= 1400px) */
+@media (min-width: 1400px) {
+  /* Mantém 3 colunas para desktops grandes */
+  #feelings-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+  }
+  .feeling-btn {
+    width: 180px;
+  }
+}
 
-/* STYLES FOR ALL SCREENS UP TO 992PX (TABLETS AND PHONES) */
-@media (max-width: 992px) {
+/* 2. DESKTOPS E LAPTOPS (1024px - 1399px) */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  h1, .title {
+    font-size: 3.5em;
+  }
+  #feeling-btn {
+    font-size: 3em;
+  }
+  #daily-prayer-btn, #prayer-btn {
+    width: 180px;
+  }
+  
+  /* 3 colunas para tablets em landscape */
+  #feelings-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0;
+  }
+  
+  .feeling-btn {
+    width: 100%;
+    height: 60px;
+    font-size: 1.1em;
+  }
+}
+
+/* 3. TABLETS - MODO PAISAGEM (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1, .title {
+    font-size: 3em;
+  }
+  #feeling-btn {
+    font-size: 2.5em;
+    padding: 12px 25px;
+  }
+  #daily-prayer-btn, #prayer-btn {
+    width: 160px;
+    height: 55px;
+    font-size: 1rem;
+  }
+  
+  /* 3 colunas para tablets */
+  #feelings-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto 0;
+  }
+  
+  .feeling-btn {
+    width: 100%;
+    height: 55px;
+    font-size: 1em;
+  }
+}
+
+/* 4. TABLETS - MODO RETRATO E CELULARES GRANDES (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
   body {
     background-attachment: scroll;
+    padding: 1rem;
   }
 
-  /* FIXED MOBILE HEADER */
   .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    padding: 15px 20px 10px;
+    padding: 10px 15px;
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
+    height: 60px;
+=======
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: none;
+    height: 70px;
+>>>>>>> 2bc5565 (Chore: Remove leftover .history files and update HTML/CSS)
   }
 
-  .title,
-  h1 {
-    display: none;
-    font-size: 1.8em !important;
-    font-weight: bold;
+  .main-container, main {
+    padding-top: 80px; 
+  }
+  
+  h1, .title {
+    font-size: 1.8rem;
     color: #2c3e50;
-    margin: 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  }
-
-  .main-container,
-  main {
-    padding-top: 70px;
-  }
-
-  .subtitle {
-    font-size: 1.2em;
   }
 
   #feeling-btn {
     font-size: 1.8em;
     width: 90%;
-    position: static;
-    top: auto;
   }
-
+  
+  /* ===== 2 COLUNAS PARA TABLETS PORTRAIT ===== */
   #feelings-container {
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     width: 100%;
+    max-width: 450px;
+    margin: 20px auto 0;
   }
 
   .feeling-btn {
-    display: grid;
+    width: 100%;
+    height: 55px;
+    font-size: 1em;
+  }
+
+  #daily-prayer-btn, #prayer-btn {
+    position: static;
+    width: 120px;
+    height: 40px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+  
+  .header-buttons {
+    display: flex;
     gap: 10px;
-    max-height: 60vh;
-    overflow-y: auto;
+  }
+}
+
+/* 5. CELULARES - TODOS OS TAMANHOS (<= 480px) */
+@media (max-width: 480px) {
+  body {
+    background-attachment: scroll;
+    padding: 1rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: 60px;
+  }
+
+  .main-container, main {
+    padding-top: 80px; 
+  }
+  
+  h1, .title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  #feeling-btn {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    width: 90%;
+  }
+  
+  /* ===== 2 COLUNAS PARA CELULARES ===== */
+  #feelings-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto 0;
+  }
+
+  .feeling-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 0.9em;
+    padding: 8px 12px;
   }
 
   #verse-display {
-    font-size: 1.2em;
-    padding: 20px;
-    width: 90%;
+    font-size: 1.1em;
+    padding: 15px;
   }
 
-  /* Base mobile style for prayer button */
-  #prayer-btn, #daily-prayer-btn{
-    position: absolute;
-    top: 15px;
-    right: 90px;
-    width: 120px;
-    height: 50px;
-    padding: 8px 16px;
-    font-size: 0.9em;
-    border: none;
-    box-shadow: lightblue 0px 14px 22px;
-    font-family: "Quicksand", sans-serif;
+  #daily-prayer-btn, #prayer-btn {
+    position: static;
+    width: 90px;
+    height: 38px;
+    font-size: 0.75rem;
+    padding: 5px 8px;
   }
+  
+  .header-buttons {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+<<<<<<< HEAD
+/* 6. TELAS MUITO PEQUENAS (<= 320px) */
+@media (max-width: 320px) {
+  .header-buttons {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  #daily-prayer-btn, #prayer-btn {
+=======
+#daily-prayer-btn {
+    top: 15px;
+    left: 30px;
+>>>>>>> 2bc5565 (Chore: Remove leftover .history files and update HTML/CSS)
+    width: 80px;
+    height: 32px;
+    font-size: 0.7rem;
+  }
+<<<<<<< HEAD
+  
+  .feeling-btn {
+    height: 45px;
+    font-size: 0.8em;
+  }
+  
+  /* Mantém 2 colunas mesmo em telas muito pequenas */
+  #feelings-container {
+    gap: 10px;
+    max-width: 280px;
+=======
 }
 
 /* SPECIFIC OVERRIDES FOR SCREENS UP TO 768PX */
@@ -415,41 +600,41 @@ main,
 /* I AM TESTING THIS SIZE ON MY GALAXY S3 ULTRA */
 @media (max-width: 420px) {
   #prayer-btn, #daily-prayer-btn {
-    width: 90px !important;
-    height: 55px !important;
-    padding: 6px 12px !important;
-    font-size: 0.9em !important;
+    width: 90px ;
+    height: 55px ;
+    padding: 6px 12px ;
+    font-size: 1em ;
   }
 
   .feeling-btn {
-    width: 180px !important;
-    height: 50px !important;
-    font-size: 1em !important;
+    width: 180px ;
+    height: 50px ;
+    font-size: 1em ;
   }
 
   @media (max-width: 400px) {
     #prayer-btn {
-      position: absolute !important;
-      width: 80px !important;
-      height: 50px !important;
-      padding: 4px 10px !important;
-      font-size: 0.8em !important;
+      width: 80px;
+      height: 50px;
+      padding: 4px 10px;
+      font-size: 0.8em;
     }
 
     #feeling-btn {
-      font-size: 1.5em !important;
-      padding: 10px 15px !important;
+      font-size: 1.5em;
+      padding: 10px 15px;
     }
 
     #random-verse-btn {
-      padding: 10px 15px !important;
-      font-size: 0.9em !important;
+      padding: 10px 15px;
+      font-size: 0.9em;
     }
 
     .feeling-btn {
-      width: 140px !important;
-      height: 50px !important;
-      font-size: 0.9em !important;
+      width: 140px;
+      height: 50px;
+      font-size: 0.9em;
     }
+>>>>>>> 2bc5565 (Chore: Remove leftover .history files and update HTML/CSS)
   }
 }

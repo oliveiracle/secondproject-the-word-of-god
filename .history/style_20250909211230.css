@@ -414,7 +414,7 @@ main,
 /* SPECIFIC OVERRIDES FOR SCREENS UP TO 420PX */
 /* I AM TESTING THIS SIZE ON MY GALAXY S3 ULTRA */
 @media (max-width: 420px) {
-  #prayer-btn, #daily-prayer-btn {
+  #prayer-btn {
     width: 90px !important;
     height: 55px !important;
     padding: 6px 12px !important;
