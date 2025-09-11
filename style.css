@@ -408,11 +408,11 @@ main,
   }
 
   #daily-prayer-btn {
-    left: 15px;
+    left: 45px;
   }
 
   #prayer-btn {
-    right: 15px;
+    right: 45px;
   }
 }
 
@@ -430,11 +430,11 @@ main,
   }
 
   #daily-prayer-btn {
-    left: 5px;
+    left: 45px;
   }
 
   #prayer-btn {
-    right: 5px;
+    right: 45px;
   }
 
   #feeling-btn {
@@ -443,6 +443,7 @@ main,
   }
 
   .feeling-btn {
+    padding: 8px 12px;
     width: 150px;
     height: 50px;
     font-size: 1em;
