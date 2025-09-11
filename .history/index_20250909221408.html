@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Peace in the Word</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap">
+
+</head>
+<body>
+    <header class="header"> 
+        <button id="daily-prayer-btn" class="header-btn" aria-label="Open daily prayer">Today's Prayer 🕊 </button>
+
+        <button id="prayer-btn" class="header-btn" aria-label="Open prayer request form"> Prayer Request 🙏</button>
+    </header>
+
+    <div id="daily-prayer-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h1 class="popup-title">Daily Prayer</h1>
+            <div id="daily-prayer-content">
+                <p id="prayer-text-display">Loading today's prayer...</p>
+            </div>
+            <div class="popup-actions">
+                <button id="close-daily-prayer">Close</button>
+                <button id="mark-as-read-btn">Mark as Read</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="prayer-popup" class="popup-overlay">
+        <div class="popup-content">
+            <h2 class="popup-title">Prayer Request</h2>
+            <input type="text" id="prayer-name" placeholder="Your name">
+            <textarea id="prayer-text" placeholder="Write your prayer request..."></textarea>
+            <div class="popup-actions">
+                <button id="close-prayer-popup">Close</button>
+                <button id="send-prayer-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        <div id="intro">
+            <h1 class="main-title">Peace in the Word</h1>
+            <p class="subtitle">Your word is a lamp to my feet and a light to my path.. (Psalm 119:105)</p>
+            <button id="feeling-btn">How are you feeling today?</button>
+        </div>
+
+        <div>
+            <a href="#" id="random-verse-btn">✨ Or get a random verse for your day</a>
+        </div>
+
+        <div id="feelings-container">
+            <button class="feeling-btn" data-feeling="Angry" aria-label="Get verses for when feeling angry">Angry 😡</button>
+            <button class="feeling-btn" data-feeling="Peaceful" aria-label="Get verses for when feeling peaceful">Peaceful 😇</button>
+            <button class="feeling-btn" data-feeling="Strong" aria-label="Get verses for when feeling strong">Strong 💪</button>
+            <button class="feeling-btn" data-feeling="Happy" aria-label="Get verses for when feeling happy">Happy 😆</button>
+            <button class="feeling-btn" data-feeling="Sad" aria-label="Get verses for when feeling sad">Sad 😭</button>
+            <button class="feeling-btn" data-feeling="Afraid" aria-label="Get verses for when feeling afraid">Afraid 😨</button>
+            <button class="feeling-btn" data-feeling="Lonely" aria-label="Get verses for when feeling lonely">Lonely 💔</button>
+            <button class="feeling-btn" data-feeling="Grateful" aria-label="Get verses for when feeling grateful">Grateful 🙏</button>
+            <button class="feeling-btn" data-feeling="Anxious" aria-label="Get verses for when feeling anxious">Anxious 😟</button>
+            <button class="feeling-btn" data-feeling="Hopeful" aria-label="Get verses for when feeling hopeful">Hopeful 👼</button>
+            <button class="feeling-btn" data-feeling="Guilty" aria-label="Get verses for when feeling guilty">Guilty 🤷‍♂️</button>
+            <button class="feeling-btn" data-feeling="Weak" aria-label="Get verses for when feeling weak">Weak 😩</button>
+            <button class="feeling-btn" data-feeling="Loved" aria-label="Get verses for when feeling loved">Loved ❤️</button>
+            <button class="feeling-btn" data-feeling="Jealous" aria-label="Get verses for when feeling jealous">Jealous 🤨</button>
+            <button class="feeling-btn" data-feeling="Tired" aria-label="Get verses for when feeling tired">Tired 😴</button>
+            <button class="feeling-btn" data-feeling="Proud" aria-label="Get verses for when feeling proud">Proud 😌</button>
+            <button class="feeling-btn" data-feeling="Content" aria-label="Get verses for when feeling content">Content 🙂</button>
+            <button class="feeling-btn" data-feeling="Confused" aria-label="Get verses for when feeling confused">Confused 😕</button>
+            <button class="feeling-btn" data-feeling="Forgiving" aria-label="Get verses for when feeling forgiving">Forgiving 🙏</button>
+            <button class="feeling-btn" data-feeling="Discouraged" aria-label="Get verses for when feeling discouraged">Discouraged 😞</button>
+        </div>
+        <div id="verse-display">
+            <p>Click in one feeling to see a verse.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

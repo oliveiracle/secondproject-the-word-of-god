@@ -1,0 +1,419 @@
+/* Import Google Fonts */
+/* Imports the necessary Google Fonts for the page's typography */
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+/* ========================================= */
+/* BASE & LAYOUT STYLES (MOBILE-FIRST)       */
+/* ========================================= */
+
+/* Prevents horizontal scrolling on all screens */
+html, body {
+  overflow-x: hidden; 
+}
+
+/* General body styles */
+body {
+  font-family: "Gloria Hallelujah", cursive;
+  background: url("assets/images/bg.png") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  max-width: 800px;
+  height: 70px;
+}
+
+/* Header class for flexible layout */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Styles for main titles */
+h1,
+.title {
+  font-size: 4em;
+  margin: 0 0 10px 0;
+  color: #222;
+}
+
+/* Main container styles */
+main,
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* ========================================= */
+/* COMPONENT STYLES                          */
+/* ========================================= */
+
+/* "How are you feeling today?" button */
+#feeling-btn {
+  padding: 15px 30px;
+  box-sizing: border-box;
+  border: 2px solid rgb(238, 229, 218);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 3.5em;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the main button */
+#feeling-btn:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+  box-shadow: lightblue 0 10px 18px;
+}
+
+/* Container for the feeling buttons */
+#feelings-container {
+  display: none; /* Hidden by default, shown with JS */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Style for individual feeling buttons */
+.feeling-btn {
+  width: 180px;
+  height: 60px;
+  padding: 10px 20px;
+  border: 2px solid #bbb;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #444;
+  font-size: 1.1em;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Hover effect for feeling buttons */
+.feeling-btn:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-3px);
+  box-shadow: lightblue 0 10px 18px;
+}
+
+/* Verse display area */
+#verse-display {
+  display: none; /* Hidden by default, shown with JS */
+  font-family: "Quicksand", sans-serif;
+  margin-top: 40px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: #222;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+}
+
+/* "Get a random verse" button */
+#random-verse-btn {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  color: #444;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: all 0.9s ease;
+}
+
+/* Hover effect for the random verse button */
+#random-verse-btn:hover {
+  color: #000;
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Fixed prayer buttons at the top */
+#prayer-btn, #daily-prayer-btn {
+  top: 5%;
+  position: fixed;
+  width: 200px;
+  height: 60px;
+  padding: 10px 20px;
+  border: 1px solid lightblue;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #444;
+  font-size: 1.03em;
+  font-weight: bold;
+  box-shadow: 0 1px 5px lightblue;
+  transition: all 0.2s ease-in-out;
+  background-color: #f8feff;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Positioning of the prayer buttons */
+#prayer-btn {
+  right: 5%;
+}
+
+#daily-prayer-btn {
+  left: 5%;
+}
+
+/* Popup overlay (dark background) */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+/* Popup content (white box) */
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Text fields inside the popup */
+#prayer-text, #prayer-name {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Focus effect for text fields */
+#prayer-text:focus, #prayer-name:focus {
+  outline: none;
+  border-color: lightblue;
+}
+
+#prayer-text {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Popup action buttons container */
+.popup-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Style for popup buttons */
+.popup-actions button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Specific button colors for popups */
+#close-popup, #close-daily-prayer { background: #ccc; color: #333; }
+#close-popup:hover, #close-daily-prayer:hover { background: #bbb; }
+#send-prayer-btn { background: lightblue; color: #333; }
+#send-prayer-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+
+#daily-prayer-content {
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(173, 216, 230, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid lightblue;
+}
+
+#prayer-text-display {
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  color: #555;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* ======================================================= */
+/* RESPONSIVE DESIGN - MOBILE & TABLET STYLES              */
+/* ======================================================= */
+
+/* Styles for screens up to 992px (tablets and phones) */
+@media (max-width: 992px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .header-btn {
+      position: static;
+      margin-top: 10px;
+      margin-bottom: 5px;
+  }
+
+  .title, h1 {
+    display: none;
+  }
+
+  .main-container, main {
+    padding-top: 70px;
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+  }
+
+  #feeling-btn {
+    font-size: 1.8em;
+    width: 90%;
+    position: static;
+    margin-top: 50px;
+  }
+
+  #feelings-container {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .feeling-btn {
+    display: grid;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  #verse-display {
+    font-size: 1.2em;
+    padding: 20px;
+    width: 90%;
+  }
+
+  #prayer-btn, #daily-prayer-btn {
+    position: absolute;
+    top: 15px;
+    right: 90px;
+    width: 120px;
+    height: 50px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    border: none;
+    box-shadow: lightblue 0px 14px 22px;
+    font-family: "Quicksand", sans-serif;
+  }
+}
+
+/* Styles for screens up to 768px */
+@media (max-width: 768px) {
+  #feeling-btn {
+    font-size: 2em;
+    position: relative;
+    margin-top: 50px;
+  }
+}
+
+/* Styles for screens up to 600px */
+@media (max-width: 600px) {
+  #prayer-btn, #daily-prayer-btn {
+    width: 120px;
+    font-size: 0.8em;
+  }
+
+  #feeling-btn {
+    margin-top:50px;
+  }
+}
+
+/* Styles for screens up to 420px */
+@media (max-width: 420px) {
+  #prayer-btn, #daily-prayer-btn {
+    width: 120px !important;
+    height: 60px !important;
+    padding: 6px 12px !important;
+    font-size: 1em !important;
+  }
+
+  .feeling-btn {
+    width: 180px !important;
+    height: 50px !important;
+    font-size: 1em !important;
+  }
+  
+  #feeling-btn {
+    margin-top: 50px;
+  }
+  
+  @media (max-width: 400px) {
+    #prayer-btn, #daily-prayer-btn {
+      position: absolute !important;
+      width: 80px !important;
+      height: 50px !important;
+      padding: 4px 10px !important;
+      font-size: 0.8em !important;
+    }
+
+    #feeling-btn {
+      font-size: 1.5em !important;
+      padding: 10px 15px !important;
+    }
+
+    #random-verse-btn {
+      padding: 10px 15px !important;
+      font-size: 0.9em !important;
+    }
+
+    .feeling-btn {
+      width: 140px !important;
+      height: 50px !important;
+      font-size: 0.9em !important;
+    }
+  }
+}
