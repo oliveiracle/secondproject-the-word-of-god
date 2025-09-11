@@ -142,12 +142,12 @@ Key adaptations for the mobile layout include:
 
 This approach ensures that the application is just as powerful and easy to use on a mobile device as it is on a desktop.
 
-### Step 5 - The Daily Prayer Popup
+### Step 5 - The Daily Prayer Pop-up
  
  Mobile - Daily Prayer Popup
 This wireframe details the interaction of the Daily Prayer popup on mobile devices. The experience has been optimized to maintain the user's full focus by adapting the modal's design for vertical screens and touch-based interactions.
 
-![Wireframe - Home Page Mobile](assets/images/documentation/wireframes-mobile/wireframe5.png)
+![Wireframe - Daily Prayer Pop-up Mobile](assets/images/documentation/wireframes-mobile/wireframe5.png)
 
 
 Key optimizations for the mobile popup experience include:
@@ -158,6 +158,19 @@ Key optimizations for the mobile popup experience include:
 
 3. Clear Action Hierarchy: The two actions ("Mark as Read" and "Close") maintain a clear visual hierarchy, with the primary action having more emphasis to intuitively guide the user to complete or dismiss the interaction.
 
+### Step 6 - The Prayer Request Pop-up
+
+This wireframe details the "Prayer Request" form on mobile devices. The primary goal is to ensure the process of submitting a request is simple, private, and effortless, adapting the form's layout for a seamless touch-based experience.
+
+![Wireframe - Prayer Request Pop-up Mobile](assets/images/documentation/wireframes-mobile/wireframe6.png)
+
+The mobile adaptation focuses on clarity and ease of use:
+
+1. Distraction-Free Form: The modal overlay provides a private and focused environment, allowing the user to write their request without any distractions from the main page.
+
+2. Optimized for Touch: The input fields and text area are large and have ample spacing, making them easy to tap and type on a mobile screen.
+
+3. Clear and Simple Actions: The `"Send" and "Close" buttons are designed to be easily accessible, with a clear visual hierarchy that guides the user toward the primary action of submitting the form.
 ---
 
 ## Features
