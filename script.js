@@ -23,6 +23,11 @@ const dailyPrayerTextDisplay = document.getElementById("prayer-text-display");
 const closeDailyPrayerBtn = document.getElementById("close-daily-prayer"); // Assuming you have a close button with this ID
 const markPrayerReadBtn = document.getElementById("mark-read-btn"); // Assuming you have a button with this ID
 
+//Share This Webpage Button//
+const sharePopup = document.getElementById("share-popup");
+const shareNameInput = document.getElementById("share-name");
+const shareTextInput = document.getElementById("share-text");
+const closeSharePopupBtn = document.getElementById("close-share-popup");
 
 // ===================================================================================
 //  2. DATA: VERSES & PRAYERS
@@ -446,4 +451,31 @@ if (dailyPrayerPopup) {
     dailyPrayerPopup.addEventListener("click", (e) => {
         if (e.target === dailyPrayerPopup) dailyPrayerManager.close();
     });
+}
+
+//Share this page button//
+const fb = document.getElementById('fb');
+fb.addEventListener('click', shareonFacebook);
+function shareonFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    window.open(fbShareUrl, '_blank', 'width=600,height=400');
+}
+
+const twitter = document.getElementById('tw');
+twitter.addEventListener('click', shareonTwitter);
+function shareonTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Find Bible verses for your feelings at Bible Verses for Every Feeling.");
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+    window.open(twitterShareUrl, '_blank', 'width=600,height=400');
+}
+
+const whatsapp = document.getElementById('wa');
+whatsapp.addEventListener('click', shareonWhatsApp);
+function shareonWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Find Bible verses for your feelings at Bible Verses for Every Feeling.");
+    const whatsappShareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+    window.open(whatsappShareUrl, '_blank');
 }

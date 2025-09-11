@@ -51,7 +51,7 @@ The user is welcomed by a background image rich in soft, warm, and earthy tonesâ
 * **Warmth and Humanity:** The beige and organic tones create a welcoming, human, and comforting atmosphere.
 * **Spirituality and Peace:** The imagery of the dove and the cross evokes a sense of peace, hope, and the presence of the Holy Spirit.
 
-**2. The User Interface Palette (The Clarity of the Message)**
+**2. The User Interface Palette (The Clarity of the Message)** 
 
 Floating above this warm atmosphere is a clean, minimalist UI palette designed for focus and readability.
 
