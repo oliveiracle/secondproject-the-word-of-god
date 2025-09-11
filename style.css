@@ -5,9 +5,9 @@
   /* Colors */
   --color-primary: #222;
   --color-secondary: #333;
-  --color-accent: lightblue;
+  --color-accent: lightblue;  
   --color-bg: #f8feff;
-  --color-border: #ddd;
+  --color-border: #ddd; 
   --color-btn-bg: rgba(255, 255, 255, 0.95);
   --color-btn-hover: rgba(255, 255, 255, 0.95);
   --color-popup-bg: rgba(255, 255, 255, 0.95);
@@ -16,7 +16,6 @@
   /* Fonts */
   --font-title: "Gloria Hallelujah", cursive;
   --font-body: "Quicksand", sans-serif;
-  --font-mono: 'Courier New', Courier, monospace;
 
   /* Spacing */
   --radius-btn: 30px;

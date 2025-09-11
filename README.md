@@ -17,36 +17,6 @@ The goal is to provide comfort, encouragement, and inspiration in a minimalist, 
 
 ---
 
-## UX Design
-
-### Colour Palette
-The website uses a **soft and calm color palette** to reflect serenity and hope. The tones are minimalist, ensuring that the focus remains on the Word of God.
-
-- **Primary (Text / Titles):** `#222` (soft black)  
-- **Secondary (Body Text):** `#444` (dark gray)  
-- **Accent (Highlights / Button borders):** `#add8e6` (light blue)  
-- **Background:** `#f8feff` (white with a soft blue hue)  
-- **Border / Special Highlight:** `#eee5da` (light beige, used in the central button)  
-- **Button Background:** `rgba(255, 255, 255, 0.9)` (translucent white)  
-- **Popup Overlay:** `rgba(0, 0, 0, 0.7)` (semi-transparent dark background)
-
-This palette was chosen to keep the site visually peaceful, clean, and uplifting.
-
-### Typography
-To create a warm and uplifting user experience, three different fonts were chosen:
-
-- **Gloria Hallelujah** – Used for the main titles and headings, giving a friendly, handwritten and personal touch.  
-- **Quicksand** – Used for body text, menus, and buttons, ensuring readability and a modern, clean look across all devices.  
-- **Leckerli One** – Used for special highlights such as the site logo or call-to-action elements, adding elegance and a unique identity to the brand.  
- 
-
-### Wireframes
-Wireframes were created for both desktop and mobile to plan the layout and user flow before building the site.
-
-*)*
-
----
-
 ## Site Owner Goals
 - **Provide spiritual comfort** by creating a space where users can access verses and prayers that bring peace.  
 - **Offer personalized guidance** through verses tailored to the user’s emotions.  
@@ -63,6 +33,36 @@ Wireframes were created for both desktop and mobile to plan the layout and user 
 3. As a user who wants daily spiritual inspiration, I want to click the *“Today’s Prayer”* button, so that I can read a new prayer every day.  
 4. As a user who wants a random message of hope, I want to click the *“Or get a random verse for your day”* link, so that a new verse is displayed.  
 5. As a user in need of spiritual support, I want to fill out and submit the prayer request form, so that others can pray for me.  
+
+---
+
+## UX Design
+
+### The Psychology of Colors in the Project
+
+Our color palette was carefully selected to visually convey the project’s mission: to offer a haven of peace and clarity. Each shade plays a key role in creating a reading experience that is both focused and spiritually uplifting.
+
+![Color Palette](assets/images/documentation/screenshots/colorpalette/colorspalette.png)
+
+- ** Dark Tones (#222 and #333): Represent the solidity and timelessness of the message. They ensure that the text remains the central focus, providing comfortable, distraction-free reading while conveying authority and trust.
+
+- ** Light Blue (lightblue): Our touch of serenity and hope. This color evokes a sense of calm and confidence, used strategically to illuminate the interface and guide the user intuitively and peacefully.
+
+- ** Background (#f8feff): The foundation is a white with a subtle bluish tint, creating a clean, open, and minimalist space. It’s not just a background, but a blank canvas symbolizing the mental clarity and peace needed for reflection.
+This palette was chosen to keep the site visually peaceful, clean, and uplifting.
+
+### Typography
+To create a warm and uplifting user experience, three different fonts were chosen:
+
+- **Gloria Hallelujah** – Used for the main titles and headings, giving a friendly, handwritten and personal touch.  
+- **Quicksand** – Used for body text, menus, and buttons, ensuring readability and a modern, clean look across all devices.  
+- **Leckerli One** – Used for special highlights such as the site logo or call-to-action elements, adding elegance and a unique identity to the brand.  
+ 
+
+### Wireframes
+Wireframes were created for both desktop and mobile to plan the layout and user flow before building the site.
+
+*)*
 
 ---
 
@@ -104,14 +104,14 @@ Wireframes were created for both desktop and mobile to plan the layout and user 
 
 ## Testing
 
-### Manual Testing
+### Manual Testing - IT HAS TO BE DONE
 - All links and buttons were tested to ensure correct functionality.  
 - Prayer request form tested with both valid and invalid inputs.  
 - Verses and prayers display correctly across all devices.  
 - Popups tested to open and close without issues.  
 - Layout tested on Chrome, Safari, and mobile devices.  
 
-### Validator Testing
+### Validator Testing - IT HAS TO BE DONE
 - **HTML:** Passed through [W3C Validator](https://validator.w3.org/) with no errors.  
 - **CSS:** Passed through [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) with no errors.  
 - **Accessibility:** Achieved high scores on Lighthouse audits.  
