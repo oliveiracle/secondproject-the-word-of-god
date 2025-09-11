@@ -394,9 +394,15 @@ main,
   }
 }
 
-/* --- Up to 768px --- */
-@media (max-width: 768px) {
-  
+/* --- Up to 899px --- */
+@media (max-width: 899px) {
+
+  #feeling-btn {
+    opacity: 0.8;
+    width: 650px;
+    font-size: 2.5em;
+    box-shadow: lightblue 0px 0px 20px 4px;
+  }
 
   #prayer-btn,
   #daily-prayer-btn {
