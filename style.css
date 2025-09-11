@@ -111,7 +111,7 @@ main,
   box-shadow: var(--shadow-btn);
   transition: background-color 0.3s ease;
   font-family: 'Leckerli One', cursive;
-
+  width: 850px;
 }
 
 #feeling-btn:hover {
