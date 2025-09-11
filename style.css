@@ -116,7 +116,7 @@ main,
   margin-bottom: 30px;
   box-shadow: var(--shadow-btn);
   transition: background-color 0.3s ease;
-  font-family: 'Leckerli One', cursive;
+  font-family: var(--font-title);
   width: 850px;
 }
 
@@ -197,19 +197,19 @@ main,
   position: fixed;
   top: 5%;
   right: 5%;
-  width: 200px;
+  width: 220px;
   height: 60px;
   padding: 10px 20px;
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-btn);
   cursor: pointer;
   color: #444;
-  font-size: 1.03em;
+  font-size: 1.43em;
   font-weight: bold;
   box-shadow: 0 1px 5px var(--color-accent);
   transition: all 0.2s ease-in-out;
   background-color: var(--color-bg);
-  font-family: var(--font-body);
+  font-family: var(--font-title);
 }
 
 #prayer-btn:hover {
@@ -257,6 +257,7 @@ main,
   font-size: 1em;
   transition: border-color 0.3s ease;
   box-sizing: border-box;
+  font-family: var(--font-title);
 }
 
 #prayer-text:focus,
@@ -310,19 +311,19 @@ main,
   position: fixed;
   top: 5%;
   left: 5%;
-  width: 200px;
+  width: 220px;
   height: 60px;
   padding: 10px 20px;
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-btn);
   cursor: pointer;
   color: #444;
-  font-size: 1.03em;
+  font-size: 1.43em;
   font-weight: bold;
   box-shadow: 0 1px 5px var(--color-accent);
   transition: all 0.2s ease-in-out;
   background-color: var(--color-bg);
-  font-family: var(--font-body);
+  font-family: var(--font-title);
 }
 
 #daily-prayer-btn:hover {
@@ -423,15 +424,16 @@ main,
 
 /* For smaller screens, keep the same positioning but adjust size if needed */
 @media (max-width: 600px), 
-       (max-width: 420px), 
-       (max-width: 400px), 
-       (max-width: 320px) {
+  (max-width: 420px), 
+  (max-width: 400px), 
+  (max-width: 320px) {
   #prayer-btn,
   #daily-prayer-btn {
     width: 100px;
     height: 60px;
     padding: 6px 8px;
     font-size: 1em;
+    font-family: "Quicksand", sans-serif !important; /* Added !important to ensure it takes precedence */
   }
 
   #daily-prayer-btn {
@@ -462,4 +464,3 @@ main,
     padding: 10px;
   }
 }
-
