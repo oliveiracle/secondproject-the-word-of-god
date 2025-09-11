@@ -362,6 +362,28 @@ main,
   font-family: var(--font-mono);
 }
 
+.share-buttons button {
+  border: none;
+  background: none;
+  font-size: 2em; /* tamanho do ícone */
+  cursor: pointer;
+  margin: 0 10px;
+  color: #333; /* cor padrão */
+  transition: color 0.3s ease;
+}
+
+#fb:hover {
+  color: #1877f2; /* azul Facebook */
+}
+
+#tw:hover {
+  color: #000000; /* cor do X/Twitter */
+}
+
+#wa:hover {
+  color: #25d366; /* verde WhatsApp */
+}
+
 
 /* =========================
   RESPONSIVE DESIGN
