@@ -416,10 +416,12 @@ main,
 
   #daily-prayer-btn {
     left: 45px;
+    text-align: center;
   }
 
   #prayer-btn {
     right: 45px;
+    text-align: center;
   }
 }
 
@@ -434,18 +436,19 @@ main,
     height: 60px;
     padding: 6px 8px;
     font-size: 1em;
-    font-family: "Quicksand", sans-serif !important; /* Added !important to ensure it takes precedence */
   }
 
   #daily-prayer-btn {
     left: 45px;
+    text-align: center;
   }
 
   #prayer-btn {
     right: 45px;
+    text-align: center;
   }
 
-  #feeling-btn {
+  #feeling-btn {  
     opacity: 0.8;
     width: 350px;
     font-size: 2.5em;
