@@ -366,8 +366,7 @@ main,
 
 /* --- Up to 992px (Tablet & Phone) --- */
 @media (max-width: 992px) {
-  /* ... other styles remain the same ... */
-
+  
   #prayer-btn {
     position: absolute;
     top: 15px;
@@ -397,7 +396,7 @@ main,
 
 /* --- Up to 768px --- */
 @media (max-width: 768px) {
-  /* ... other styles remain the same ... */
+  
 
   #prayer-btn,
   #daily-prayer-btn {
@@ -438,11 +437,15 @@ main,
   }
 
   #feeling-btn {
+    opacity: 0.8;
     width: 350px;
     font-size: 2.5em;
+    box-shadow: lightblue 0px 0px 20px 4px;
   }
 
   .feeling-btn {
+    border: none;
+    box-shadow: lightblue 0px 0px 10px;
     padding: 8px 12px;
     width: 150px;
     height: 50px;
