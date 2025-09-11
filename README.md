@@ -80,29 +80,42 @@ The layout is intentionally simple and centered around three key interactions:
 
 This initial screen is designed to be a peaceful entry point, leading the user seamlessly to the next step: selecting their feeling to receive a tailored verse.
 
-### Step 2: The Daily Prayer Popup
+#### Step 2: Feelings Selection Screen (Desktop)
+
+After the user clicks the main call-to-action on the home page, the interface transitions to reveal the feelings selection screen. The goal of this step is to present a clear and accessible grid of options that allows the user to easily identify and select their current emotional state.
+
+![Wireframe - Feelings Selection Screen](assets/images/documentation/wireframes-desktop/wireframe1.1.png)
+
+The layout is designed to guide the user through this selection process smoothly:
+
+1. Inactive CTA: The main call-to-action remains on screen but is visually de-emphasized. This maintains context, showing the user the origin of their current step without being an active element.
+
+2. Feelings Grid: This is the primary interaction area. A structured grid of buttons is displayed, each representing a different feeling. This layout allows for quick scanning and easy comparison of the available options.
+
+3. Verse Display Placeholder: A dedicated area is shown at the bottom of the screen. This placeholder clearly communicates to the user where the result of their selection (the verse) will appear, setting expectations for the next and final step of the flow.
+
+#### Step 3: The Daily Prayer Popup
 This flow is triggered when the user clicks on the "Today's Prayer" navigation button from the main screen. The goal is to present the prayer in a focused, immersive environment without navigating away from the home page.
 
 ![Wireframe - Home Page Today's Prayer pop-up](assets/images/documentation/wireframes-desktop/wireframe2.png)
 
-
 The decision to use a popup modal is strategic. It creates a focused environment by using a blurred overlay to remove all other distractions, allowing the user to concentrate solely on the prayer. This approach also preserves the user's context, as they can easily return to the main interface without losing their place.
 
-The popup's layout is structured for simplicity and function:
+1. The popup's layout is structured for simplicity and function:
 
-Clear Title: Immediately identifies the purpose of the popup.
+2. Clear Title: Immediately identifies the purpose of the popup.
 
-Content Block: A well-defined and readable text area for the prayer.
+3. Content Block: A well-defined and readable text area for the prayer.
 
-Action Buttons: Two buttons with distinct purposes:
+4. Action Buttons: Two buttons with distinct purposes:
 
-Primary Action ("Mark as Read"): Provides a sense of completion for the user.
+5. Primary Action ("Mark as Read"): Provides a sense of completion for the user.
 
-Secondary Action ("Close"): Offers a simple and universal way to dismiss the modal.
+6. Secondary Action ("Close"): Offers a simple and universal way to dismiss the modal.
 
 This interaction provides a moment of reflection before the user seamlessly returns to the main flow.
 
-### Step 3: The Prayer Request Popup
+#### Step 3: The Prayer Request Popup
 This flow is initiated when the user clicks on the "Prayer Request" navigation button. The goal is to provide a simple, private, and accessible way for users to submit a prayer request without disrupting their main experience.
 
 ![Wireframe - Home Page Request a Prayer pop-up](assets/images/documentation/wireframes-desktop/wireframe3.png)
@@ -117,20 +130,19 @@ The form's layout is designed for clarity and ease of use:
 
 3. Distinct Actions: The buttons are clearly defined:
 
-Primary Action ("Send"): The main goal of the form, visually emphasized.
+4. Primary Action ("Send"): The main goal of the form, visually emphasized.
 
-Secondary Action ("Close"): Allows the user to easily cancel the action without any friction.
+5. Secondary Action ("Close"): Allows the user to easily cancel the action without any friction.
 
 This feature is designed to foster a sense of community and support in a seamless and respectful manner.
 
 #### Mobile Wireframes
 For mobile devices, the design was adapted to a single-column layout to ensure a clean, focused, and user-friendly experience on smaller screens. The priority is to maintain the same serene atmosphere while making all interactions easily accessible with one hand.
 
-### Step 4: The Home Page (Mobile)
+#### Step 4: The Home Page (Mobile)
 The mobile home page retains the core functionality of the desktop version but stacks the elements vertically for a natural and intuitive flow.
 
 ![Wireframe - Home Page Mobile](assets/images/documentation/wireframes-mobile/wireframe4.png)
-
 
 Key adaptations for the mobile layout include:
 
@@ -142,7 +154,9 @@ Key adaptations for the mobile layout include:
 
 This approach ensures that the application is just as powerful and easy to use on a mobile device as it is on a desktop.
 
-### Step 5 - The Daily Prayer Pop-up
+#### Step 5 - The Home Page (Mobile)
+
+#### Step 6 - The Daily Prayer Pop-up
  
  Mobile - Daily Prayer Popup
 This wireframe details the interaction of the Daily Prayer popup on mobile devices. The experience has been optimized to maintain the user's full focus by adapting the modal's design for vertical screens and touch-based interactions.
@@ -158,7 +172,7 @@ Key optimizations for the mobile popup experience include:
 
 3. Clear Action Hierarchy: The two actions ("Mark as Read" and "Close") maintain a clear visual hierarchy, with the primary action having more emphasis to intuitively guide the user to complete or dismiss the interaction.
 
-### Step 6 - The Prayer Request Pop-up
+#### Step 6 - The Prayer Request Pop-up
 
 This wireframe details the "Prayer Request" form on mobile devices. The primary goal is to ensure the process of submitting a request is simple, private, and effortless, adapting the form's layout for a seamless touch-based experience.
 
