@@ -80,6 +80,28 @@ The layout is intentionally simple and centered around three key interactions:
 
 This initial screen is designed to be a peaceful entry point, leading the user seamlessly to the next step: selecting their feeling to receive a tailored verse.
 
+### Step 2: The Daily Prayer Popup
+This flow is triggered when the user clicks on the "Today's Prayer" navigation button from the main screen. The goal is to present the prayer in a focused, immersive environment without navigating away from the home page.
+
+![Wireframe - Home Page Today's Prayer pop-up](assets/images/documentation/wireframes-desktop/wireframe2.png)
+
+
+The decision to use a popup modal is strategic. It creates a focused environment by using a blurred overlay to remove all other distractions, allowing the user to concentrate solely on the prayer. This approach also preserves the user's context, as they can easily return to the main interface without losing their place.
+
+The popup's layout is structured for simplicity and function:
+
+Clear Title: Immediately identifies the purpose of the popup.
+
+Content Block: A well-defined and readable text area for the prayer.
+
+Action Buttons: Two buttons with distinct purposes:
+
+Primary Action ("Mark as Read"): Provides a sense of completion for the user.
+
+Secondary Action ("Close"): Offers a simple and universal way to dismiss the modal.
+
+This interaction provides a moment of reflection before the user seamlessly returns to the main flow.
+
 ---
 
 ## Features
