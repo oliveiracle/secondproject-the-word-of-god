@@ -121,7 +121,7 @@ const verses = {
     "In all your ways acknowledge him, and he will make your paths straight. (Proverbs 3:6)",
     "Your word is a lamp for my feet, a light on my path. (Psalm 119:105)",
     "Whether you turn to the right or to the left, your ears will hear a voice behind you, saying, 'This is the way; walk in it.' (Isaiah 30:21)",
-    "For my thoughts are not your thoughts, neither are my ways, declares the Lord. (Isaiah 55:8)",
+    "For my thoughts are not your thoughts, neither are your ways my ways, declares the Lord. (Isaiah 55:8)",
     "I will instruct you and teach you in the way you should go; I will counsel you with my loving eye on you. (Psalm 32:8)",
   ],
   Content: [
@@ -304,7 +304,7 @@ const dailyPrayers = [
  * Toggles the visibility of the feelings button container.
  */
 function toggleFeelingsContainer() {
-    // verseDisplay.style.display = "block"; // Remova esta linha
+    verseDisplay.style.display = "block";
     const isVisible = feelingsContainer.style.display === "flex";
     feelingsContainer.style.display = isVisible ? "none" : "flex";
 }
@@ -335,8 +335,8 @@ function displayVerseForFeeling(feeling) {
     feelingsContainer.style.display = "none";
 }
 
-    // verseDisplay.style.display = "block"; // Remova esta linha
-    // feelingsContainer.style.display = "none"; // Remova esta linha
+    verseDisplay.style.display = "block";
+    feelingsContainer.style.display = "none";
 
 
 /**

@@ -31,8 +31,7 @@
 ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
 /* =========================
   BASE & LAYOUT (DESKTOP-FIRST)
 ========================= */
@@ -99,6 +98,7 @@ main,
 
 /* --- How Are You Feeling Button --- */
 #feeling-btn {
+  font-size: 2em;
   padding: 15px 30px;
   box-sizing: border-box;
   border: 2px solid rgb(238, 229, 218);
@@ -110,8 +110,6 @@ main,
   margin-bottom: 30px;
   box-shadow: var(--shadow-btn);
   transition: background-color 0.3s ease;
-  font-family: 'Leckerli One', cursive;
-
 }
 
 #feeling-btn:hover {
@@ -153,14 +151,13 @@ main,
 
 /* --- Verse Display --- */
 #verse-display {
-  display: block;
-  font-family: var(--font-body);
+  font-family: passions conflict, cursive;
   margin-top: 40px;
   padding: 40px;
   background-color:#fff;
   border-radius: 15px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   line-height: 1.6;
   color: var(--color-primary);
   max-width: 800px;
