@@ -419,7 +419,7 @@ main,
   #verse-display {
     font-size: 1.2em;
     padding: 20px;
-    width: 90%;
+    width: 80%;
   }
 
   #prayer-btn,
@@ -444,14 +444,40 @@ main,
     position: relative;
     margin-top: 50px;
   }
+
+  #prayer-btn {
+    width: 120px;
+    height: 60px;
+    padding: 6px 8px;
+    font-size: 1.1em;
+  }
+  
+  #daily-prayer-btn {
+    position: absolute;
+    left: 45px;
+    width: 120px;
+    height: 60px;
+      padding: 6px 8px;
+    font-size: 1.1em;
+  }
 }
 
 /* --- Up to 600px --- */
 @media (max-width: 600px) {
-  #prayer-btn,
-  #daily-prayer-btn {
+ #prayer-btn {
     width: 120px;
-    font-size: 0.8em;
+    height: 60px;
+    padding: 6px 8px;
+    font-size: 1.1em;
+  }
+  
+  #daily-prayer-btn {
+    position: absolute;
+    left: 45px;
+    width: 120px;
+    height: 60px;
+      padding: 6px 8px;
+    font-size: 1.1em;
   }
 
   #feeling-btn {
@@ -461,14 +487,22 @@ main,
 
 /* --- Up to 420px (Galaxy S3 Ultra) --- */
 @media (max-width: 420px) {
-  #prayer-btn,
-  #daily-prayer-btn {
+  #prayer-btn {
     width: 120px;
     height: 60px;
-    padding: 6px 12px;
-    font-size: 1em;
+    padding: 6px 8px;
+    font-size: 1.1em;
   }
-
+  
+  #daily-prayer-btn {
+    position: absolute;
+    left: 45px;
+    width: 120px;
+    height: 60px;
+      padding: 6px 8px;
+    font-size: 1.1em;
+  }
+  
   .feeling-btn {
     width: 180px;
     height: 50px;
@@ -481,14 +515,21 @@ main,
 
   /* --- Up to 400px --- */
   @media (max-width: 400px) {
-    #prayer-btn,
-    #daily-prayer-btn {
-      position: absolute;
-      width: 80px;
-      height: 50px;
-      padding: 4px 10px;
-      font-size: 0.8em;
-    }
+    #prayer-btn {
+    width: 120px;
+    height: 60px;
+    padding: 6px 8px;
+    font-size: 1.1em;
+  }
+  
+  #daily-prayer-btn {
+    position: absolute;
+    left: 45px;
+    width: 120px;
+    height: 60px;
+      padding: 6px 8px;
+    font-size: 1.1em;
+  }
 
     .title,
     h1 {
