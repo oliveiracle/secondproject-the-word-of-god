@@ -38,6 +38,7 @@
 ========================= */
 html, body {
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -53,6 +54,9 @@ body {
   min-height: 100vh;
   text-align: center;
   color: var(--color-secondary);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* =========================
@@ -415,10 +419,18 @@ main,
        (max-width: 320px) {
   #prayer-btn,
   #daily-prayer-btn {
-    width: 120px;
-    height: 50px;
+    width: 90px;
+    height: 45px;
     padding: 6px 8px;
-    font-size: 1em;
+    font-size: 0.85em;
+  }
+
+  #daily-prayer-btn {
+    left: 5px;
+  }
+
+  #prayer-btn {
+    right: 5px;
   }
 
   #feeling-btn {
@@ -431,5 +443,4 @@ main,
     height: 50px;
     font-size: 1em;
   }
-
 }
