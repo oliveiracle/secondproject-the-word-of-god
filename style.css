@@ -47,6 +47,7 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
+  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -91,13 +92,18 @@ h1,
 main,
 .main-container {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 900px;
   padding: 30px;
-  
+  flex: 1;
+   padding-bottom: 150px !important; /* Força espaço para o footer */
+    min-height: calc(100vh - 200px); /* Garante altura mínima */
+
 }
+  
 
 /* =========================
   COMPONENTS
@@ -130,10 +136,14 @@ main,
 /* --- Feelings Container --- */
 #feelings-container {
   display: none;
+  overflow-y: auto;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
+  margin-bottom: 80px;
+  padding-bottom: 20px;
+  max-height: calc(100vh - 250px); /* Limita altura máxima */
 }
 
 .feeling-btn {
@@ -143,7 +153,7 @@ main,
   border: 2px solid #bbb;
   border-radius: var(--radius-btn);
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
   color: #444;
   font-size: 1.1em;
   font-weight: bold;
@@ -385,6 +395,64 @@ main,
 }
 
 
+.footer {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    text-align: center;
+    background: rgba(173, 216, 230, 0.9) !important; /* Fundo semi-transparente da cor da página */
+    z-index: 9999 !important; /* Sempre por cima */
+
+}
+
+.share-section {
+    margin-bottom: 30px;
+}
+
+.share-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.share-buttons button {
+    border: none;
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #666;
+    padding: 12px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.share-buttons button:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.footer-text {
+    font-size: 0.8em;
+    color: #888;
+    margin: 0;
+}
+
+
 /* =========================
   RESPONSIVE DESIGN
 ========================= */
@@ -478,11 +546,20 @@ main,
     box-shadow: lightblue 0px 0px 20px 4px;
   }
 
+  #feelings-container {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+  }
+
   .feeling-btn {
     border: none;
     box-shadow: lightblue 0px 0px 10px;
     padding: 8px 12px;
-    width: 150px;
+    width: 100%;
     height: 50px;
     font-size: 1em;
   }
