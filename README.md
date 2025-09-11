@@ -131,6 +131,7 @@ The mobile home page retains the core functionality of the desktop version but s
 
 ![Wireframe - Home Page Mobile](assets/images/documentation/wireframes-mobile/wireframe4.png)
 
+
 Key adaptations for the mobile layout include:
 
 1. Optimized Navigation: The two main navigation buttons ("Today's Prayer" and "Prayer Request") are positioned at the top of the screen, providing immediate access without cluttering the primary interaction area.
@@ -141,6 +142,21 @@ Key adaptations for the mobile layout include:
 
 This approach ensures that the application is just as powerful and easy to use on a mobile device as it is on a desktop.
 
+### Step 5 - The Daily Prayer Popup
+ 
+ Mobile - Daily Prayer Popup
+This wireframe details the interaction of the Daily Prayer popup on mobile devices. The experience has been optimized to maintain the user's full focus by adapting the modal's design for vertical screens and touch-based interactions.
+
+![Wireframe - Home Page Mobile](assets/images/documentation/wireframes-mobile/wireframe5.png)
+
+
+Key optimizations for the mobile popup experience include:
+
+1. Focused Overlay: The popup uses an overlay that darkens the background, eliminating distractions and centering the user's attention exclusively on the prayer's content—an even more critical approach on smaller screens.
+
+2. Readable and Tappable Layout: The content is presented in an easy-to-read text block, and the action buttons are large and well-spaced to ensure that the interaction is simple and accessible by touch.
+
+3. Clear Action Hierarchy: The two actions ("Mark as Read" and "Close") maintain a clear visual hierarchy, with the primary action having more emphasis to intuitively guide the user to complete or dismiss the interaction.
 
 ---
 
