@@ -51,12 +51,15 @@ Our color palette was carefully selected to visually convey the project’s miss
 - ** Background (#f8feff): The foundation is a white with a subtle bluish tint, creating a clean, open, and minimalist space. It’s not just a background, but a blank canvas symbolizing the mental clarity and peace needed for reflection.
 This palette was chosen to keep the site visually peaceful, clean, and uplifting.
 
-### Typography
-To create a warm and uplifting user experience, three different fonts were chosen:
+### Typography: A Balance of Personality and Clarity
 
-- **Gloria Hallelujah** – Used for the main titles and headings, giving a friendly, handwritten and personal touch.  
-- **Quicksand** – Used for body text, menus, and buttons, ensuring readability and a modern, clean look across all devices.  
-- **Leckerli One** – Used for special highlights such as the site logo or call-to-action elements, adding elegance and a unique identity to the brand.  
+The typographic strategy was designed to be warm and engaging, balancing a personal, handwritten font with a clean, modern sans-serif for optimal readability. This pairing creates a clear hierarchy and guides the user through a friendly and accessible experience.
+
+- **Heading Font (Gloria Hallelujah):** *The Personal Touch.* Used for main titles to create a human and friendly connection. Its handwritten style brings warmth and an inviting personality to the forefront.
+
+- **Body Font (Quicksand):** *The Foundation of Clarity.* Chosen for all body text, menus, and buttons to ensure a comfortable and highly readable experience on any device. Its clean, modern aesthetic complements the heading font without competing for attention.
+
+- **Accent Font (Leckerli One):** *The Elegant Signature.* Reserved for key brand elements like the logo or special call-to-actions. It adds a touch of sophistication and reinforces a unique, memorable brand identity.  
  
 
 ### Wireframes
