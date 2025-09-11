@@ -154,16 +154,17 @@ main,
   font-family: var(--font-body);
   margin-top: 40px;
   padding: 40px;
-  background-color:#fff;
+  background-color: var(--color-popup-bg);
   border-radius: 15px;
   text-align: center;
   font-size: 1.5em;
   line-height: 1.6;
   color: var(--color-primary);
   max-width: 800px;
-  box-shadow: 0 0 10px 5px #e6f2ff;
-  border: 1px solid #e6f2ff;
-
+  box-shadow: 0 6px 20px var(--color-accent);
+  border: 1px solid var(--color-border);
+  
+  
 }
 
 /* --- Random Verse Button --- */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Peace in the Word</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header"> 
+        <!-- DAILY PRAYER BUTTON - DESKTOP ONLY -->
+        <button onclick="DailyPrayerPopup()" id="daily-prayer-btn" aria-label="Open daily prayer">
+            Today's Prayer 🕊
+        </button>
+        <!-- REQUEST A PRAYER BUTTON -->
+        <button onclick="Popup()" role="button" id="prayer-btn" aria-label="Open prayer request form">
+            Prayer Request 🙏
+        </button>
+    </header>
+
+    <!-- DAILY PRAYER POPUP -->
+    <div id="daily-prayer-popup">
+        <div class="popup-content">
+            <h1 style="color: #333; margin-top: 0; font-size: 2em;">Daily Prayer</h1>
+            <div id="daily-prayer-content">
+                <p id="prayer-text-display">Loading today's prayer...</p>
+            </div>
+            <div class="popup-actions">
+                <button id="close-daily-prayer" onclick="CloseDailyPrayerPopup()">Close</button>
+                <button onclick="dailyPrayerManager.markAsRead()">Mark as Read</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRAYER REQUEST POPUP -->
+    <div id="prayer-popup">
+        <div class="popup-content">
+            <h2 style="color: #333; margin-top: 0;">Prayer Request</h2>
+            <input type="text" id="prayer-name" placeholder="Your name">
+            <textarea id="prayer-text" placeholder="Write your prayer request..."></textarea>
+            <div class="popup-actions">
+                <button id="close-popup" onclick="ClosePopup()">Close</button>
+                <button onclick="SendPrayer()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="main-container">
+        <div id="intro">
+            <button id="feeling-btn">How are you feeling today?</button>
+        </div>
+        <div>
+            <a href="#" id="random-verse-btn">✨ Or get a random verse for your day</a>
+        </div>
+        <!-- FEELINGS BUTTONS CONTAINER -->
+        <div id="feelings-container">
+            <button id="angry-btn" class="feeling-btn" aria-label="Get verses for when feeling angry">Angry 😡</button>
+            <button id="peaceful-btn" class="feeling-btn" aria-label="Get verses for when feeling peaceful">Peaceful 😇</button>
+            <button id="strong-btn" class="feeling-btn" aria-label="Get verses for when feeling strong">Strong 💪</button>
+            <button id="happy-btn" class="feeling-btn" aria-label="Get verses for when feeling happy">Happy 😆</button>
+            <button id="sad-btn" class="feeling-btn" aria-label="Get verses for when feeling sad">Sad 😭</button>
+            <button id="afraid-btn" class="feeling-btn" aria-label="Get verses for when feeling afraid">Afraid 😨</button>
+            <button id="lonely-btn" class="feeling-btn" aria-label="Get verses for when feeling lonely">Lonely 💔</button>
+            <button id="grateful-btn" class="feeling-btn" aria-label="Get verses for when feeling grateful">Grateful 🙏</button>
+            <button id="anxious-btn" class="feeling-btn" aria-label="Get verses for when feeling anxious">Anxious 😟</button>
+            <button id="hope-btn" class="feeling-btn" aria-label="Get verses for when feeling hopeful">Hopeful 👼</button>
+            <button id="guilty-btn" class="feeling-btn" aria-label="Get verses for when feeling guilty">Guilty 🤷‍♂️</button>
+            <button id="weak-btn" class="feeling-btn" aria-label="Get verses for when feeling weak">Weak 😩</button>
+            <button id="loved-btn" class="feeling-btn" aria-label="Get verses for when feeling loved">Loved ❤️</button>
+            <button id="jealous-btn" class="feeling-btn" aria-label="Get verses for when feeling jealous">Jealous 🤨</button>
+            <button id="tired-btn" class="feeling-btn" aria-label="Get verses for when feeling tired">Tired 😴</button>
+            <button id="proud-btn" class="feeling-btn" aria-label="Get verses for when feeling proud">Proud 😌</button>
+            <button id="content-btn" class="feeling-btn" aria-label="Get verses for when feeling content">Content 🙂</button>
+            <button id="confused-btn" class="feeling-btn" aria-label="Get verses for when feeling confused">Confused 😕</button>
+            <button id="forgiving-btn" class="feeling-btn" aria-label="Get verses for when feeling forgiving">Forgiving 🙏</button>
+            <button id="discouraged-btn" class="feeling-btn" aria-label="Get verses for when feeling discouraged">Discouraged 😞</button>
+        </div>
+        <!-- VERSE DISPLAY AREA -->
+        <div id="verse-display">
+            <p Click in one feeling to see a verse display="block"></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -162,8 +162,9 @@ main,
   color: var(--color-primary);
   max-width: 800px;
   box-shadow: 0 0 10px 5px #e6f2ff;
-  border: 1px solid #e6f2ff;
-
+     border: 1px solid #e6f2ff;
+  
+  
 }
 
 /* --- Random Verse Button --- */
