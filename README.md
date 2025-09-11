@@ -107,22 +107,40 @@ This flow is initiated when the user clicks on the "Prayer Request" navigation b
 
 ![Wireframe - Home Page Request a Prayer pop-up](assets/images/documentation/wireframes-desktop/wireframe3.png)
 
-
 Using a popup modal for this feature is a deliberate choice. It provides a focused and distraction-free interface for form submission, ensuring user privacy and concentration. Once the interaction is complete, the user is returned seamlessly to the home page.
 
 The form's layout is designed for clarity and ease of use:
 
-Clear Title: The title "Prayer Request" immediately clarifies the purpose of the modal.
+1. Clear Title: The title "Prayer Request" immediately clarifies the purpose of the modal.
 
-Minimalist Form: Two straightforward input fields ("Your name" and "Write your prayer request...") make the submission process quick and intuitive.
+2. Minimalist Form: Two straightforward input fields ("Your name" and "Write your prayer request...") make the submission process quick and intuitive.
 
-Distinct Actions: The buttons are clearly defined:
+3. Distinct Actions: The buttons are clearly defined:
 
 Primary Action ("Send"): The main goal of the form, visually emphasized.
 
 Secondary Action ("Close"): Allows the user to easily cancel the action without any friction.
 
 This feature is designed to foster a sense of community and support in a seamless and respectful manner.
+
+#### Mobile Wireframes
+For mobile devices, the design was adapted to a single-column layout to ensure a clean, focused, and user-friendly experience on smaller screens. The priority is to maintain the same serene atmosphere while making all interactions easily accessible with one hand.
+
+### Step 4: The Home Page (Mobile)
+The mobile home page retains the core functionality of the desktop version but stacks the elements vertically for a natural and intuitive flow.
+
+![Wireframe - Home Page Mobile](assets/images/documentation/wireframes-mobile/wireframe4.png)
+
+Key adaptations for the mobile layout include:
+
+1. Optimized Navigation: The two main navigation buttons ("Today's Prayer" and "Prayer Request") are positioned at the top of the screen, providing immediate access without cluttering the primary interaction area.
+
+2. Prominent CTA: The main call-to-action remains the central focus, enlarged to be easily tappable and immediately draw the user's attention.
+
+3. Vertical Hierarchy: All elements are arranged in a clear vertical hierarchy, guiding the user's eye downwards from the navigation options to the primary and secondary actions, ensuring a seamless experience.
+
+This approach ensures that the application is just as powerful and easy to use on a mobile device as it is on a desktop.
+
 
 ---
 
