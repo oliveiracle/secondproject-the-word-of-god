@@ -62,10 +62,23 @@ The typographic strategy was designed to be warm and engaging, balancing a perso
 - **Accent Font (Leckerli One):** *The Elegant Signature.* Reserved for key brand elements like the logo or special call-to-actions. It adds a touch of sophistication and reinforces a unique, memorable brand identity.  
  
 
-### Wireframes
-Wireframes were created for both desktop and mobile to plan the layout and user flow before building the site.
+### Wireframes & User Flow
 
-*)*
+To ensure an intuitive and serene user experience, a series of wireframes were designed to map out the core user journey. The focus was on creating a minimalist layout that guides the user gently, eliminating distractions and focusing on the main purpose of the application.
+
+#### Step 1: The Home Page (Desktop)
+
+The main goal of the home page is to welcome the user in a calm and focused environment, immediately presenting the central purpose of the site.
+
+![Wireframe - Home Page Desktop](assets/images/documentation/wireframes-desktop/wireframe1.png)
+
+The layout is intentionally simple and centered around three key interactions:
+
+1.  **Main Call-to-Action (CTA):** The user's journey is initiated by a single, clear call-to-action ("How are you feeling today?"). This is the primary path.
+2.  **Secondary Navigation:** Essential but non-critical options ("Today's Prayer" and "Prayer Request") are placed at the corners to be accessible but not distracting.
+3.  **Alternative Path:** A secondary, less prominent link ("Or get a random verse") offers a direct alternative for users who don't wish to follow the main flow.
+
+This initial screen is designed to be a peaceful entry point, leading the user seamlessly to the next step: selecting their feeling to receive a tailored verse.
 
 ---
 
