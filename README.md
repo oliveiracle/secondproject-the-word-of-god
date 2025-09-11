@@ -102,6 +102,28 @@ Secondary Action ("Close"): Offers a simple and universal way to dismiss the mod
 
 This interaction provides a moment of reflection before the user seamlessly returns to the main flow.
 
+### Step 3: The Prayer Request Popup
+This flow is initiated when the user clicks on the "Prayer Request" navigation button. The goal is to provide a simple, private, and accessible way for users to submit a prayer request without disrupting their main experience.
+
+![Wireframe - Home Page Request a Prayer pop-up](assets/images/documentation/wireframes-desktop/wireframe3.png)
+
+
+Using a popup modal for this feature is a deliberate choice. It provides a focused and distraction-free interface for form submission, ensuring user privacy and concentration. Once the interaction is complete, the user is returned seamlessly to the home page.
+
+The form's layout is designed for clarity and ease of use:
+
+Clear Title: The title "Prayer Request" immediately clarifies the purpose of the modal.
+
+Minimalist Form: Two straightforward input fields ("Your name" and "Write your prayer request...") make the submission process quick and intuitive.
+
+Distinct Actions: The buttons are clearly defined:
+
+Primary Action ("Send"): The main goal of the form, visually emphasized.
+
+Secondary Action ("Close"): Allows the user to easily cancel the action without any friction.
+
+This feature is designed to foster a sense of community and support in a seamless and respectful manner.
+
 ---
 
 ## Features
