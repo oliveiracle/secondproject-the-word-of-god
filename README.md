@@ -1,11 +1,11 @@
 # The Word of God
 
-The Word of God is a responsive front-end website created as part of the Code Institute Full-Stack Developer course.  
-It is designed to be an interactive and spiritual space where users can find Bible verses, daily prayers, and share prayer requests.  
-The goal is to provide comfort, encouragement, and inspiration in a minimalist, mobile-friendly experience.
+This project was born from my faith and a deep desire to share the comfort and hope that I find in God's Word. "Peace in the Word" is more than just a website; it is a digital sanctuary created to bring the love of Jesus Christ to those in need.
+
+My goal is to offer a peaceful space where anyone, at any time, can find a word of encouragement through Bible verses, daily prayers, and a community that prays for one another. To ensure this message is accessible to everyone, the site was built with a minimalist and fully responsive design.
 
 👉 [View the live project here](https://oliveiracle.github.io/secondproject-the-word-of-god/)
-
+`
 ---
 
 ## Technologies Used
@@ -40,16 +40,26 @@ The goal is to provide comfort, encouragement, and inspiration in a minimalist, 
 
 ### The Psychology of Colors in the Project
 
-Our color palette was carefully selected to visually convey the project’s mission: to offer a haven of peace and clarity. Each shade plays a key role in creating a reading experience that is both focused and spiritually uplifting.
+Our visual identity is built on a dual-palette strategy to create an experience that is both spiritually warm and functionally clear. We combine an atmospheric background with a clean, focused user interface.
 
 ![Color Palette](assets/images/documentation/screenshots/colorpalette/colorspalette.png)
 
-- ** Dark Tones (#222 and #333): Represent the solidity and timelessness of the message. They ensure that the text remains the central focus, providing comfortable, distraction-free reading while conveying authority and trust.
+**1. The Atmospheric Palette (The Heart of the Site)**
 
-- ** Light Blue (lightblue): Our touch of serenity and hope. This color evokes a sense of calm and confidence, used strategically to illuminate the interface and guide the user intuitively and peacefully.
+The user is welcomed by a background image rich in soft, warm, and earthy tones—the gentle whites of a dove and the natural beiges of open hands. This visual foundation sets the emotional tone of the site:
 
-- ** Background (#f8feff): The foundation is a white with a subtle bluish tint, creating a clean, open, and minimalist space. It’s not just a background, but a blank canvas symbolizing the mental clarity and peace needed for reflection.
-This palette was chosen to keep the site visually peaceful, clean, and uplifting.
+* **Warmth and Humanity:** The beige and organic tones create a welcoming, human, and comforting atmosphere.
+* **Spirituality and Peace:** The imagery of the dove and the cross evokes a sense of peace, hope, and the presence of the Holy Spirit.
+
+**2. The User Interface Palette (The Clarity of the Message)**
+
+Floating above this warm atmosphere is a clean, minimalist UI palette designed for focus and readability.
+
+* **Dark Tones (`#222` and `#333`):** Represent the **solidity and timelessness** of the message. They provide maximum contrast for comfortable, distraction-free reading, conveying authority and trust.
+* **Light Blue (`lightblue`):** Our touch of **serenity and clarity**. This cool color complements the warm background, evoking a sense of calm and confidence. It is used strategically to guide the user's actions peacefully.
+* **Background (`#f8feff`):** The foundation for all content is a white with a subtle bluish tint, creating a **clean and open space**. It acts as a canvas that elevates the Word, symbolizing the mental clarity needed for reflection.
+
+This combination ensures that the user feels welcomed and at peace (from the background) while being able to interact with the message clearly and without effort (from the UI).
 
 ### Typography: A Balance of Personality and Clarity
 
@@ -61,7 +71,6 @@ The typographic strategy was designed to be warm and engaging, balancing a perso
 
 - **Accent Font (Leckerli One):** *The Elegant Signature.* Reserved for key brand elements like the logo or special call-to-actions. It adds a touch of sophistication and reinforces a unique, memorable brand identity.  
  
-
 ### Wireframes & User Flow
 
 To ensure an intuitive and serene user experience, a series of wireframes were designed to map out the core user journey. The focus was on creating a minimalist layout that guides the user gently, eliminating distractions and focusing on the main purpose of the application.
@@ -195,6 +204,7 @@ The mobile adaptation focuses on clarity and ease of use:
 2. Optimized for Touch: The input fields and text area are large and have ample spacing, making them easy to tap and type on a mobile screen.
 
 3. Clear and Simple Actions: The `"Send" and "Close" buttons are designed to be easily accessible, with a clear visual hierarchy that guides the user toward the primary action of submitting the form.
+`
 ---
 
 ## Features
@@ -222,7 +232,7 @@ The mobile adaptation focuses on clarity and ease of use:
 
 - **Responsive Design**  
    - Fully responsive layout with mobile-first design.  
-   - Navigation, popups, and buttons adapt to different screen sizes.  
+   - Navigation, popups, and buttons ad`apt to different screen sizes.  
 
 ---
 
