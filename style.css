@@ -219,6 +219,8 @@ main,
 
 /* --- Prayer Popup --- */
 #prayer-popup {
+  font-family: var(--font-title);
+  font-size: 1.2em;
   display: none;
   position: fixed;
   z-index: 1000;
