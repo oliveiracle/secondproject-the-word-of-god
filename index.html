@@ -6,12 +6,8 @@
     <title>Peace in the Word</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
-
-
 <body>
     <!-- HEADER -->
     <header class="header"> 
@@ -24,35 +20,33 @@
             Prayer Request 🙏
         </button>
 
-
-    <!-- DAILY PRAYER POPUP -->
-    <div id="daily-prayer-popup">
-        <div class="popup-content">
-            <h1 style="color: #333; margin-top: 0; font-size: 2em;">Daily Prayer</h1>
-            <div id="daily-prayer-content">
-                <p id="prayer-text-display">Loading today's prayer...</p>
-            </div>
-            <div class="popup-actions">
-                <button id="close-daily-prayer" onclick="CloseDailyPrayerPopup()">Close</button>
-                <button onclick="dailyPrayerManager.markAsRead()">Mark as Read</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- PRAYER REQUEST POPUP -->
-    <div id="prayer-popup">
-        <div class="popup-content">
-            <h2 style="color: #333; margin-top: 0;">Prayer Request</h2>
-            <input type="text" id="prayer-name" placeholder="Your name">
-            <textarea id="prayer-text" placeholder="Write your prayer request..."></textarea>
-            <div class="popup-actions">
-                <button id="close-popup" onclick="ClosePopup()">Close</button>
-                <button onclick="SendPrayer()">Send</button>
+        <!-- DAILY PRAYER POPUP -->
+        <div id="daily-prayer-popup">
+            <div class="popup-content">
+                <h1 style="color: #333; margin-top: 0; font-size: 2em;">Daily Prayer</h1>
+                <div id="daily-prayer-content">
+                    <p id="prayer-text-display">Loading today's prayer...</p>
+                </div>
+                <div class="popup-actions">
+                    <button id="close-daily-prayer" onclick="CloseDailyPrayerPopup()">Close</button>
+                    <button onclick="dailyPrayerManager.markAsRead()">Mark as Read</button>
+                </div>
             </div>
         </div>
-    </div>
+
+        <!-- PRAYER REQUEST POPUP -->
+        <div id="prayer-popup">
+            <div class="popup-content">
+                <h2 style="color: #333; margin-top: 0;">Prayer Request</h2>
+                <input type="text" id="prayer-name" placeholder="Your name">
+                <textarea id="prayer-text" placeholder="Write your prayer request..."></textarea>
+                <div class="popup-actions">
+                    <button id="close-popup" onclick="ClosePopup()">Close</button>
+                    <button onclick="SendPrayer()">Send</button>
+                </div>
+            </div>
+        </div>
     </header>
-
 
     <!-- MAIN CONTAINER -->
     <main class="main-container">
@@ -88,28 +82,28 @@
             <button id="nervous-btn" class="feeling-btn" aria-label="Get verses for when feeling nervous">Nervous 😬</button>
             <button id="blessed-btn" class="feeling-btn" aria-label="Get verses for when feeling blessed">Blessed 🙌</button>
             <button id="determined-btn" class="feeling-btn" aria-label="Get verses for when feeling determined">Determined 💫</button>
-        
+            
         </div>
         <!-- VERSE DISPLAY AREA -->
         <div id="verse-display" style="display: none;">
-    <p>Click in one feeling to see a verse.</p>
-</div>
+            <p>Click in one feeling to see a verse.</p>
+        </div>
     </main>
 
-     <footer class="footer">
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="share-buttons">
-  <button id="fb">
-    <i class="fa-brands fa-facebook-f"></i>
-  </button>
-  <button id="tw">
-    <i class="fa-brands fa-x-twitter"></i>
-  </button>
-  <button id="wa">
-    <i class="fa-brands fa-whatsapp"></i>
-  </button>
-</div>
-</footer>
-        
+            <button id="fb">
+                <i class="fa-brands fa-facebook-f"></i>
+            </button>
+            <button id="tw">
+                <i class="fa-brands fa-x-twitter"></i>
+            </button>
+            <button id="wa">
+                <i class="fa-brands fa-whatsapp"></i>
+            </button>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
