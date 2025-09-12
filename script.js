@@ -285,86 +285,24 @@ const verses = {
     "Thanks be to God for his indescribable gift! (2 Corinthians 9:15)",
     "Let the peace of Christ rule in your hearts... And be thankful. (Colossians 3:15)",
   ],
-  Humble: [
-    "Humble yourselves, therefore, under God’s mighty hand, that he may lift you up in due time. (1 Peter 5:6)",
-    "When pride comes, then comes disgrace, but with humility comes wisdom. (Proverbs 11:2)",
-    "God opposes the proud but shows favor to the humble. (James 4:6)",
-    "Pride goes before destruction, a haughty spirit before a fall. (Proverbs 16:18)",
-    "The Lord is close to the brokenhearted and saves those who are crushed in spirit. (Psalm 34:18)",
-    "He has shown you, O mortal, what is good. And what does the Lord require of you? To act justly and to love mercy and to walk humbly with your God. (Micah 6:8)",
-    "Do nothing out of selfish ambition or vain conceit. Rather, in humility value others above yourselves. (Philippians 2:3)",
-    "Live in harmony with one another. Do not be proud, but be willing to associate with people of low position. Do not be conceited. (Romans 12:16)",
-    "For all those who exalt themselves will be humbled, and those who humble themselves will be exalted. (Luke 14:11)",
-    "The fear of the Lord is instruction in wisdom, and humility comes before honor. (Proverbs 15:33)",
-  ],
-  Faithful: [
-    "Let us hold unswervingly to the hope we profess, for he who promised is faithful. (Hebrews 10:23)",
-    "The one who calls you is faithful, and he will do it. (1 Thessalonians 5:24)",
-    "If we are faithless, he remains faithful, for he cannot disown himself. (2 Timothy 2:13)",
-    "Know therefore that the Lord your God is God; he is the faithful God, keeping his covenant of love to a thousand generations of those who love him and keep his commandments. (Deuteronomy 7:9)",
-    "Great is thy faithfulness. (Lamentations 3:23)",
-    "But the fruit of the Spirit is love, joy, peace, forbearance, kindness, goodness, faithfulness. (Galatians 5:22)",
-    "I have been young, and now am old; yet I have not seen the righteous forsaken, nor his seed begging bread. (Psalm 37:25)",
-    "The Lord is good, a refuge in times of trouble. He cares for those who trust in him. (Nahum 1:7)",
-    "You are my God, and I will praise you; you are my God, and I will exalt you. (Psalm 118:28)",
-  ],
-  Worthy: [
-    "So God created mankind in his own image... (Genesis 1:27)",
-    "For we are God’s handiwork, created in Christ Jesus to do good works. (Ephesians 2:10)", 
-    "I praise you because I am fearfully and wonderfully made; your works are wonderful, I know that full well. (Psalm 139:14)",
-    "But you are a chosen people, a royal priesthood, a holy nation, God’s special possession. (1 Peter 2:9)",
-    "The Spirit himself testifies with our spirit that we are God’s children. (Romans 8:16)",
-  ],
-
-  Victorious: [
-    "But thanks be to God! He gives us the victory through our Lord Jesus Christ. (1 Corinthians 15:57)",
-    "I have told you these things, so that in me you may have peace. In this world you will have trouble. But take heart! I have overcome the world. (John 16:33)",
-    "No, in all these things we are more than conquerors through him who loved us. (Romans 8:37)",
-  ],
-    Thankful: [
-    "Give thanks to the Lord, for he is good; his love endures forever. (Psalm 107:1)",         
-    "Give thanks in all circumstances; for this is God’s will for you in Christ Jesus. (1 Thessalonians 5:18)",
-    "Enter his gates with thanksgiving and his courts with praise; give thanks to him and praise his name. (Psalm 100:4)",
-    "And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him. (Colossians 3:17)",
-    
-    ],
-    Patient: [
-    "Be completely humble and gentle; be patient, bearing with one another in love. (Ephesians 4:2)",
-    "But if we hope for what we do not yet have, we wait for it patiently. (Romans 8:25)",
-
-    ],
-    Joyful: [         
-    "The joy of the Lord is your strength. (Nehemiah 8:10)",
-    "Rejoice in the Lord always. I will say it again: Rejoice! (Philippians 4:4)",
-    "This is the day that the Lord has made; let us rejoice and be glad in it. (Psalm 118:24)",
-    "You make known to me the path of life; in your presence there is fullness of joy. (Psalm 16:11)",
-    ],
-
-    Fearless: [
-    "For God has not given us a spirit of fear, but of power and of love and of a sound mind. (2 Timothy 1:7)",
-    "When I am afraid, I will trust in you. (Psalm 56:3)",
-
-    ],
-    Determined: [
-    "I press on toward the goal to win the prize for which God has called me heavenward in Christ Jesus. (Philippians 3:14)",
-    "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up. (Galatians 6:9)",
-    ],
-    Blessed: [
+  
+  
+  Blessed: [
     "Blessed are those who hunger and thirst for righteousness, for they will be filled. (Matthew 5:6)",
     "Blessed are the pure in heart, for they will see God. (Matthew 5:8)",
     "Blessed are those who mourn, for they will be comforted. (Matthew 5:4)",
-    "Blessed are the meek, for they will inherit the earth. (Matthew 5:5)",
-    ],
-    Nervous: [
+    "Blessed are the meek, for they will inherit the earth. (Matthew 5:5)"
+  ],
+  
+  Nervous: [
     "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God. (Philippians 4:6)",
-    "Cast all your anxiety on him because he cares for you. (1 Peter 5:7)",
-    ],
+    "Cast all your anxiety on him because he cares for you. (1 Peter 5:7)"
+  ],
 
-    Excited: [
+  Excited: [
     "Rejoice in the Lord always. I will say it again: Rejoice! (Philippians 4:4)",
-    "This is the day that the Lord has made; let us rejoice and be glad in it. (Psalm 118:24)",
-    ],  
-    
+    "This is the day that the Lord has made; let us rejoice and be glad in it. (Psalm 118:24)"
+  ]
 };
 
 // ===================================================================================
