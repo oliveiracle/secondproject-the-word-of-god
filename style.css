@@ -377,6 +377,24 @@ main,
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* Facebook */
+#fb:hover {
+  background: #1877F2; 
+  color: white;
+}
+
+/* Twitter (X) */
+#tw:hover {
+  background: #000; 
+  color: white;
+}
+
+/* WhatsApp */
+#wa:hover {
+  background: #25D366; 
+  color: white;
+}
+
 
 /* =========================
 RESPONSIVE DESIGN (FINAL E CORRIGIDO)
@@ -394,7 +412,8 @@ font-size: 2.8em;
 /* --- Tablets Pequenos & Todos os Telemóveis --- */
 @media (max-width: 768px) {
 body {
-padding-bottom: 150px; /* Garante espaço para o footer fixo */
+padding-bottom: 150px; 
+    background-attachment: scroll;/* Garante espaço para o footer fixo */
 }
 
 h1, .title {
@@ -428,20 +447,29 @@ font-size: 2.5em;
        (max-width: 420px), 
        (max-width: 400px), 
        (max-width: 320px) {
+
+        body{
+          max-width: fit-content;
+        }
+h1, .title {
+font-size: 2.8em;
+} 
+
 #feelings-container.is-visible {
 display: grid !important;
 grid-template-columns: repeat(2, 1fr) !important;
 width: 100%;
 max-width: 600px;
+
 }
 
 .feeling-btn {
-width: 40%;
+width: 47%;
 height: 60px;
 font-size: 1em;
-padding: 8px;
+padding:  4px 18px;
 border: none;
-box-shadow: lightblue 0px 0px 10px;
+box-shadow: lightblue 0px 0px 16px;
 }
 
 .footer {
