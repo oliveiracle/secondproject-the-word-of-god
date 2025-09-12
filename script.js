@@ -326,12 +326,15 @@ const dailyPrayers = [
 // Functions that perform the application's main tasks.
 
 /**
- * Toggles the visibility of the feelings button container.
+ * Toggles the visibility of the feelings button container using a CSS class.
  */
 function toggleFeelingsContainer() {
-    // verseDisplay.style.display = "block"; // Remova esta linha
-    const isVisible = feelingsContainer.style.display === "flex";
-    feelingsContainer.style.display = isVisible ? "none" : "flex";
+    feelingsContainer.classList.toggle('is-visible');
+
+    // Hide the verse display if we are showing the feelings
+    if (feelingsContainer.classList.contains('is-visible')) {
+        verseDisplay.classList.remove('is-visible');
+    }
 }
 
 /**

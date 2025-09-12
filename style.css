@@ -35,30 +35,27 @@
 /* =========================
   BASE & LAYOUT (DESKTOP-FIRST)
 ========================= */
-html, body {
+html {
   overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-  display: flex ;
-  flex-direction: column;
   font-family: var(--font-body);
-  background: url("assets/images/bg.png");
+  background: url("assets/images/bg.png") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
-  padding: 0;
-  padding-bottom: 80px;
+  padding: 5vh 20px;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  padding: 5vh 20px;
   align-items: center;
   min-height: 100vh;
   text-align: center;
   color: var(--color-secondary);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
 }
 
 /* =========================
@@ -92,18 +89,14 @@ h1,
 main,
 .main-container {
   display: flex;
-  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 900px;
   padding: 30px;
   flex: 1;
-   padding-bottom: 150px !important; /* Força espaço para o footer */
-    min-height: calc(100vh - 200px); /* Garante altura mínima */
-
+  padding-bottom: 150px; /* Space for the footer */
 }
-  
 
 /* =========================
   COMPONENTS
@@ -113,7 +106,6 @@ main,
 #feeling-btn {
   margin-top: 100px;
   padding: 15px 30px;
-  box-sizing: border-box;
   border: 2px solid rgb(238, 229, 218);
   border-radius: 20px;
   cursor: pointer;
@@ -134,15 +126,19 @@ main,
 }
 
 /* --- Feelings Container --- */
+/* Control visibility with JS, but layout with CSS */
 #feelings-container {
-  display: none;
-  flex-wrap: wrap;
+  display: none; /* Hidden by default */
   justify-content: center;
+  flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
   margin-bottom: 80px;
-  padding-bottom: 20px;
-  max-height: calc(100vh - 250px); /* Limita altura máxima */
+}
+
+/* JS will add/remove this class */
+#feelings-container.is-visible {
+  display: flex; /* Flexbox for desktop */
 }
 
 .feeling-btn {
@@ -169,7 +165,7 @@ main,
 
 /* --- Verse Display --- */
 #verse-display {
-  display: block;
+  display: none; /* Hidden by default */
   font-family: var(--font-body);
   margin-top: 40px;
   padding: 40px;
@@ -182,7 +178,10 @@ main,
   max-width: 800px;
   box-shadow: 0 0 10px 5px #e6f2ff;
   border: 1px solid #e6f2ff;
+}
 
+#verse-display.is-visible {
+    display: block;
 }
 
 /* --- Random Verse Button --- */
@@ -202,11 +201,11 @@ main,
   transform: translateY(-2px);
 }
 
-/* --- Prayer Button (Desktop) --- */
-#prayer-btn {
+/* --- Header Buttons --- */
+#prayer-btn,
+#daily-prayer-btn {
   position: fixed;
   top: 5%;
-  right: 5%;
   width: 220px;
   height: 60px;
   padding: 10px 20px;
@@ -222,16 +221,24 @@ main,
   font-family: var(--font-title);
 }
 
-#prayer-btn:hover {
+#prayer-btn {
+  right: 5%;
+}
+
+#daily-prayer-btn {
+  left: 5%;
+}
+
+#prayer-btn:hover,
+#daily-prayer-btn:hover {
   background-color: var(--color-btn-hover);
   transform: translateY(-3px);
   box-shadow: var(--shadow-light);
 }
 
-/* --- Prayer Popup --- */
-#prayer-popup {
-  font-family: var(--font-title);
-  font-size: 1.2em;
+/* --- Popups --- */
+#prayer-popup,
+#daily-prayer-popup {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -241,6 +248,11 @@ main,
   height: 100%;
   background-color: var(--color-popup-overlay);
   backdrop-filter: blur(5px);
+}
+
+#prayer-popup {
+  font-family: var(--font-title);
+  font-size: 1.2em;
 }
 
 .popup-content {
@@ -266,8 +278,6 @@ main,
   font-family: var(--font-body);
   font-size: 1em;
   transition: border-color 0.3s ease;
-  box-sizing: border-box;
-  font-family: var(--font-title);
 }
 
 #prayer-text:focus,
@@ -316,45 +326,6 @@ main,
   box-shadow: 0 5px 15px var(--color-accent);
 }
 
-/* --- Daily Prayer Button (Desktop) --- */
-#daily-prayer-btn {
-  position: fixed;
-  top: 5%;
-  left: 5%;
-  width: 220px;
-  height: 60px;
-  padding: 10px 20px;
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-btn);
-  cursor: pointer;
-  color: #444;
-  font-size: 1.43em;
-  font-weight: bold;
-  box-shadow: 0 1px 5px var(--color-accent);
-  transition: all 0.2s ease-in-out;
-  background-color: var(--color-bg);
-  font-family: var(--font-title);
-}
-
-#daily-prayer-btn:hover {
-  background-color: var(--color-btn-hover);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-light);
-}
-
-/* --- Daily Prayer Popup --- */
-#daily-prayer-popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-popup-overlay);
-  backdrop-filter: blur(5px);
-}
-
 #daily-prayer-content {
   margin: 20px 0;
   padding: 20px;
@@ -368,53 +339,18 @@ main,
   line-height: 1.6;
   margin: 0;
   color: #555;
-  font-family: var(--font-mono);
 }
 
-.share-buttons button {
-  border: none;
-  background: none;
-  font-size: 2em; /* tamanho do ícone */
-  cursor: pointer;
-  margin: 0 10px;
-  color: #333; /* cor padrão */
-  transition: color 0.3s ease;
-}
-
-#fb:hover {
-  color: #1877f2; /* azul Facebook */
-}
-
-#tw:hover {
-  color: #000000; /* cor do X/Twitter */
-}
-
-#wa:hover {
-  color: #25d366; /* verde WhatsApp */
-}
-
-
+/* --- Footer & Share Buttons --- */
 .footer {
-    position: fixed !important;
-    bottom: 0 !important;
+    position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
     padding: 15px;
     text-align: center;
-    background: rgba(173, 216, 230, 0.9) !important; /* Fundo semi-transparente da cor da página */
-    z-index: 9999 !important; /* Sempre por cima */
-
-}
-
-.share-section {
-    margin-bottom: 30px;
-}
-
-.share-text {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 15px;
-    font-style: italic;
+    background: rgba(173, 216, 230, 0.9);
+    z-index: 100;
 }
 
 .share-buttons {
@@ -425,7 +361,6 @@ main,
 
 .share-buttons button {
     border: none;
-    pointer-events: auto;
     background: rgba(255, 255, 255, 0.8);
     font-size: 1.3em;
     cursor: pointer;
@@ -445,37 +380,17 @@ main,
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.footer-text {
-    font-size: 0.8em;
-    color: #888;
-    margin: 0;
-}
-
 
 /* =========================
   RESPONSIVE DESIGN
 ========================= */
 
-/* --- Up to 992px (Tablet & Phone) --- */
+/* --- Up to 992px --- */
 @media (max-width: 992px) {
-  
-  #prayer-btn {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    width: 120px;
-    height: 50px;
-    padding: 8px 16px;
-    font-size: 0.9em;
-    border: none;
-    box-shadow: var(--shadow-light);
-    font-family: var(--font-body);
-  }
-
+  #prayer-btn,
   #daily-prayer-btn {
     position: absolute;
     top: 15px;
-    left: 20px;
     width: 120px;
     height: 50px;
     padding: 8px 16px;
@@ -484,87 +399,54 @@ main,
     box-shadow: var(--shadow-light);
     font-family: var(--font-body);
   }
+  #daily-prayer-btn { left: 20px; }
+  #prayer-btn { right: 20px; }
 }
 
 /* --- Up to 899px --- */
 @media (max-width: 899px) {
-
   #feeling-btn {
-    opacity: 0.8;
-    width: 650px;
+    width: 90%;
+    max-width: 650px;
     font-size: 2.5em;
-    box-shadow: lightblue 0px 0px 20px 4px;
-  }
-
-  #prayer-btn,
-  #daily-prayer-btn {
-    width: 110px;
-    height: 50px;
-    padding: 6px 8px;
-    font-size: 0.9em;
-  }
-
-  #daily-prayer-btn {
-    left: 45px;
-    text-align: center;
-  }
-
-  #prayer-btn {
-    right: 45px;
-    text-align: center;
   }
 }
 
-/* For smaller screens, keep the same positioning but adjust size if needed */
-@media (max-width: 600px), 
-  (max-width: 420px), 
-  (max-width: 400px), 
-  (max-width: 320px) {
+/* --- Up to 420px --- */
+@media (max-width: 420px) {
+  h1, .title {
+    font-size: 3em;
+  }
+  
   #prayer-btn,
   #daily-prayer-btn {
     width: 100px;
     height: 60px;
     padding: 6px 8px;
     font-size: 1em;
-  }
-
-  #daily-prayer-btn {
-    left: 45px;
     text-align: center;
   }
-
-  #prayer-btn {
-    right: 45px;
-    text-align: center;
-  }
+  #daily-prayer-btn { left: 15px; }
+  #prayer-btn { right: 15px; }
 
   #feeling-btn {  
-    opacity: 0.8;
-    width: 350px;
-    font-size: 2.5em;
-    box-shadow: lightblue 0px 0px 20px 4px;
+    width: 90%;
+    max-width: 350px;
+    font-size: 2em;
+    margin-top: 50px;
   }
 
-  #feelings-container {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px;
+  /* THIS IS THE CRITICAL PART FOR THE FIX */
+  #feelings-container.is-visible {
+    display: grid !important;
+    grid-template-columns: 2fr 1fr !important;
+    gap: 10px !important;
     width: 100%;
-    max-width: 320px;
-    padding: 10px;
-  }
-
-  .feeling-btn {
-    border: none;
-    box-shadow: lightblue 0px 0px 10px;
-    padding: 8px 12px;
-    width: 100%;
-    height: 50px;
-    font-size: 1em;
+    max-width: 350px !important;
   }
 
   .header {
     padding: 10px;
   }
 }
+

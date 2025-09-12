@@ -256,6 +256,7 @@ The mobile adaptation focuses on clarity and ease of use:
 - **HTML:** Passed through [W3C Validator](https://validator.w3.org/) with no errors.  
 - **CSS:** Passed through [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) with no errors.  
 - **Accessibility:** Achieved high scores on Lighthouse audits.  
+- **JS Test
 
 ---
 
