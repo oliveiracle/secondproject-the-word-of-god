@@ -302,6 +302,11 @@ const verses = {
   Excited: [
     "Rejoice in the Lord always. I will say it again: Rejoice! (Philippians 4:4)",
     "This is the day that the Lord has made; let us rejoice and be glad in it. (Psalm 118:24)"
+  ],
+  Determined: [
+    "I can do all things through Christ who strengthens me. (Philippians 4:13)",
+    "The Lord will fight for you; you need only to be still. (Exodus 14:14)",
+    "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go. (Joshua 1:9)"
   ]
 };
 
