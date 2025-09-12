@@ -77,17 +77,19 @@ To ensure an intuitive and serene user experience, a series of wireframes were d
 
 #### Step 1: The Home Page 
 
-The main goal of the home page is to welcome the user in a calm and focused environment, immediately presenting the central purpose of the site.
+The main goal of the home page is to welcome the user in a calm and focused environment, immediately presenting the central purpose of the site. The layout is intentionally simple and centered around four key interactions.
 
 ![Wireframe - Home Page Desktop](assets/images/documentation/wireframes-desktop/wireframe1.png)
 
-The layout is intentionally simple and centered around three key interactions:
+1. Main Call-to-Action (CTA): The user's journey is initiated by a single, clear call-to-action ("How are you feeling today?"). This is the primary path.
 
-1.  **Main Call-to-Action (CTA):** The user's journey is initiated by a single, clear call-to-action ("How are you feeling today?"). This is the primary path.
-2.  **Secondary Navigation:** Essential but non-critical options ("Today's Prayer" and "Prayer Request") are placed at the corners to be accessible but not distracting.
-3.  **Alternative Path:** A secondary, less prominent link ("Or get a random verse") offers a direct alternative for users who don't wish to follow the main flow.
+2. Secondary Navigation: Essential but non-critical options ("Today's Prayer" and "Prayer Request") are placed at the corners to be accessible but not distracting.
 
-This initial screen is designed to be a peaceful entry point, leading the user seamlessly to the next step: selecting their feeling to receive a tailored verse.
+3. Alternative Path: A secondary, less prominent link ("Or get a random verse") offers a direct alternative for users who don't wish to follow the main flow.
+
+4. Fixed Share Component: A fixed footer remains visible at the bottom of the screen. It contains social media share buttons, providing a constant but unobtrusive encouragement for users to share the site with others.
+
+This initial screen is designed to be a peaceful entry point, leading the user seamlessly to the next step while also facilitating the site's organic growth through sharing.
 
 #### Step 2: Feelings Selection Screen
 
