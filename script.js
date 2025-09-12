@@ -5,7 +5,7 @@
 
 const startButton = document.getElementById("feeling-btn");
 const feelingsContainer = document.getElementById("feelings-container");
-const feelingButtons = document.querySelectorAll(".feeling-btn");
+const feelingButtons = document.querySelectorAll(".feeling-btn"); feelingsContainer.style.display
 const verseDisplay = document.getElementById("verse-display");
 const randomVerseButton = document.getElementById("random-verse-btn");
 const prayerButton = document.getElementById("prayer-btn");
@@ -342,6 +342,18 @@ function toggleFeelingsContainer() {
     }
 }
 
+
+/**
+ * Toggles the visibility of the feelings button container.
+ */
+function toggleFeelingsContainer() {
+    // Primeiro, esconda sempre o versículo para "resetar" a vista.
+    verseDisplay.style.display = "none";
+
+    // Depois, continue a mostrar/esconder os sentimentos como antes.
+    const isVisible = feelingsContainer.style.display === "flex";
+    feelingsContainer.style.display = isVisible ? "none" : "flex";
+}
 /**
  * Selects and displays a random verse based on the chosen feeling.
  * @param {string} feeling - The feeling (e.g., 'Angry', 'Peaceful').
@@ -356,6 +368,9 @@ function displayVerseForFeeling(feeling) {
         verseDisplay.style.display = "block";
         feelingsContainer.style.display = "none";
         return;
+        verseDisplay.scrollIntoView({ behavior: 'smooth', block: 'center' }); // <-- ADICIONE ESTA LINHA
+}else {
+        verseDisplay.scrollIntoView({ behavior: 'smooth', block: 'center' }); // <-- ADICIONE ESTA LINHA  
     }
 
     // Get random verse
@@ -366,6 +381,8 @@ function displayVerseForFeeling(feeling) {
     verseDisplay.innerHTML = `<p>${randomVerse}</p>`;
     verseDisplay.style.display = "block";
     feelingsContainer.style.display = "none";
+     verseDisplay.scrollIntoView({ behavior: 'smooth', block: 'center' }); // <-- ADICIONE ESTA LINHA
+
 }
 
     // verseDisplay.style.display = "block"; // Remova esta linha
