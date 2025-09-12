@@ -5,7 +5,7 @@ This project was born from my faith and a deep desire to share the comfort and h
 My goal is to offer a peaceful space where anyone, at any time, can find a word of encouragement through Bible verses, daily prayers, and a community that prays for one another. To ensure this message is accessible to everyone, the site was built with a minimalist and fully responsive design.
 
 👉 [View the live project here](https://oliveiracle.github.io/secondproject-the-word-of-god/)
-`
+
 ---
 
 ## Technologies Used
@@ -22,7 +22,8 @@ My goal is to offer a peaceful space where anyone, at any time, can find a word 
 - **Offer personalized guidance** through verses tailored to the user’s emotions.  
 - **Encourage daily spiritual practice** with the *“Today’s Prayer”* feature.  
 - **Foster community and support** via the prayer request form.  
-- **Make inspiration accessible** with the random verse generator.  
+- **Make inspiration accessible** with the random verse generator. 
+- **Encourage Sharing and Growth** to help the message of hope reach more people, the site includes simple and accessible sharing options, fostering organic community growth. 
 
 ---
 
@@ -75,8 +76,9 @@ The typographic strategy was designed to be warm and engaging, balancing a perso
 
 To ensure an intuitive and serene user experience, a series of wireframes were designed to map out the core user journey. The focus was on creating a minimalist layout that guides the user gently, eliminating distractions and focusing on the main purpose of the application.
 
-#### Step 1: The Home Page 
+### Desktop Wireframes
 
+#### Step 1: The Home Page 
 The main goal of the home page is to welcome the user in a calm and focused environment, immediately presenting the central purpose of the site. The layout is intentionally simple and centered around four key interactions.
 
 ![Wireframe - Home Page Desktop](assets/images/documentation/wireframes-desktop/wireframe1.png)
@@ -147,7 +149,7 @@ The form's layout is designed for clarity and ease of use:
 
 This feature is designed to foster a sense of community and support in a seamless and respectful manner.
 
-#### Mobile Wireframes
+### Mobile Wireframes
 For mobile devices, the design was adapted to a single-column layout to ensure a clean, focused, and user-friendly experience on smaller screens. The priority is to maintain the same serene atmosphere while making all interactions easily accessible with one hand.
 
 #### Step 5: The Home Page 
@@ -207,43 +209,41 @@ The mobile adaptation focuses on clarity and ease of use:
 
 2. Optimized for Touch: The input fields and text area are large and have ample spacing, making them easy to tap and type on a mobile screen.
 
-3. Clear and Simple Actions: The `"Send" and "Close" buttons are designed to be easily accessible, with a clear visual hierarchy that guides the user toward the primary action of submitting the form.
-`
----
-
-## Features
-
-### Existing Features
-
-- **Main Button – “How are you feeling today?”**  
-   - Opens a set of emotion buttons, guiding the user to personalized verses.
-
-- **Emotion Buttons**  
-   - Each button displays a verse based on the selected emotion (sadness, joy, anxiety, etc.).  
-   - Verses are displayed randomly from the corresponding category.
-
-- **“Today’s Prayer” Feature**  
-   - Displays a unique prayer in a popup window.  
-   - Encourages users to return daily.
-
-- **Random Verse Generator**  
-   - Provides an instant Bible verse for users who don’t have a specific emotion in mind.
-
-- **Prayer Request Form**  
-   - Users can submit their personal prayer requests via a popup form.  
-   - Simple validation ensures the form is filled before submission.  
-   - Confirmation is displayed after sending the request.  
-
-- **Responsive Design**  
-   - Fully responsive layout with mobile-first design.  
-   - Navigation, popups, and buttons ad`apt to different screen sizes.  
+3. Clear and Simple Actions: The"Send" and "Close" buttons are designed to be easily accessible, with a clear visual hierarchy that guides the user toward the primary action of submitting the form.
 
 ---
 
-## Features Left to Implement
-- Ability to save user’s favorite verses.  
-- Prayer request submissions stored in a backend database.  
-- Daily verse delivered via notification or email subscription.  
+#### Core Features & User Experience
+This project is designed to be more than a simple website; it's an interactive spiritual sanctuary. Every feature was crafted to be intuitive, serene, and focused on providing comfort and inspiration.
+
+##### Interactive Verse Finder
+The core experience begins with a single, welcoming call-to-action: “How are you feeling today?”. This leads the user to an interactive grid of feelings, where they can select an emotion to receive a tailored Bible verse, offering personalized guidance and comfort.
+
+##### Daily Prayer Modal
+To encourage a daily moment of reflection, the site presents a unique prayer each day in a focused, distraction-free modal window. This feature invites users to return and start their day with a moment of peace.
+
+##### Spontaneous Inspiration
+For users seeking a quick word of encouragement, the "Random Verse" option provides a spontaneous Bible verse without the need to navigate through the feelings grid.
+
+##### Prayer Request Form
+A safe and private space where users can submit their personal prayer requests through a simple and elegant form. A confirmation message assures the user that their request has been received.
+
+##### Seamless Social Sharing
+A fixed footer provides a constant but unobtrusive way to share the website on Facebook, X (Twitter), and WhatsApp. This feature was designed to help grow the community organically by making it effortless for users to share this sanctuary with others.
+
+##### Fully Responsive Design
+The entire experience is seamlessly adapted for all screen sizes, from mobile phones to desktops. The mobile-first approach ensures that the site is beautiful, functional, and accessible to everyone, everywhere.
+
+### The Vision: Future Enhancements
+
+#### Personal Verse Collection: 
+To deepen the user's personal connection with the Word, a future update will allow them to "favorite" and save verses. This will create a personal, persistent collection that can be revisited anytime for encouragement and reflection.
+
+#### Secure Prayer Backend: 
+To enhance the prayer request feature, a secure backend will be implemented to store submissions. This paves the way for a potential future feature: an anonymous "Community Prayer Wall" where users can feel the support of a praying community.
+
+#### Daily Devotional Subscriptions: 
+To help users build a consistent spiritual habit, a subscription feature (via email or push notifications) will be developed. Users will be able to opt-in to receive the "Daily Prayer" or a verse directly on their device, bringing a moment of peace to their daily routine. 
 
 ---
 
