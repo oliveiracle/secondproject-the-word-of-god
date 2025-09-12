@@ -151,7 +151,7 @@ This feature is designed to foster a sense of community and support in a seamles
 For mobile devices, the design was adapted to a single-column layout to ensure a clean, focused, and user-friendly experience on smaller screens. The priority is to maintain the same serene atmosphere while making all interactions easily accessible with one hand.
 
 #### Step 5: The Home Page 
-The mobile home page retains the core functionality of the desktop version but stacks the elements vertically for a natural and intuitive flow.
+On mobile devices, after the user interacts with the main CTA, the interface transitions to display the feelings selection screen. The layout is adapted into a touch-friendly, two-column grid to ensure all options are easily scannable and selectable with one hand.
 
 ![Wireframe - Home Page Mobile](assets/images/documentation/wireframes-mobile/wireframe4.png)
 
@@ -162,6 +162,8 @@ Key adaptations for the mobile layout include:
 2. Prominent CTA: The main call-to-action remains the central focus, enlarged to be easily tappable and immediately draw the user's attention.
 
 3. Vertical Hierarchy: All elements are arranged in a clear vertical hierarchy, guiding the user's eye downwards from the navigation options to the primary and secondary actions, ensuring a seamless experience.
+
+4 .Persistent Share Footer: The fixed footer with the share buttons for Facebook, X (Twitter), and WhatsApp remains visible at the bottom of the screen. This ensures that the option to share the site is always available, even as the user navigates through the main flow.
 
 This approach ensures that the application is just as powerful and easy to use on a mobile device as it is on a desktop.
 

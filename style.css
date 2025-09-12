@@ -467,7 +467,6 @@ main, .main-container {
     .footer {
       position: fixed;
       padding: 30px;
-      opacity: 0.8;
     }
 
     .share-buttons button {
