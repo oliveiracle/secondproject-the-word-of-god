@@ -9,11 +9,16 @@ My goal is to offer a peaceful space where anyone, at any time, can find a word 
 ---
 
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- Git & GitHub
-- VS Code
+
+HTML5: For the core structure and content of the application.
+
+CSS3: For all styling, including the responsive layout, animations, and the dual-palette design strategy.
+
+JavaScript (ES6): For all interactivity, including the logic for displaying verses, managing pop-ups, and handling user events.
+
+Git & GitHub: For version control and hosting the deployed project via GitHub Pages.
+
+VS Code: As the primary code editor for development.
 
 ---
 
@@ -39,28 +44,27 @@ My goal is to offer a peaceful space where anyone, at any time, can find a word 
 
 ## UX Design
 
-### The Psychology of Colors in the Project
+#### The Psychology of Colors: An Ethereal Experience
 
-Our visual identity is built on a dual-palette strategy to create an experience that is both spiritually warm and functionally clear. We combine an atmospheric background with a clean, focused user interface.
+The visual identity of the project is designed to create an experience that is both spiritually uplifting and functionally clear. The strategy combines a celestial, calming atmosphere with a warm, human core at its center.
 
-![Color Palette](assets/images/documentation/screenshots/colorpalette/colorspalette.png)
+#### The Celestial Atmosphere (The Calming Blue)
 
-**1. The Atmospheric Palette (The Heart of the Site)**
+The entire user experience is enveloped in a soft, light blue. This is not just an accent color, but the primary atmospheric element of the site.
 
-The user is welcomed by a background image rich in soft, warm, and earthy tones—the gentle whites of a dove and the natural beiges of open hands. This visual foundation sets the emotional tone of the site:
+The Ethereal Frame: A gentle blue vignette on the edges of the screen and a solid blue footer create a soothing visual boundary. This "celestial frame" removes outside distractions and immerses the user in a space of peace and serenity.
 
-* **Warmth and Humanity:** The beige and organic tones create a welcoming, human, and comforting atmosphere.
-* **Spirituality and Peace:** The imagery of the dove and the cross evokes a sense of peace, hope, and the presence of the Holy Spirit.
+The Unifying Element: This same lightblue is used for all interactive elements (buttons, links, pop-ups), creating a seamless and harmonious connection between the atmosphere and the user interface.
 
-**2. The User Interface Palette (The Clarity of the Message)** 
+#### The Human Core (The Heart of the Site)
 
-Floating above this warm atmosphere is a clean, minimalist UI palette designed for focus and readability.
+Resting at the heart of this blue atmosphere is the background image, rich in soft, warm, and earthy tones.
 
-* **Dark Tones (`#222` and `#333`):** Represent the **solidity and timelessness** of the message. They provide maximum contrast for comfortable, distraction-free reading, conveying authority and trust.
-* **Light Blue (`lightblue`):** Our touch of **serenity and clarity**. This cool color complements the warm background, evoking a sense of calm and confidence. It is used strategically to guide the user's actions peacefully.
-* **Background (`#f8feff`):** The foundation for all content is a white with a subtle bluish tint, creating a **clean and open space**. It acts as a canvas that elevates the Word, symbolizing the mental clarity needed for reflection.
+Warmth and Humanity: The natural beiges of the open hands and the gentle whites of the dove provide a focal point of warmth, comfort, and human connection.
 
-This combination ensures that the user feels welcomed and at peace (from the background) while being able to interact with the message clearly and without effort (from the UI).
+Clarity and Readability: Floating above this, the dark tones (#222 and #333) are used for all text, ensuring the message is always solid, timeless, and easy to read.
+
+This combination ensures that the user feels enveloped in a peaceful, heavenly calm (from the blue atmosphere) while connecting with a message of hope and humanity at its core.
 
 ### Typography: A Balance of Personality and Clarity
 
@@ -165,7 +169,7 @@ Key adaptations for the mobile layout include:
 
 3. Vertical Hierarchy: All elements are arranged in a clear vertical hierarchy, guiding the user's eye downwards from the navigation options to the primary and secondary actions, ensuring a seamless experience.
 
-4 .Persistent Share Footer: The fixed footer with the share buttons for Facebook, X (Twitter), and WhatsApp remains visible at the bottom of the screen. This ensures that the option to share the site is always available, even as the user navigates through the main flow.
+4.    Persistent Share Footer: The fixed footer with the share buttons for Facebook, X (Twitter), and WhatsApp remains visible at the bottom of the screen. This ensures that the option to share the site is always available, even as the user navigates through the main flow.
 
 This approach ensures that the application is just as powerful and easy to use on a mobile device as it is on a desktop.
 
@@ -249,18 +253,43 @@ To help users build a consistent spiritual habit, a subscription feature (via em
 
 ## Testing
 
-### Manual Testing - IT HAS TO BE DONE
+### Manual Testing 
 - All links and buttons were tested to ensure correct functionality.  
 - Prayer request form tested with both valid and invalid inputs.  
 - Verses and prayers display correctly across all devices.  
 - Popups tested to open and close without issues.  
 - Layout tested on Chrome, Safari, and mobile devices.  
 
-### Validator Testing - IT HAS TO BE DONE
-- **HTML:** Passed through [W3C Validator](https://validator.w3.org/) with no errors.  
-- **CSS:** Passed through [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) with no errors.  
-- **Accessibility:** Achieved high scores on Lighthouse audits.  
-- **JS Test
+
+## Validator Testing
+To ensure the highest quality, the project's code and performance were rigorously tested using official industry-standard tools.
+
+**HTML Validation:** The HTML code was passed through the official W3C Validator.
+![Screenshot of  HTML Validador](assets/images/documentation/html-validation/htmlvalidation.png)
+
+**Result**: Passed with no errors or significant warnings.
+
+**CSS Validation:** The CSS code was passed through the official Jigsaw CSS Validator.
+![Screenshot of CSS Validador](assets/images/documentation/css-validation/cssvalidator.png)
+
+**Result:** Passed with no errors found.
+
+**JavaScript Linting:** The JavaScript code was analyzed using JSHint to check for syntax errors and potential issues.
+
+**Result:** Passed with no significant errors or warnings detected.
+
+
+| Feature | Action | Expected Result |
+| --- | --- | --- |
+| Main CTA | Click "How are you feeling today?" button. | The feelings selection grid appears, and the main button becomes inactive. |
+| Feelings Buttons | Click on any feeling button (e.g., "Peaceful"). | The feelings grid disappears, and a relevant Bible verse is displayed and centered on the screen. |
+| Random Verse Link | Click "Or get a random verse for your day". | A random verse from any category is displayed and centered on the screen. |
+| Daily Prayer | Click "Today's Prayer" button. | A modal window appears with the daily prayer. The "Close" and "Mark as Read" buttons function correctly. |
+| Prayer Request | Click "Prayer Request" button. | A modal window with a form appears. The form validates input and shows a confirmation upon sending. |
+| Social Sharing | Click on Facebook, X, or WhatsApp icons. | A new tab opens with the corresponding social media sharing dialogue pre-populated with the site's link. |
+| Responsiveness | Resize the browser window from desktop to mobile size. | The layout adjusts smoothly, with elements stacking correctly and the feelings grid changing from flex to a 2-column grid. |
+
+
 
 ---
 

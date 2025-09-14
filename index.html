@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peace in the Word</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header"> 
+
+      <header class="mobile-header">
+        <button id="daily-prayer-btn" aria-label="Open daily prayer">Today's Prayer 🙏</button>
+        <button id="prayer-btn" aria-label="Open prayer request form">Prayer Request 🙏</button>
+  
         <!-- DAILY PRAYER BUTTON - DESKTOP ONLY -->
         <button onclick="DailyPrayerPopup()" id="daily-prayer-btn" aria-label="Open daily prayer">
             Today's Prayer 🕊
         </button>
         <!-- REQUEST A PRAYER BUTTON -->
-        <button onclick="Popup()" role="button" id="prayer-btn" aria-label="Open prayer request form">
+        <button onclick="Popup()" id="prayer-btn" aria-label="Open prayer request form">
             Prayer Request 🙏
         </button>
+        </header>
 
         <!-- DAILY PRAYER POPUP -->
         <div id="daily-prayer-popup">
