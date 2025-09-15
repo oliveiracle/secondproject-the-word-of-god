@@ -170,7 +170,7 @@ For mobile devices, the design was adapted to a single-column layout to ensure a
 #### Step 5: The Home Page 
 On mobile devices, after the user interacts with the main CTA, the interface transitions to display the feelings selection screen. The layout is adapted into a touch-friendly, two-column grid to ensure all options are easily scannable and selectable with one hand.
 
-![Wireframe - Home Page Mobile](assets/images/documentation/wireframes-mobile/wireframe4.png)
+![Wireframe - Home Page Mobile](wireframes/mobile/wireframe4.png)
 
 Key adaptations for the mobile layout include:
 
