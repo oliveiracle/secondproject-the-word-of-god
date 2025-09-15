@@ -1,10 +1,10 @@
 # The Word of God
 
-This project was born from my faith and a deep desire to share the comfort and hope that I find in God's Word. "Peace in the Word" is more than just a website; it is a digital sanctuary created to bring the love of Jesus Christ to those in need.
+This project was born from my personal faith in the Lord Jesus Christ and a calling on my heart to share the immense comfort and love His Word offers. More than just a website, "Peace in the Word" is my act of service to others—a digital sanctuary created so that anyone, in a moment of need, can find a word of hope.
 
-My goal is to offer a peaceful space where anyone, at any time, can find a word of encouragement through Bible verses, daily prayers, and a community that prays for one another. To ensure this message is accessible to everyone, the site was built with a minimalist and fully responsive design.
+My prayer is that, through this space, the love of Jesus may touch and console hearts, reminding everyone that they are not alone. To ensure this message is accessible to all, the site was built with a minimalist and fully responsive design.
 
-    **Screenshot showing site responsiveness** 
+    Screenshot showing site responsiveness 
 
 ![Screenshot showing site responsiveness](assets/images/responsiveness.png)
 
@@ -305,6 +305,51 @@ To ensure the highest quality, the project's code and performance were rigorousl
 
 ---
 
+### Lighthouse Audit
+
+To ensure the highest quality, the project was audited using **Lighthouse** in Chrome DevTools to evaluate its performance, accessibility, and overall user experience. The project achieved excellent scores across the board, demonstrating a commitment to modern web standards and a high-quality experience for all users.
+
+#### **Desktop Audit Results**
+
+The desktop version was tested to ensure a fast, accessible, and reliable experience on larger screens.
+
+| Category | Score |
+| :--- | :--- |
+| Performance | **99** |
+| Accessibility | **91** |
+| Best Practices | **100** |
+| SEO | **100** |
+
+<details>
+<summary>Click to view Desktop Lighthouse Report</summary>
+<img src="assets/images/documentation/lighthouse/mobile/perfomancemobile.png" alt="Desktop Performance Score">
+<img src="assets/images/documentation/lighthouse/mobile/acessibilitymobile.png" alt="Desktop Accessibility Score">
+<img src="assets/images/documentation/lighthouse/mobile/bestpracticesmobile.png" alt="Desktop Best Practices Score">
+<img src="assets/images/documentation/lighthouse/mobile/seomobile.png" alt="Desktop SEO Score">
+</details>
+
+<br>
+
+#### **Mobile Audit Results**
+
+The mobile version was tested to confirm a seamless and optimized experience, achieving perfect or near-perfect scores in all categories.
+
+| Category | Score |
+| :--- | :--- |
+| Performance | **99** |
+| Accessibility | **100** |
+| Best Practices | **100** |
+| SEO | **100** |
+
+<details>
+<summary>Click to view Mobile Lighthouse Report</summary>
+<img src="assets/images/documentation/lighthouse/mobile/perfomancemobile.png" alt="Mobile Performance Score">
+<img src="assets/images/documentation/lighthouse/mobile/acessibilitymobile.png" alt="Mobile Accessibility Score">
+<img src="assets/images/documentation/lighthouse/mobile/bestpracticesmobile.png" alt="Mobile Best Practices Score">
+<img src="assets/images/documentation/lighthouse/mobile/seomobile.png" alt="Mobile SEO Score">
+</details>
+
+
 ### Deployment
 The site was deployed using **GitHub Pages**:  
 
@@ -347,18 +392,17 @@ Debugging complex CSS layout issues and refactoring JavaScript for better perfor
 
 Acting as a language translator to ensure all documentation met a professional English standard.
 
-### Code & Logic:
+### Code & Logic
 
 **GitHub Copilot:**
  Provided real-time code completion and assisted in structuring the CSS file within VS Code.
 
 **Stack Overflow & MDN Web Docs:** Served as essential resources for researching and implementing JavaScript solutions for event handling and DOM manipulation.
 
-### Code Quality & Formatting:
+### Code Quality & Formatting
 
 **Prettier:** The Prettier extension for VS Code was used to automatically format all code, ensuring a clean, consistent, and readable codebase.
 
 **Code Institute:** A special thanks to the Code Institute for providing the project's foundational learning structure and recommended practices.
   
-
 ---
