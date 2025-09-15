@@ -272,7 +272,6 @@ To help users build a consistent spiritual habit, a subscription feature (via em
 - Popups tested to open and close without issues.  
 - Layout tested on Chrome, Safari, and mobile devices.  
 
-
 ## Validator Testing
 To ensure the highest quality, the project's code and performance were rigorously tested using official industry-standard tools.
 
@@ -300,8 +299,6 @@ To ensure the highest quality, the project's code and performance were rigorousl
 | Prayer Request | Click "Prayer Request" button. | A modal window with a form appears. The form validates input and shows a confirmation upon sending. |
 | Social Sharing | Click on Facebook, X, or WhatsApp icons. | A new tab opens with the corresponding social media sharing dialogue pre-populated with the site's link. |
 | Responsiveness | Resize the browser window from desktop to mobile size. | The layout adjusts smoothly, with elements stacking correctly and the feelings grid changing from flex to a 2-column grid. |
-
-
 
 ---
 
@@ -360,6 +357,35 @@ The site was deployed using **GitHub Pages**:
 5. Save, and GitHub will provide a deployment link.  
 
 👉 Live Project: [The Word of God](https://oliveiracle.github.io/secondproject-the-word-of-god/)  
+
+---
+
+#### Bugs and Fixes
+No major bugs were found during the final testing phase that remain unfixed. However, several challenges were identified and resolved during the development process to ensure a stable and professional user experience.
+
+**Responsive Layout Inconsistency:**
+
+**Bug:** On mobile devices, the feelings button grid would sometimes display as a single column instead of the intended two-column layout.
+
+**Fix:** The issue was caused by a conflict between a display: flex rule in the JavaScript and a display: grid rule in the CSS media queries. The JavaScript was refactored to use classList.toggle() to add or remove a .is-visible class, giving the CSS full control over the layout and ensuring the two-column grid is always applied correctly on smaller screens.
+
+**Unresponsive Main CTA:**
+
+**Bug:** On desktop, after a user selected a feeling and a verse was displayed, the main "How are you feeling today?" button would become unresponsive and could not be clicked again to restart the flow.
+
+**Fix:** The JavaScript function toggleFeelingsContainer() was updated to always hide the verse display (verseDisplay.style.display = "none") before showing the feelings grid. This "resets" the UI state and ensures the button is always functional.
+
+**Content Overlap on Mobile:**
+
+**Bug:** On smaller screens, the main content would scroll underneath the new fixed mobile header, causing visual overlap.
+
+**Fix:** A padding-top with the same height as the header was added to the .main-container within the media query for mobile devices. This creates a "safe area" that pushes all content down, preventing any overlap.
+
+**Automatic Scrolling on Mobile:**
+
+**Bug:** After selecting a feeling on a mobile device, the verse would appear off-screen at the bottom of the page, forcing the user to scroll down manually to see the result of their action.
+
+**Fix:** The scrollIntoView({ behavior: 'smooth', block: 'center' }) method was added to the JavaScript functions that display the verse. This automatically and smoothly scrolls the page to center the verse on the screen, creating a much better user experience.
 
 ---
 
