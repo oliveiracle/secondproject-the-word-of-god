@@ -1,3 +1,6 @@
+/* =========================
+  GOOGLE FONTS
+========================= */
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
@@ -7,7 +10,6 @@
   ROOT VARIABLES
 ========================= */
 :root {
-  /* Colors */
   --color-primary: #222;
   --color-secondary: #333;
   --color-accent: lightblue;
@@ -18,11 +20,9 @@
   --color-popup-bg: rgba(255, 255, 255, 0.95);
   --color-popup-overlay: rgba(0, 0, 0, 0.7);
 
-  /* Fonts */
   --font-title: "Gloria Hallelujah", cursive;
   --font-body: "Quicksand", sans-serif;
 
-  /* Spacing & Effects */
   --radius-btn: 30px;
   --radius-popup: 20px;
   --shadow-btn: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -31,16 +31,11 @@
 }
 
 /* =========================
-  GOOGLE FONTS
-========================= */
-
-/* =========================
   BASE & LAYOUT (DESKTOP-FIRST)
 ========================= */
 html {
   overflow-x: hidden;
   box-sizing: border-box;
-  /* Permite rolar verticalmente apenas metade da altura da página */
   max-height: 20;
   overflow-y: auto;
 }
@@ -62,7 +57,6 @@ body {
   text-align: center;
   color: var(--color-secondary);
 }
-
 h1,
 .title {
   font-size: 4em;
@@ -83,7 +77,7 @@ main,
   max-width: 900px;
   padding: 30px;
   flex: 1;
-  padding-bottom: 150px; /* Space for the footer */
+  padding-bottom: 150px;
 }
 
 /* =========================
@@ -113,7 +107,20 @@ main,
   position: relative;
   overflow: hidden;
 }
-
+#feeling-btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 120px;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(179,229,252,0.25) 0%, rgba(224,247,250,0.18) 60%, rgba(255,255,255,0) 100%);
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 1;
+  filter: blur(2px);
+  opacity: 0.9;
+}
 #feeling-btn:hover {
   background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
   color: #0d47a1;
@@ -124,30 +131,27 @@ main,
 }
 
 /* --- Feelings Container --- */
-/* Control visibility with JS, but layout with CSS */
 #feelings-container {
-  display: none; /* Hidden by default */
+  display: none;
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
   margin-bottom: 80px;
 }
-
 .feeling-btn {
-  width: 180px;
+  width: 220px;
   height: 60px;
   padding: 10px 20px;
-  border: 2px solid #bbb;
-  border-radius: var(--radius-btn);
+  border: 2px solid #b3e5fc;
+  border-radius: 30px;
   cursor: pointer;
-  background-color: white;
-  color: #444;
-  font-size: 1.1em;
+  background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
+  color: #1976d2;
+  font-size: 1.3em;
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease-in-out;
-  font-family: var(--font-body);
+  font-family: 'Leckerli One', cursive;
+  letter-spacing: 2px;
 }
 .feeling-btn:hover {
   background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
@@ -160,7 +164,7 @@ main,
 
 /* --- Verse Display --- */
 #verse-display {
-  display: none; /* Hidden by default */
+  display: none;
   font-family: var(--font-body);
   margin-top: 40px;
   padding: 40px;
@@ -171,16 +175,13 @@ main,
   line-height: 1.6;
   color: var(--color-primary);
   max-width: 800px;
-  box-shadow: 0 0 10px 5px #e6f2ff;
   border: 1px solid #e6f2ff;
-  box-shadow: 0 40px 60px lightblue; /* Sombra inicial */
+  box-shadow: 0 40px 60px lightblue;
   transition: box-shadow 0.3s ease;
 }
-
 #verse-display:hover {
   box-shadow: 0 0 15px 7px #b3e5fc;
 }
-
 #verse-display.is-visible {
   display: block;
 }
@@ -188,14 +189,13 @@ main,
 /* --- Random Verse Button --- */
 #random-verse-btn {
   display: block;
-  margin-top: 60px; /* Puxa o link para cima, para mais perto do botão principal */
+  margin-top: 60px;
   color: #444;
   font-family: "poppins", sans-serif;
   font-size: 1.3em;
   text-decoration: none;
   transition: all 0.9s ease;
 }
-
 #random-verse-btn:hover {
   color: #000;
   transform: translateY(-20px);
@@ -222,19 +222,34 @@ main,
     0 8px 32px 0 rgba(179, 224, 255, 0.45),
     0 1.5px 30px 10px #fff,
     0 0px 80px 10px #e6f2ff,
-    0 0 120px 20px #b3e5fc;
+    0 0 120px 20px #b3e5fc,
+    0 0 40px 10px #e0f7fa,
+    0 0 120px 40px #b3e5fc,
+    0 0 200px 80px #e0f7fa;
   text-shadow: 0 2px 8px #b3e5fc, 0 1px 0 #fff;
   transition: background 0.4s, box-shadow 0.4s, color 0.3s;
+  overflow: visible;
 }
-#prayer-btn {
-  right: 5%;
+#prayer-btn::after,
+#daily-prayer-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 120px;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(179,229,252,0.25) 0%, rgba(224,247,250,0.18) 60%, rgba(255,255,255,0) 100%);
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 1;
+  filter: blur(2px);
+  opacity: 0.9;
 }
-#daily-prayer-btn {
-  left: 5%;
-}
+#prayer-btn { right: 5%; }
+#daily-prayer-btn { left: 5%; }
 #prayer-btn:hover,
 #daily-prayer-btn:hover {
-   background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
   color: #0d47a1;
   box-shadow:
     0 12px 48px 0 rgba(179, 224, 255, 0.55),
@@ -370,24 +385,8 @@ main,
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 /* Facebook */
-#fb:hover {
-  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
-  color: #0d47a1;
-  box-shadow:
-    0 12px 48px 0 rgba(179, 224, 255, 0.55),
-    0 2px 40px 15px #fff,
-    0 0px 100px 20px #b3e5fc;
-}
-/* Twitter (X) */
-#tw:hover {
-  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
-  color: #0d47a1;
-  box-shadow:
-    0 12px 48px 0 rgba(179, 224, 255, 0.55),
-    0 2px 40px 15px #fff,
-    0 0px 100px 20px #b3e5fc;
-}
-/* WhatsApp */
+#fb:hover,
+#tw:hover,
 #wa:hover {
   background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
   color: #0d47a1;
@@ -415,7 +414,7 @@ main,
   body {
     overflow-x: hidden!important;
     padding-bottom: 150px;
-    background-attachment: scroll; /* Space for fixed footer */
+    background-attachment: scroll;
   }
   h1,
   .title {
@@ -432,86 +431,16 @@ main,
     border: none;
     box-shadow: var(--shadow-light);
   }
-
-  #daily-prayer-btn {
-    left: 15px;
-  }
-  #prayer-btn {
-    right: 15px;
-  }
+  #daily-prayer-btn { left: 15px; }
+  #prayer-btn { right: 15px; }
   #feeling-btn {
     margin-top: 50px;
     width: 100%;
     max-width: 400px;
     font-size: 2.5em;
   }
-
-  /* --- Extra Small Screens --- */
-  @media (max-width: 600px),
-    (max-width: 420px),
-    (max-width: 400px),
-    (max-width: 320px),
-    (max-width: 280px) {
-    body,
-    html {
-      width: 100vw;
-      height: 100vh;
-      min-height: 100vh !important;
-      margin: 0;
-      padding: 0;
-      background-size: cover !important;
-      background-position: center center !important;
-      background-repeat: no-repeat !important;
-      background-attachment: scroll !important;
-      overflow-x: hidden !important
-
-    }
-
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
-
-    .main {
-      min-height: calc(100vh - 60px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    h1,
-    .title {
-      font-size: 2.8em;
-    }
-
-    #feelings-container.is-visible {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      width: 100%;
-    }
-    #feelings-container {
-      padding-top: 50px;
-    }
-
-    .feeling-btn-container {
-      min-height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding-bottom: 100px;
-    }
-
-    .feeling-btn {
-      width: 47%;
-      height: 60px;
-      max-width: 300px;
-      font-size: 1em;
-      padding: 4px 18px;
-      border: none;
-      box-shadow: lightblue 0px 0px 16px;
-    }
+  .feeling-btn {
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
   }
   .footer {
     position: fixed;
@@ -525,7 +454,6 @@ main,
     align-items: center;
     justify-content: center;
   }
-
   .share-buttons {
     display: flex !important;
     justify-content: center !important;
@@ -533,13 +461,11 @@ main,
     width: 100%;
     gap: 20px;
   }
-
   .mobile-header {
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -567,7 +493,6 @@ main,
     border-color: rgb(13, 163, 213);
     opacity: 0.93;
   }
-
   #feeling-btn {
     margin-top: 150px;
     opacity: 0.9;
@@ -576,7 +501,6 @@ main,
     border-color: lightblue;
     text-decoration: uppercase;
   }
-
   #random-verse-btn {
     margin-top: 40px;
     font-size: 1.2em;
@@ -585,11 +509,71 @@ main,
     font-family: quicksand, sans-serif;
     font-style: normal;
   }
-
   .share-buttons button {
     width: 50px;
     height: 50px;
     font-size: 1.5em;
     box-shadow: white 0px 0px 30px;
+  }
+  /* --- Extra Small Screens --- */
+  @media (max-width: 600px),
+    (max-width: 420px),
+    (max-width: 400px),
+    (max-width: 320px),
+    (max-width: 280px) {
+    body,
+    html {
+      width: 100vw;
+      height: 100vh;
+      min-height: 100vh !important;
+      margin: 0;
+      padding: 0;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-attachment: scroll !important;
+      overflow-x: hidden !important;
+    }
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+    }
+    .main {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h1,
+    .title {
+      font-size: 2.8em;
+    }
+    #feelings-container.is-visible {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      width: 100%;
+    }
+    #feelings-container {
+      padding-top: 50px;
+    }
+    .feeling-btn-container {
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-bottom: 100px;
+    }
+    .feeling-btn {
+      background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
+      width: 47%;
+      height: 60px;
+      max-width: 300px;
+      font-size: 1em;
+      padding: 4px 18px;
+      border: none;
+      box-shadow: lightblue 0px 0px 16px;
+    }
   }
 }
