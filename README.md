@@ -4,6 +4,10 @@ This project was born from my faith and a deep desire to share the comfort and h
 
 My goal is to offer a peaceful space where anyone, at any time, can find a word of encouragement through Bible verses, daily prayers, and a community that prays for one another. To ensure this message is accessible to everyone, the site was built with a minimalist and fully responsive design.
 
+    **Screenshot showing site responsiveness** 
+
+![Screenshot showing site responsiveness](assets/images/responsiveness.png)
+
 👉 [View the live project here](https://oliveiracle.github.io/secondproject-the-word-of-god/)
 
 ---
@@ -46,23 +50,28 @@ VS Code: As the primary code editor for development.
 
 #### The Psychology of Colors: An Ethereal Experience
 
+![Screenshot showing colorpalette](assets/images/documentation/screenshots/colorpalette/colorpalette.png)
+
+
 The visual identity of the project is designed to create an experience that is both spiritually uplifting and functionally clear. The strategy combines a celestial, calming atmosphere with a warm, human core at its center.
 
-#### The Celestial Atmosphere (The Calming Blue)
+1. The Celestial Atmosphere (The Calming Blue)
 
 The entire user experience is enveloped in a soft, light blue. This is not just an accent color, but the primary atmospheric element of the site.
 
-The Ethereal Frame: A gentle blue vignette on the edges of the screen and a solid blue footer create a soothing visual boundary. This "celestial frame" removes outside distractions and immerses the user in a space of peace and serenity.
+**The Ethereal Frame:** A gentle blue vignette on the edges of the screen and a solid blue footer create a soothing visual boundary. This "celestial frame" removes outside distractions and immerses the user in a space of peace and serenity.
 
-The Unifying Element: This same lightblue is used for all interactive elements (buttons, links, pop-ups), creating a seamless and harmonious connection between the atmosphere and the user interface.
+**The Unifying Element:** This same lightblue is used for all interactive elements (buttons, links, pop-ups), creating a seamless and harmonious connection between the atmosphere and the user interface.
 
-#### The Human Core (The Heart of the Site)
+**Interactive Light:** To enhance the ethereal feeling, interactive elements respond to the user's touch with a soft "explosion of light" effect. This micro-interaction reinforces the theme of hope and divine inspiration, making every click feel meaningful.
+
+2. The Human Core (The Heart of the Site)
 
 Resting at the heart of this blue atmosphere is the background image, rich in soft, warm, and earthy tones.
 
-Warmth and Humanity: The natural beiges of the open hands and the gentle whites of the dove provide a focal point of warmth, comfort, and human connection.
+**Warmth and Humanity:** The natural beiges of the open hands and the gentle whites of the dove provide a focal point of warmth, comfort, and human connection.
 
-Clarity and Readability: Floating above this, the dark tones (#222 and #333) are used for all text, ensuring the message is always solid, timeless, and easy to read.
+**Clarity and Readability:** Floating above this, the dark tones (#222 and #333) are used for all text, ensuring the message is always solid, timeless, and easy to read.
 
 This combination ensures that the user feels enveloped in a peaceful, heavenly calm (from the blue atmosphere) while connecting with a message of hope and humanity at its core.
 
@@ -94,6 +103,8 @@ The main goal of the home page is to welcome the user in a calm and focused envi
 3. Alternative Path: A secondary, less prominent link ("Or get a random verse") offers a direct alternative for users who don't wish to follow the main flow.
 
 4. Fixed Share Component: A fixed footer remains visible at the bottom of the screen. It contains social media share buttons, providing a constant but unobtrusive encouragement for users to share the site with others.
+
+5.  Persistent Share Footer: The fixed footer with the share buttons for Facebook, X (Twitter), and WhatsApp remains visible at the bottom of the screen. This ensures that the option to share the site is always available, even as the user navigates through the main flow.
 
 This initial screen is designed to be a peaceful entry point, leading the user seamlessly to the next step while also facilitating the site's organic growth through sharing.
 
@@ -168,10 +179,9 @@ Key adaptations for the mobile layout include:
 2. Prominent CTA: The main call-to-action remains the central focus, enlarged to be easily tappable and immediately draw the user's attention.
 
 3. Vertical Hierarchy: All elements are arranged in a clear vertical hierarchy, guiding the user's eye downwards from the navigation options to the primary and secondary actions, ensuring a seamless experience.
-
-4.    Persistent Share Footer: The fixed footer with the share buttons for Facebook, X (Twitter), and WhatsApp remains visible at the bottom of the screen. This ensures that the option to share the site is always available, even as the user navigates through the main flow.
-
 This approach ensures that the application is just as powerful and easy to use on a mobile device as it is on a desktop.
+
+4. Persistent Share Footer: The fixed footer with the share buttons for Facebook, X (Twitter), and WhatsApp remains visible at the bottom of the screen. This ensures that the option to share the site is always available, even as the user navigates through the main flow.
 
 #### Step 6: Feelings Selection Screen 
 
@@ -214,6 +224,8 @@ The mobile adaptation focuses on clarity and ease of use:
 2. Optimized for Touch: The input fields and text area are large and have ample spacing, making them easy to tap and type on a mobile screen.
 
 3. Clear and Simple Actions: The"Send" and "Close" buttons are designed to be easily accessible, with a clear visual hierarchy that guides the user toward the primary action of submitting the form.
+
+4. A fixed footer provides a constant and accessible way for users to share the website. It contains clean icons for sharing on Facebook, X (Twitter), and WhatsApp. The component is designed to be unobtrusive, ensuring it doesn't interrupt the user's peaceful experience. This feature encourages organic community growth by making it effortless to share the message of hope.
 
 ---
 
@@ -293,7 +305,7 @@ To ensure the highest quality, the project's code and performance were rigorousl
 
 ---
 
-## Deployment
+### Deployment
 The site was deployed using **GitHub Pages**:  
 
 1. Go to the repository on GitHub.  
@@ -306,21 +318,47 @@ The site was deployed using **GitHub Pages**:
 
 ---
 
-## Credits
+### Credits
 
-### Content & Design Inspiration
-- Bible verses and prayers were sourced from the **Holy Bible (NIV translation)**.  
-- Color palette inspired by **soft spiritual tones**, mixing white, beige, and light blue for serenity.  
-- Handwritten typography for warmth and personal touch.  
-- README structure adapted from Code Institute’s recommended format.  
+**Concept & Content**
+
+**Core Vision:** The entire project, from its spiritual mission to its final visual identity, was born from a personal vision to create a serene and hopeful digital sanctuary.
+
+**Biblical Verses:** All scripture quoted in this project is from the Holy Bible (New International Version).
+
+**Daily Prayers:** The daily prayers were inspired by various online devotionals and personally written to align with the project's comforting and uplifting tone.
 
 ### Media
-- Icons sourced from [Font Awesome](https://fontawesome.com/).  
-- Backgrounds and illustrations adapted from free resources on [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/).  
 
-### Acknowledgements
-- **Code Institute**: For project structure and learning guidance.  
-- **Stack Overflow & CSS-Tricks**: For support on responsive popups and JavaScript event handling.  
-- **Google & GitHub Copilot**: Assisted in debugging and structuring the JavaScript logic.  
+**Background Imagery:**
+ The atmospheric background image is a composite created and adapted from royalty-free resources on Pexels.
+
+**Icons:** All icons used for the social sharing features and UI elements are from Emojipedia.
+
+### Development, Tools & Acknowledgements
+
+**Google AI (Gemini):** Served as an invaluable partner throughout the development lifecycle. Gemini was instrumental in:
+
+Brainstorming UX strategies and professional phrasing for all documentation.
+
+Creating the detailed wireframes and design boards.
+
+Debugging complex CSS layout issues and refactoring JavaScript for better performance and stability.
+
+Acting as a language translator to ensure all documentation met a professional English standard.
+
+### Code & Logic:
+
+**GitHub Copilot:**
+ Provided real-time code completion and assisted in structuring the CSS file within VS Code.
+
+**Stack Overflow & MDN Web Docs:** Served as essential resources for researching and implementing JavaScript solutions for event handling and DOM manipulation.
+
+### Code Quality & Formatting:
+
+**Prettier:** The Prettier extension for VS Code was used to automatically format all code, ensuring a clean, consistent, and readable codebase.
+
+**Code Institute:** A special thanks to the Code Institute for providing the project's foundational learning structure and recommended practices.
+  
 
 ---
