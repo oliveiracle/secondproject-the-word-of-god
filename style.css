@@ -209,16 +209,22 @@ main,
   width: 220px;
   height: 60px;
   padding: 10px 20px;
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-btn);
+  border: 2px solid #b3e5fc;
+  border-radius: 30px;
   cursor: pointer;
-  color: #444;
-  font-size: 1.43em;
+  color: #1976d2;
+  font-size: 1.3em;
   font-weight: bold;
-  box-shadow: 0 1px 5px var(--color-accent);
-  transition: all 0.2s ease-in-out;
-  background-color: var(--color-bg);
-  font-family: var(--font-title);
+  background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
+  font-family: 'Leckerli One', cursive;
+  letter-spacing: 2px;
+  box-shadow:
+    0 8px 32px 0 rgba(179, 224, 255, 0.45),
+    0 1.5px 30px 10px #fff,
+    0 0px 80px 10px #e6f2ff,
+    0 0 120px 20px #b3e5fc;
+  text-shadow: 0 2px 8px #b3e5fc, 0 1px 0 #fff;
+  transition: background 0.4s, box-shadow 0.4s, color 0.3s;
 }
 #prayer-btn {
   right: 5%;
@@ -228,7 +234,7 @@ main,
 }
 #prayer-btn:hover,
 #daily-prayer-btn:hover {
-  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+   background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
   color: #0d47a1;
   box-shadow:
     0 12px 48px 0 rgba(179, 224, 255, 0.55),
@@ -407,6 +413,7 @@ main,
 /* --- Small Tablets & All Phones --- */
 @media (max-width: 768px) {
   body {
+    overflow-x: hidden!important;
     padding-bottom: 150px;
     background-attachment: scroll; /* Space for fixed footer */
   }
@@ -421,10 +428,11 @@ main,
     position: absolute;
     top: 15px;
     width: 130px;
-    height: 70px;
+    height: 90px;
     border: none;
     box-shadow: var(--shadow-light);
   }
+
   #daily-prayer-btn {
     left: 15px;
   }
@@ -455,7 +463,8 @@ main,
       background-position: center center !important;
       background-repeat: no-repeat !important;
       background-attachment: scroll !important;
-      overflow-x: hidden;
+      overflow-x: hidden !important
+
     }
 
     body,
@@ -511,6 +520,18 @@ main,
     width: 100%;
     background: rgba(173, 216, 230, 0.9);
     z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    gap: 20px;
   }
 
   .mobile-header {
@@ -522,7 +543,7 @@ main,
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 90px;
     padding: 0 15px;
     background: rgba(173, 216, 230, 0.9);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -532,15 +553,19 @@ main,
   #prayer-btn {
     text-align: center;
     width: 130px;
-    height: 40px;
-    font-size: 0.8em;
+    height: 60px;
+    font-size: 1.18em;
     box-shadow: 0px 0px 300px lightblue;
-    color: darkblue;
-    background: rgba(255, 255, 255, 0.95);
-    text-shadow: 0 1px 20px #e6f2ff;
-    font-family: 'calibri', sans-serif;
-       border-color: rgb(13, 163, 213);
-       opacity: 0.9 !important;
+    color: #1976d2;
+    background: rgba(255, 255, 255, 0.97);
+    text-shadow:
+      0 2px 12px #b3e5fc,
+      0 1px 0 #fff,
+      0 0 8px #aeefff;
+    font-family: 'Leckerli One', cursive;
+    letter-spacing: 1.5px;
+    border-color: rgb(13, 163, 213);
+    opacity: 0.93;
   }
 
   #feeling-btn {
@@ -562,10 +587,9 @@ main,
   }
 
   .share-buttons button {
-    margin-bottom: 25px !important;
-    width: 45px;
-    height: 45px;
-    font-size: 1.1em;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
     box-shadow: white 0px 0px 30px;
   }
 }
