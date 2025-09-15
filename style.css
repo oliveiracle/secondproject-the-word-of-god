@@ -5,9 +5,9 @@
   /* Colors */
   --color-primary: #222;
   --color-secondary: #333;
-  --color-accent: lightblue;  
+  --color-accent: lightblue;
   --color-bg: #f8feff;
-  --color-border: #ddd; 
+  --color-border: #ddd;
   --color-btn-bg: rgba(255, 255, 255, 0.95);
   --color-btn-hover: rgba(255, 255, 255, 0.95);
   --color-popup-bg: rgba(255, 255, 255, 0.95);
@@ -30,7 +30,8 @@
 ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 /* =========================
   BASE & LAYOUT (DESKTOP-FIRST)
@@ -38,8 +39,13 @@
 html {
   overflow-x: hidden;
   box-sizing: border-box;
+  /* Permite rolar verticalmente apenas metade da altura da página */
+  max-height: 20;
+  overflow-y: auto;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 body {
@@ -56,22 +62,8 @@ body {
   color: var(--color-secondary);
 }
 
-/* =========================
-  HEADER
-========================= */
-header {
-  width: 100%;
-  max-width: 800px;
-  height: 70px;
-}
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-h1, .title {
+h1,
+.title {
   font-size: 4em;
   margin: 0 0 10px 0;
   color: var(--color-primary);
@@ -81,7 +73,8 @@ h1, .title {
 /* =========================
   MAIN CONTAINER
 ========================= */
-main, .main-container {
+main,
+.main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,24 +91,35 @@ main, .main-container {
 
 /* --- How Are You Feeling Button --- */
 #feeling-btn {
-  margin-top: 100px;
-  padding: 15px 30px;
-  border: 2px solid rgb(238, 229, 218);
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 3.5em;
-  color: var(--color-secondary);
-  font-weight: bold;
-  margin-bottom: 30px;
-  box-shadow: var(--shadow-btn);
-  transition: background-color 0.3s ease;
-  font-family: var(--font-title);
-  width: 850px;
+  height: 100px;
+  font-size: 3em;
+  width: 800px;
+  margin-top: 150px;
+  opacity: 0.92;
+  border-radius: 2em;
+  border: 2px solid #b3e0ff;
+  background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
+  box-shadow:
+    0 8px 32px 0 rgba(179, 224, 255, 0.45),
+    0 1.5px 30px 10px #fff,
+    0 0px 80px 10px #e6f2ff,
+    0 0 120px 20px #b3e5fc;
+  color: #1976d2;
+  font-family: "Indie Flower", cursive;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px #b3e5fc, 0 1px 0 #fff;
+  transition: background 0.4s, box-shadow 0.4s, color 0.3s;
+  position: relative;
+  overflow: hidden;
 }
+
 #feeling-btn:hover {
-  background-color: var(--color-btn-hover);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-light);
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
 }
 
 /* --- Feelings Container --- */
@@ -128,6 +132,7 @@ main, .main-container {
   margin-top: 20px;
   margin-bottom: 80px;
 }
+
 .feeling-btn {
   width: 180px;
   height: 60px;
@@ -144,9 +149,12 @@ main, .main-container {
   font-family: var(--font-body);
 }
 .feeling-btn:hover {
-  background-color: var(--color-btn-hover);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-light);
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
 }
 
 /* --- Verse Display --- */
@@ -164,25 +172,32 @@ main, .main-container {
   max-width: 800px;
   box-shadow: 0 0 10px 5px #e6f2ff;
   border: 1px solid #e6f2ff;
+  box-shadow: 0 40px 60px lightblue; /* Sombra inicial */
+  transition: box-shadow 0.3s ease;
 }
+
+#verse-display:hover {
+  box-shadow: 0 0 15px 7px #b3e5fc;
+}
+
 #verse-display.is-visible {
   display: block;
 }
 
 /* --- Random Verse Button --- */
 #random-verse-btn {
-  margin-top: 25px;
-  margin-bottom: 40px;
+  display: block;
+  margin-top: 60px; /* Puxa o link para cima, para mais perto do botão principal */
   color: #444;
-  font-family: var(--font-body);
-  font-size: 1.1em;
+  font-family: "poppins", sans-serif;
+  font-size: 1.3em;
   text-decoration: none;
   transition: all 0.9s ease;
 }
+
 #random-verse-btn:hover {
   color: #000;
-  text-decoration: underline;
-  transform: translateY(-2px);
+  transform: translateY(-20px);
 }
 
 /* --- Header Buttons --- */
@@ -204,13 +219,20 @@ main, .main-container {
   background-color: var(--color-bg);
   font-family: var(--font-title);
 }
-#prayer-btn { right: 5%; }
-#daily-prayer-btn { left: 5%; }
+#prayer-btn {
+  right: 5%;
+}
+#daily-prayer-btn {
+  left: 5%;
+}
 #prayer-btn:hover,
 #daily-prayer-btn:hover {
-  background-color: var(--color-btn-hover);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-light);
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
 }
 
 /* --- Popups --- */
@@ -338,22 +360,34 @@ main, .main-container {
   background: rgba(255, 255, 255, 0.9);
   color: #333;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 /* Facebook */
 #fb:hover {
-  background: #1877F2; 
-  color: white;
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
 }
 /* Twitter (X) */
 #tw:hover {
-  background: #000; 
-  color: white;
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
 }
 /* WhatsApp */
 #wa:hover {
-  background: #25D366; 
-  color: white;
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
 }
 
 /* =========================
@@ -363,7 +397,7 @@ main, .main-container {
 /* --- Medium Screens (Tablets) --- */
 @media (max-width: 900px) {
   #feeling-btn {
-    width: 100%;          
+    width: 100%;
     max-width: 650px;
     font-size: 2.8em;
   }
@@ -372,14 +406,16 @@ main, .main-container {
 /* --- Small Tablets & All Phones --- */
 @media (max-width: 768px) {
   body {
-    padding-bottom: 150px; 
+    padding-bottom: 150px;
     background-attachment: scroll; /* Space for fixed footer */
   }
-  h1, .title {
+  h1,
+  .title {
     font-size: 3.5em;
   }
-  #prayer-btn, #daily-prayer-btn {
-    font-family: 'Courier New', Courier, monospace;
+  #prayer-btn,
+  #daily-prayer-btn {
+    font-family: "Courier New", Courier, monospace;
     font-size: 1.1em;
     position: absolute;
     top: 15px;
@@ -388,8 +424,12 @@ main, .main-container {
     border: none;
     box-shadow: var(--shadow-light);
   }
-  #daily-prayer-btn { left: 15px; }
-  #prayer-btn { right: 15px; }
+  #daily-prayer-btn {
+    left: 15px;
+  }
+  #prayer-btn {
+    right: 15px;
+  }
   #feeling-btn {
     margin-top: 50px;
     width: 100%;
@@ -398,28 +438,29 @@ main, .main-container {
   }
 
   /* --- Extra Small Screens --- */
-  @media (max-width: 600px), 
-         (max-width: 420px), 
-         (max-width: 400px), 
-         (max-width: 320px),
-         (max-width: 280px) {
+  @media (max-width: 600px),
+    (max-width: 420px),
+    (max-width: 400px),
+    (max-width: 320px),
+    (max-width: 280px) {
+    body,
+    html {
+      width: 100vw;
+      height: 100vh;
+      min-height: 100vh !important;
+      margin: 0;
+      padding: 0;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-attachment: scroll !important;
+      overflow-x: hidden;
+    }
 
-            body, html {
-            width: 100vw;
-            height: 100vh;
-            min-height: 100vh !important;
-            margin: 0;
-            padding: 0;
-            background-size: cover !important;
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
-            background-attachment: scroll !important;
-            overflow-x: hidden; 
-            }
-
-    body,html  {
+    body,
+    html {
       height: 100%;
-      margin:0
+      margin: 0;
     }
 
     .main {
@@ -429,16 +470,15 @@ main, .main-container {
       justify-content: center;
     }
 
-
-    h1, .title {
+    h1,
+    .title {
       font-size: 2.8em;
-    } 
+    }
 
     #feelings-container.is-visible {
       display: grid !important;
       grid-template-columns: repeat(2, 1fr) !important;
       width: 100%;
-     
     }
     #feelings-container {
       padding-top: 50px;
@@ -448,7 +488,7 @@ main, .main-container {
       min-height: 100px;
       display: flex;
       justify-content: center;
-      align-items: center;    
+      align-items: center;
       flex-wrap: wrap;
       padding-bottom: 100px;
     }
@@ -461,50 +501,69 @@ main, .main-container {
       padding: 4px 18px;
       border: none;
       box-shadow: lightblue 0px 0px 16px;
-      
     }
- 
-}
-    .footer {
-      position: fixed;
-      padding: 30px;
-      height: 80px;
-    }
+  }
+  .footer {
+    position: fixed;
+    padding: 30px;
+    height: 90px;
+    width: 100%;
+    background: rgba(173, 216, 230, 0.9);
+    z-index: 500;
+  }
 
-     .mobile-header {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+  .mobile-header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; 
+    height: 90px;
     padding: 0 15px;
     background: rgba(173, 216, 230, 0.9);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 500;
-     }
-    
+  }
 
-  #daily-prayer-btn, #prayer-btn {
+  #daily-prayer-btn,
+  #prayer-btn {
     text-align: center;
-    width: 150px; /* 130px * 0.85 */
-    height: 50px; /* 70px * 0.85 */
-    font-size: 0.9em; /* 1.1em * 0.85 */
-    box-shadow: white 0px 0px 100px;
-  }
-  
-#feeling-btn {
-    margin-top: 150px; 
-}  /* Space for mobile header */
-
-
-    .share-buttons button {
-      width: 45px;
-      height: 45px;
-      font-size: 1.1em;
-      box-shadow: white 0px 0px 30px;
-    }
+    width: 130px;
+    height: 60px;
+    font-size: 1.3em;
+    box-shadow: white 0px 0px 30px;
+    letter-spacing: 1.2px;
+    color: darkblue 0px 0px 30px;
+    background: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 20px #e6f2ff;
+    font-family: "Indie Flower", cursive;
   }
 
+  #feeling-btn {
+    margin-top: 150px;
+    opacity: 0.9;
+    border-radius: 2em;
+    font-size: 2em;
+    border-color: lightblue;
+    text-decoration: uppercase;
+  }
+
+  #random-verse-btn {
+    margin-top: 40px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: black;
+    font-family: quicksand, sans-serif;
+    font-style: normal;
+  }
+
+  .share-buttons button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1em;
+    box-shadow: white 0px 0px 30px;
+  }
+}
