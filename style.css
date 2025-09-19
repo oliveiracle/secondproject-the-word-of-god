@@ -3,8 +3,9 @@
 ========================= */
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
 
 /* =========================
   ROOT VARIABLES
@@ -284,6 +285,44 @@ main,
     0 12px 48px 0 rgba(179, 224, 255, 0.55),
     0 2px 40px 15px #fff,
     0 0px 100px 20px #b3e5fc;
+}
+
+
+/* Popup backdrop */
+.popup-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none; /* escondido por padrão */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Popup content */
+.popup-content {
+  background: #fff;
+  max-width: 500px;
+  padding: 32px 24px 24px 24px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+/* Close button */
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 /* --- Popups --- */
 #prayer-popup,

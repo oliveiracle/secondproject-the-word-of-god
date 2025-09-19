@@ -8,6 +8,7 @@
   //  1. ELEMENT SELECTORS
   // ===================================================================================
   const elements = {
+    aboutjesusbtn: document.getElementById("about-jesus-btn"),
     closeDailyPrayerBtn: document.getElementById("close-daily-prayer"),
     closePrayerPopupBtn: document.getElementById("close-popup"),
     dailyPrayerBtn: document.getElementById("daily-prayer-btn"),
@@ -374,6 +375,7 @@
       showElementFlex(elements.feelingsContainer);
     }
   }
+  
 
   function displayVerseForFeeling(feeling) {
     const verseArray = verses[feeling];
@@ -583,8 +585,30 @@
         dailyPrayerManager.handleBackdropClick(event));
     }
 
+    // About Jesus popup functionality
+    if (elements.aboutjesusbtn) {
+  const jesusPopup = document.getElementById("about-jesus-popup");
+  const closeBtn = document.getElementById("close-about-jesus-popup");
 
-    
+  // Open popup
+  elements.aboutjesusbtn.addEventListener("click", () => {
+    jesusPopup.style.display = "flex";
+  });
+
+  // Close popup
+  closeBtn.addEventListener("click", () => {
+    jesusPopup.style.display = "none";
+  });
+
+  // Close clicking outside the content
+  jesusPopup.addEventListener("click", (e) => {
+    if (e.target === jesusPopup) {
+      jesusPopup.style.display = "none";
+    }
+  });
+}
+
+  
     // Share functionality
     if (elements.fb) {
       elements.fb.addEventListener("click", shareOnFacebook);
