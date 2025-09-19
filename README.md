@@ -286,6 +286,7 @@ To ensure the highest quality, the project's code and performance were rigorousl
 **Result:** Passed with no errors found.
 
 **JavaScript Linting:** The JavaScript code was analyzed using JSHint to check for syntax errors and potential issues.
+![Screenshot of JSHint Validador](assets/images/documentation/js-validation/jsvalidator.png)
 
 **Result:** Passed with no significant errors or warnings detected.
 

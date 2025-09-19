@@ -256,7 +256,35 @@ main,
     0 2px 40px 15px #fff,
     0 0px 100px 20px #b3e5fc;
 }
+#about-jesus-btn {
+  margin-top: 20px;
+  font-size: 1.5em;
+  background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
+  color: #1976d2;
+  border: 2px solid #b3e5fc;
+  border-radius: 30px;
+  font-family: 'Leckerli One', cursive;
+  letter-spacing: 2px;
+  box-shadow:
+    0 8px 32px 0 rgba(179, 224, 255, 0.45),
+    0 1.5px 30px 10px #fff,
+    0 0px 80px 10px #e6f2ff,
+    0 0 120px 20px #b3e5fc;
+  text-shadow: 0 2px 8px #b3e5fc, 0 1px 0 #fff;
+  cursor: pointer;
+  transition: background 0.4s, box-shadow 0.4s, color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
 
+#about-jesus-btn:hover {
+  background: linear-gradient(135deg, #b3e5fc 0%, #e0f7fa 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
+}
 /* --- Popups --- */
 #prayer-popup,
 #daily-prayer-popup {
