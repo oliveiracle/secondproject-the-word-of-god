@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body></body>
+<body>
     <!-- =========================
       HEADER
     ========================= -->
@@ -99,12 +99,29 @@
     <div id="prayer-popup" class="popup">
         <div class="popup-content">
             <h2 style="color: #333; margin-top: 0;">Prayer Request</h2>
-            <input type="text" id="prayer-name" placeholder="Your name">
-            <textarea id="prayer-text" placeholder="Write your prayer request..."></textarea>
-            <div class="popup-actions">
-                <button id="close-popup">Close</button>
-                <button id="send-prayer">Send</button>
-            </div>
+            <p style="font-size: 0.9em; color: #666; margin-bottom: 1em;">Your request will be received privately for prayer by a brother in faith. It won't be stored or shared.</p>
+            <form
+              action="https://formspree.io/f/mkgqwwqk"
+              method="POST"
+            >
+              <label style="display: block; margin-bottom: 0.5em;">
+                Your name (optional):
+                <input type="text" name="name" placeholder="Your name" style="width: 100%; padding: 0.5em; margin-top: 0.25em; border: 1px solid #ccc; border-radius: 4px;">
+              </label>
+              <label style="display: block; margin-bottom: 0.5em;">
+                Your email (optional, for follow-up):
+                <input type="email" name="email" placeholder="Your email" style="width: 100%; padding: 0.5em; margin-top: 0.25em; border: 1px solid #ccc; border-radius: 4px;">
+              </label>
+              <label style="display: block; margin-bottom: 1em;">
+                Your prayer request:
+                <textarea name="message" placeholder="Write your prayer request..." rows="4" style="width: 100%; padding: 0.5em; margin-top: 0.25em; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
+              </label>
+              <!-- your other form fields go here -->
+              <div class="popup-actions">
+                <button type="button" id="close-popup" style="background: #ccc; color: #333;">Close</button>
+                <button type="submit">Send</button>
+              </div>
+            </form>
         </div>
     </div>  
 
