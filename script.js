@@ -26,7 +26,8 @@
     verseDisplay: document.getElementById("verse-display"),
     fb: document.getElementById("fb"),
     twitter: document.getElementById("tw"),
-    whatsapp: document.getElementById("wa")
+    whatsapp: document.getElementById("wa"),
+    myMusic: document.getElementById("music")
   };
 
   // ===================================================================================
@@ -525,11 +526,15 @@
   // ===================================================================================
   //  8. EVENT LISTENERS
   // ===================================================================================
-  function initializeEventListeners() {
-    // Main functionality
-    if (elements.startButton) {
-      elements.startButton.addEventListener("click", toggleFeelingsContainer);
-    }
+
+function initializeEventListeners() {
+  // Main functionality
+  if (elements.startButton) {
+    elements.startButton.addEventListener("click", () => {
+      playMusic(); // Toca música no primeiro clique permitido pelo navegador
+      toggleFeelingsContainer();
+    });
+  }
 
     // Feeling buttons
     elements.feelingButtons.forEach(button => {
@@ -606,6 +611,17 @@
     }
   });
 }
+// MP3 audio
+  function playMusic() {
+    const music = elements.myMusic;
+    if (music) {
+      music.src = "assets/images/audio/music.mp3";
+      music.volume = 0.1;
+      music.muted = false; // Permite som
+      music.play().catch(() => {});
+    }
+  }
+
 
   
     // Share functionality

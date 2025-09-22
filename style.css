@@ -7,12 +7,10 @@
 
 :root {
   --font-main: "Delius", cursive;
-}
 
 /* =========================
   ROOT VARIABLES
 ========================= */
-:root {
   --color-primary: #222;
   --color-secondary: #333;
   --color-accent: lightblue;
@@ -65,6 +63,15 @@ h1,
   color: var(--color-primary);
   font-family: var(--font-title);
 }
+
+#music {
+  display: none;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
 
 /* =========================
   MAIN CONTAINER
@@ -666,9 +673,13 @@ main,
     border: none;
     box-shadow: lightblue 0px 0px 16px;
   }
-  #random-verse-btn {
-    font-size: 1.9em;
-    margin-bottom: 20px;
-    font-family: var(--font-body);
+#random-verse-btn {
+  font-size: 1.9em;
+  margin-bottom: 20px;
+  font-family: var(--font-body);
+}
+
+#music {
+  display: none;
   }
 }
