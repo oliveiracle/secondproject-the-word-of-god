@@ -100,7 +100,7 @@ The visual identity creates an uplifting spiritual experience that's functionall
 
 ### Typography: A Balance of Personality and Clarity
 
-**Headings (Gloria Hallelujah)**: Handwritten, warm, and inviting for main titles
+**Headings (Merriweather)**: Classic serif font for authority and reverence, grounding content in the timeless tradition of the Word
 **Body & UI (Quicksand)**: Clean, rounded sans-serif for modern readability and approachability on any device
 **Accent Font (Leckerli One)**: Elegant, used for buttons and special CTAs
 
@@ -169,14 +169,6 @@ Audits via Chrome DevTools show excellence in performance, accessibility, and be
 | Best Practices | **100** |
 | SEO | **100** |
 
-<details>
-<summary>Click to view Desktop Lighthouse Report</summary>
-<img src="assets/images/documentation/lighthouse/desktop/performance-desktop.png" alt="Desktop Performance Score">
-<img src="assets/images/documentation/lighthouse/desktop/accessibility-desktop.png" alt="Desktop Accessibility Score">
-<img src="assets/images/documentation/lighthouse/desktop/bestpractices-desktop.png" alt="Desktop Best Practices Score">
-<img src="assets/images/documentation/lighthouse/desktop/seo-desktop.png" alt="Desktop SEO Score">
-</details>
-
 #### Mobile Audit Results
 
 | Category | Score |
@@ -185,14 +177,6 @@ Audits via Chrome DevTools show excellence in performance, accessibility, and be
 | Accessibility | **100** |
 | Best Practices | **100** |
 | SEO | **100** |
-
-<details>
-<summary>Click to view Mobile Lighthouse Report</summary>
-<img src="assets/images/documentation/lighthouse/mobile/perfomancemobile.png" alt="Mobile Performance Score">
-<img src="assets/images/documentation/lighthouse/mobile/acessibilitymobile.png" alt="Mobile Accessibility Score">
-<img src="assets/images/documentation/lighthouse/mobile/bestpracticesmobile.png" alt="Mobile Best Practices Score">
-<img src="assets/images/documentation/lighthouse/mobile/seomobile.png" alt="Mobile SEO Score">
-</details>
 
 ---
 
