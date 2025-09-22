@@ -13,7 +13,7 @@
   --color-accent: lightblue;
   --color-bg: #f8feff;
   --color-border: #ddd;
-  --color-btn-bg: rgba(255, 255, 255, 0.95);
+  --color-btn-bg: rgba(255, 255, 255, 0.95);  
   --color-btn-hover: rgba(255, 255, 255, 0.95);
   --color-popup-bg: rgba(255, 255, 255, 0.95);
   --color-popup-overlay: rgba(0, 0, 0, 0.7);
@@ -34,7 +34,6 @@
 html {
   overflow-x: hidden;
   box-sizing: border-box;
-  max-height: 20;
   overflow-y: auto;
 }
 *,
@@ -324,23 +323,19 @@ main,
 
 /* Popup content */
 .popup-content {
-  background: #fff;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.1em;
+  background: var(--color-popup-bg);
   max-width: 500px;
-  padding: 32px 24px 24px 24px;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  max-height: 80vh;
+  padding: 40px;
+  border-radius: var(--radius-popup);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--color-popup-bg);
-  padding: 40px;
-  border-radius: var(--radius-popup);
   box-shadow: var(--shadow-popup);
-  max-width: 500px;
+  overflow-y: auto;
+  max-height: 80vh;
   width: 90%;
 }
 
@@ -358,26 +353,7 @@ main,
 /* --- Popups --- */
 #prayer-popup,
 #daily-prayer-popup {
-  background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
-  color: #1976d2;
-  box-shadow: 0 0 60px 20px #90caf9, 0 8px 32px 0 rgba(179, 224, 255, 0.45);
-  border: 3px solid #90caf9;
-  border-radius: 20px;
-  text-shadow: 0 2px 8px #90caf9, 0 1px 0 #fff;
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-popup-overlay);
-  backdrop-filter: blur(5px);
-   background-color: var(--color-popup-overlay);
-  backdrop-filter: blur(5px);
-}
-#prayer-popup {
-  font-family: var(--font-title);
+  font-family: 'Indie Flower', cursive;
   font-size: 1.2em;
   background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
   color: #1976d2;
@@ -394,7 +370,6 @@ main,
   height: 100%;
   background-color: var(--color-popup-overlay);
   backdrop-filter: blur(5px);
-
 }
 
 /* Text styles about Jesus popup */
@@ -530,7 +505,7 @@ main,
 /* --- Small Tablets & All Phones --- */
 @media (max-width: 768px) {
   body {
-    overflow-x: hidden!important;
+    overflow-x: hidden !important;
     padding-bottom: 150px;
     background-attachment: scroll;
   }
@@ -545,17 +520,31 @@ main,
     position: absolute;
     top: 15px;
     width: 130px;
-    height: 90px;
+    height: 60px;
     border: none;
     box-shadow: var(--shadow-light);
+    text-align: center;
+    color: #1976d2;
+    background: rgba(255, 255, 255, 0.97);
+    text-shadow:
+      0 2px 12px #b3e5fc,
+      0 1px 0 #fff,
+      0 0 8px #aeefff;
+    letter-spacing: 1.5px;
+    border-color: rgb(13, 163, 213);
+    opacity: 0.93;
   }
   #daily-prayer-btn { left: 15px; }
   #prayer-btn { right: 15px; }
   #feeling-btn {
-    margin-top: 50px;
+    margin-top: 150px;
     width: 100%;
     max-width: 400px;
-    font-size: 2.5em;
+    font-size: 2em;
+    opacity: 0.9;
+    border-radius: 2em;
+    border-color: lightblue;
+    text-transform: uppercase;
   }
   .feeling-btn {
     background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
@@ -593,32 +582,6 @@ main,
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 500;
   }
-  #daily-prayer-btn,
-  #prayer-btn {
-    text-align: center;
-    width: 130px;
-    height: 60px;
-    font-size: 1.18em;
-    box-shadow: 0px 0px 300px lightblue;
-    color: #1976d2;
-    background: rgba(255, 255, 255, 0.97);
-    text-shadow:
-      0 2px 12px #b3e5fc,
-      0 1px 0 #fff,
-      0 0 8px #aeefff;
-    font-family: 'Leckerli One', cursive;
-    letter-spacing: 1.5px;
-    border-color: rgb(13, 163, 213);
-    opacity: 0.93;
-  }
-  #feeling-btn {
-    margin-top: 150px;
-    opacity: 0.9;
-    border-radius: 2em;
-    font-size: 2em;
-    border-color: lightblue;
-    text-decoration: uppercase;
-  }
   #random-verse-btn {
     margin-top: 40px;
     font-size: 1.2em;
@@ -633,65 +596,61 @@ main,
     font-size: 1.5em;
     box-shadow: white 0px 0px 30px;
   }
-  /* --- Extra Small Screens --- */
-  @media (max-width: 600px),
-    (max-width: 420px),
-    (max-width: 400px),
-    (max-width: 320px),
-    (max-width: 280px) {
-    body,
-    html {
-      width: 100vw;
-      height: 100vh;
-      min-height: 100vh !important;
-      margin: 0;
-      padding: 0;
-      background-size: cover !important;
-      background-position: center center !important;
-      background-repeat: no-repeat !important;
-      background-attachment: scroll !important;
-      overflow-x: hidden !important;
-    }
-    body,
-    html {
-      height: 100%;
-      margin: 0;
-    }
-    .main {
-      min-height: calc(100vh - 60px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    h1,
-    .title {
-      font-size: 2.8em;
-    }
-    #feelings-container.is-visible {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      width: 100%;
-    }
-    #feelings-container {
-      padding-top: 50px;
-    }
-    .feeling-btn-container {
-      min-height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      padding-bottom: 100px;
-    }
-    .feeling-btn {
-      background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
-      width: 47%;
-      height: 60px;
-      max-width: 300px;
-      font-size: 1em;
-      padding: 4px 18px;
-      border: none;
-      box-shadow: lightblue 0px 0px 16px;
-    }
+}
+
+/* --- Extra Small Screens --- */
+@media (max-width: 600px),
+  (max-width: 420px),
+  (max-width: 400px),
+  (max-width: 320px),
+  (max-width: 280px) {
+  body,
+  html {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh !important;
+    margin: 0;
+    padding: 0;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    overflow-x: hidden !important;
+  }
+  .main {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1,
+  .title {
+    font-size: 2.8em;
+  }
+  #feelings-container.is-visible {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    width: 100%;
+  }
+  #feelings-container {
+    padding-top: 50px;
+  }
+  .feeling-btn-container {
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+  }
+  .feeling-btn {
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
+    width: 47%;
+    height: 60px;
+    max-width: 300px;
+    font-size: 1em;
+    padding: 4px 18px;
+    border: none;
+    box-shadow: lightblue 0px 0px 16px;
   }
 }
