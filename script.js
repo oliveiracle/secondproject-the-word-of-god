@@ -531,7 +531,7 @@ function initializeEventListeners() {
   // Main functionality
   if (elements.startButton) {
     elements.startButton.addEventListener("click", () => {
-      playMusic(); // Toca música no primeiro clique permitido pelo navegador
+      playMusic(); // Start playing music
       toggleFeelingsContainer();
     });
   }
@@ -616,14 +616,13 @@ function initializeEventListeners() {
     const music = elements.myMusic;
     if (music) {
       music.src = "assets/images/audio/music.mp3";
-      music.volume = 0.1;
+      music.volume = 0.04; // Volume baixo
       music.muted = false; // Permite som
       music.play().catch(() => {});
     }
   }
 
 
-  
     // Share functionality
     if (elements.fb) {
       elements.fb.addEventListener("click", shareOnFacebook);
