@@ -100,9 +100,9 @@ The visual identity creates an uplifting spiritual experience that's functionall
 
 ### Typography: A Balance of Personality and Clarity
 
-**Headings (Merriweather)**: Classic serif font for authority and reverence, grounding content in the timeless tradition of the Word
-**Body & UI (Quicksand)**: Clean, rounded sans-serif for modern readability and approachability on any device
-**Accent Font (Leckerli One)**: Elegant, used for buttons and special CTAs
+**Headings (Sacramento):** A flowing, handwritten script that adds personality and a warm, welcoming touch to titles and key highlights.
+
+**Body & UI (Delius):** A clean and friendly handwritten-style font, ensuring clarity and readability across all devices.
 
 ### Core Features & User Experience
 

@@ -1,8 +1,13 @@
 /* =========================
   GOOGLE FONTS
 ========================= */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+:root {
+  --font-main: "Delius", cursive;
+}
 
 /* =========================
   ROOT VARIABLES
@@ -17,9 +22,8 @@
   --color-btn-hover: rgba(255, 255, 255, 0.95);
   --color-popup-bg: rgba(255, 255, 255, 0.95);
   --color-popup-overlay: rgba(0, 0, 0, 0.7);
-
-  --font-title: "Merriweather", cursive;
-  --font-body: "Quicksand", sans-serif;
+  --font-title: "Delius", cursive;
+  --font-body: "Sacramento", cursive;
 
   --radius-btn: 30px;
   --radius-popup: 20px;
@@ -42,7 +46,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   background: url("assets/images/bg.png") no-repeat center center fixed;
   background-size: cover;
   margin: 0;
@@ -85,7 +89,7 @@ main,
 #feeling-btn {
   margin-bottom: 40px;
   height: 110px;
-  font-size: 3.2em;
+  font-size: 4.2em;
   width: 90%;
   max-width: 820px;
   margin-top: 160px;
@@ -100,7 +104,7 @@ main,
     0 0 120px 20px #b3e5fc,
     0 0 200px 80px #e0f7fa;
   color: #1976d2;
-  font-family: "Indie Flower", cursive;
+  font-family: var(--font-body);
   letter-spacing: 2.5px;
   text-shadow:
     0 2px 12px #b3e5fc,
@@ -149,6 +153,7 @@ main,
   margin-bottom: 80px;
 }
 .feeling-btn {
+  font-family: var(--font-title);
   width: 220px;
   height: 60px;
   padding: 10px 20px;
@@ -159,7 +164,6 @@ main,
   color: #1976d2;
   font-size: 1.3em;
   font-weight: bold;
-  font-family: 'Leckerli One', cursive;
   letter-spacing: 2px;
 }
 .feeling-btn:hover {
@@ -174,13 +178,13 @@ main,
 /* --- Verse Display --- */
 #verse-display {
   display: none;
-  font-family: var(--font-body);
+  font-family: var(--font-title);
   margin-top: 40px;
   padding: 40px;
   background-color: #fff;
   border-radius: 15px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.9em;
   line-height: 1.6;
   color: var(--color-primary);
   max-width: 800px;
@@ -200,8 +204,8 @@ main,
   display: block;
   margin-top: 60px;
   color: #444;
-  font-family: "poppins", sans-serif;
-  font-size: 1.3em;
+  font-family: var(--font-body);
+  font-size: 2.4em;
   text-decoration: none;
   transition: all 0.9s ease;
 }
@@ -222,10 +226,10 @@ main,
   border-radius: 30px;
   cursor: pointer;
   color: #1976d2;
-  font-size: 1.3em;
+  font-size: 1.74em;
   font-weight: bold;
   background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
-  font-family: 'Leckerli One', cursive;
+  font-family: var(--font-body);
   letter-spacing: 2px;
   box-shadow:
     0 8px 32px 0 rgba(179, 224, 255, 0.45),
@@ -269,12 +273,12 @@ main,
 /* --- About Jesus Button --- */
 #about-jesus-btn {
   margin-top: 20px;
-  font-size: 1.6em;
+  font-size: 2.5em;
   background: linear-gradient(120deg, #e0f7fa 0%, #90caf9 0%, #e0f7fa 100%);
   color: #1976d2;
   border: 3px solid #90caf9;
   border-radius: 40px;
-  font-family: 'Leckerli One', cursive;
+  font-family: var(--font-body);
   letter-spacing: 2.5px;
   font-weight: bold;
   box-shadow:
@@ -323,8 +327,8 @@ main,
 
 /* Popup content */
 .popup-content {
-  font-family: 'Indie Flower', cursive;
-  font-size: 1.1em;
+  font-family: var(--font-title);
+  font-size: 1.3em;
   background: var(--color-popup-bg);
   max-width: 500px;
   padding: 40px;
@@ -353,7 +357,7 @@ main,
 /* --- Popups --- */
 #prayer-popup,
 #daily-prayer-popup {
-  font-family: 'Indie Flower', cursive;
+  font-family: var(--font-body);
   font-size: 1.2em;
   background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
   color: #1976d2;
@@ -434,8 +438,9 @@ main,
   border-left: 4px solid var(--color-accent);
 }
 #prayer-text-display {
+  font-family: var(--font-title);
   font-style: italic;
-  line-height: 1.6;
+  line-height: 1.2em;
   margin: 0;
   color: #555;
 }
@@ -515,8 +520,8 @@ main,
   }
   #prayer-btn,
   #daily-prayer-btn {
-    font-family: "Leckerli One", cursive;
-    font-size: 1.1em;
+    font-family: var(--font-title);
+    font-size: 1.2em;
     position: absolute;
     top: 15px;
     width: 130px;
@@ -537,15 +542,22 @@ main,
   #daily-prayer-btn { left: 15px; }
   #prayer-btn { right: 15px; }
   #feeling-btn {
+    font-family: var(--font-title);
     margin-top: 150px;
     width: 100%;
     max-width: 400px;
-    font-size: 2em;
+    font-size: 1.7em;
     opacity: 0.9;
     border-radius: 2em;
     border-color: lightblue;
     text-transform: uppercase;
   }
+
+  #about-jesus-btn {
+    font-family: var(--font-title);
+    font-size: 1.6em;
+  }
+
   .feeling-btn {
     background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
   }
@@ -583,6 +595,7 @@ main,
     z-index: 500;
   }
   #random-verse-btn {
+    font-family: var(--font-title);
     margin-top: 40px;
     font-size: 1.2em;
     border-radius: 10px;
@@ -652,5 +665,10 @@ main,
     padding: 4px 18px;
     border: none;
     box-shadow: lightblue 0px 0px 16px;
+  }
+  #random-verse-btn {
+    font-size: 1.9em;
+    margin-bottom: 20px;
+    font-family: var(--font-body);
   }
 }
