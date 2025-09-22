@@ -1,16 +1,14 @@
 /* =========================
   GOOGLE FONTS
 ========================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
-
-:root {
-  --font-main: "Delius", cursive;
 
 /* =========================
   ROOT VARIABLES
 ========================= */
+:root {
+  --font-main: "Delius", cursive;
   --color-primary: #222;
   --color-secondary: #333;
   --color-accent: lightblue;
@@ -22,7 +20,6 @@
   --color-popup-overlay: rgba(0, 0, 0, 0.7);
   --font-title: "Delius", cursive;
   --font-body: "Sacramento", cursive;
-
   --radius-btn: 30px;
   --radius-popup: 20px;
   --shadow-btn: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -63,7 +60,6 @@ h1,
   color: var(--color-primary);
   font-family: var(--font-title);
 }
-
 #music {
   display: none;
   width: 100%;
@@ -71,7 +67,6 @@ h1,
   margin-top: 20px;
   box-sizing: border-box;
 }
-
 
 /* =========================
   MAIN CONTAINER
@@ -210,7 +205,6 @@ main,
     0 0px 100px 20px #b3e5fc;
   border-color: #1976d2;
 }
-
 #verse-display.is-visible {
   display: block;
 }
@@ -327,7 +321,7 @@ main,
   POPUPS
 ========================= */
 
-/* Popup backdrop */
+/* --- Popup backdrop --- */
 .popup-backdrop {
   position: fixed;
   top: 0;
@@ -341,7 +335,7 @@ main,
   z-index: 9999;
 }
 
-/* Popup content */
+/* --- Popup content --- */
 .popup-content {
   font-family: var(--font-title);
   font-size: 1.3em;
@@ -366,14 +360,11 @@ main,
     0 1px 0 #b3e5fc,
     0 0 24px #e0f7fa;
   border: 3px solid #b3e5fc;
-  /* Simulate clouds/fog at the bottom */
   box-decoration-break: clone;
   position: absolute;
-  /* Add a subtle cloud overlay using a pseudo-element */
 }
 
-
-/* Close button */
+/* --- Close button --- */
 .popup-close {
   position: absolute;
   top: 8px;
@@ -384,7 +375,7 @@ main,
   cursor: pointer;
 }
 
-/* --- Popups --- */
+/* --- Prayer & Daily Prayer Popups --- */
 #prayer-popup,
 #daily-prayer-popup {
   font-family: var(--font-body);
@@ -406,11 +397,12 @@ main,
   backdrop-filter: blur(5px);
 }
 
-/* Text styles about Jesus popup */
+/* --- About Jesus Popup --- */
 #about-jesus-popup {
   font-size: 1.2em;
 }
 
+/* --- Prayer Form Elements --- */
 #prayer-text,
 #prayer-name {
   width: 100%;
@@ -489,7 +481,6 @@ main,
   background: linear-gradient(to top, #e0f7fa 80%, rgba(173,216,230,0.9) 100%);
   z-index: 100;
   box-shadow: 0 -8px 32px 0 rgba(179, 224, 255, 0.25);
-
 }
 .share-buttons {
   display: flex;
@@ -501,7 +492,6 @@ main,
   width: 100%;
   position: relative;
 }
-
 .share-buttons button {
   border: none;
   background: rgba(255, 255, 255, 0.8);
@@ -521,7 +511,7 @@ main,
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-/* Facebook */
+/* --- Social Buttons Hover --- */
 #fb:hover,
 #tw:hover,
 #wa:hover {
@@ -591,12 +581,10 @@ main,
     border-color: lightblue;
     text-transform: uppercase;
   }
-
   #about-jesus-btn {
     font-family: var(--font-title);
     font-size: 1.6em;
   }
-
   .feeling-btn {
     background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 60%, #b3e5fc 100%);
   }
@@ -705,15 +693,11 @@ main,
     border: none;
     box-shadow: lightblue 0px 0px 16px;
   }
-
-
   #feeling-btn {
     opacity: 0.88;
     box-shadow:
       0 0 40px 10px #e0f7fa,
   }
-  
-
   #about-jesus-btn {
     font-family: var(--font-body);
     font-size: 2em;
@@ -721,14 +705,12 @@ main,
     box-shadow:
       0 0 40px 10px #e0f7fa,
   }
-
-#random-verse-btn {
-  font-size: 1.9em;
-  margin-bottom: 20px;
-  font-family: var(--font-body);
-}
-
-#music {
-  display: none;
+  #random-verse-btn {
+    font-size: 1.9em;
+    margin-bottom: 20px;
+    font-family: var(--font-body);
+  }
+  #music {
+    display: none;
   }
 }

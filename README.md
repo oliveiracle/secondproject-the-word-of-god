@@ -45,6 +45,7 @@ My prayer is that, through this space, the love of Jesus may touch and console h
 - **Social Sharing**: Share the website via Facebook, Twitter, and WhatsApp
 - **Evangelistic Feature**: "Know more about Jesus" button with Gospel message
 - **Responsive Design**: Mobile-first approach optimized for all devices
+- **Background Music**: Gentle music plays automatically in the background when you open the site (the player is hidden and cannot be paused; the volume is set low for a subtle effect).
 
 ### Interactive Elements
 
@@ -77,12 +78,12 @@ My prayer is that, through this space, the love of Jesus may touch and console h
 
 ## User Stories
 
-1. As a user feeling overwhelmed, I want to click the "How are you feeling today?" button, so that I can see my emotional options
-2. As a user looking for comfort, I want to click on one of the emotion buttons, so that a relevant Bible verse is displayed
-3. As a user wanting daily spiritual inspiration, I want to click the "Today's Prayer" button, so that I can read a new prayer every day
-4. As a user seeking a random message of hope, I want to click the "Or get a random verse for your day" link, so that a new verse is displayed
-5. As a user curious about faith, I want to click "Know more about Jesus" to learn about the Gospel
-6. As a user in need of spiritual support, I want to fill out and submit the prayer request form, so that others can pray for me
+1. As a user feeling overwhelmed, I want to click the "How are you feeling today?" button so that I can see my emotional options.
+2. As a user looking for comfort, I want to click on one of the emotion buttons so that a relevant Bible verse is displayed.
+3. As a user wanting daily spiritual inspiration, I want to click the "Today's Prayer" button so that I can read a new prayer every day.
+4. As a user seeking a random message of hope, I want to click the "Or get a random verse for your day" link so that a new verse is displayed.
+5. As a user curious about faith, I want to click "Know more about Jesus" to learn about the Gospel.
+6. As a user in need of spiritual support, I want to fill out and submit the prayer request form so that others can pray for me.
 
 ---
 
@@ -90,13 +91,13 @@ My prayer is that, through this space, the love of Jesus may touch and console h
 
 ### The Psychology of Colors: An Ethereal Experience
 
-![Screenshot showing colorpalette](assets/images/documentation/screenshots/colorpalette/colorpalette.png)
+![Screenshot showing color palette](assets/images/documentation/screenshots/colorpalette/colorpalette.png)
 
 The visual identity creates an uplifting spiritual experience that's functionally clear. It combines a celestial, calming atmosphere with a warm, human core.
 
-**Celestial Atmosphere (Calming Blue)**: A soft blue vignette on the edges and a solid blue footer create a soothing boundary. Interactive elements use the same blue for harmony, with "explosion of light" effects on clicks, evoking divine hope.
+**Celestial Atmosphere (Calming Blue):** A soft blue vignette on the edges and a solid blue footer create a soothing boundary. Interactive elements use the same blue for harmony, with "explosion of light" effects on clicks, evoking divine hope.
 
-**Human Core (Warm Tones)**: Background image with earthy tones (open hands, dove) at the center for warmth and connection. Dark text (#222, #333) ensures readability.
+**Human Core (Warm Tones):** Background image with earthy tones (open hands, dove) at the center for warmth and connection. Dark text (#222, #333) ensures readability.
 
 ### Typography: A Balance of Personality and Clarity
 
@@ -106,19 +107,19 @@ The visual identity creates an uplifting spiritual experience that's functionall
 
 ### Core Features & User Experience
 
-- **Evangelistic Feature**: "Know more about Jesus" button opens Gospel modal – the mission's core
-- **Interactive Verse Finder**: Main CTA leads to emotion grid for personalized verses
-- **Daily Prayer Modal**: Unique daily prayer in a distraction-free window
-- **Random Verse**: Spontaneous encouragement with single click
-- **Prayer Request Form**: Private space with validation and confirmation
-- **Social Sharing**: Fixed footer for easy sharing and organic growth
-- **Fully Responsive Design**: Mobile-first approach for universal accessibility
+- **Evangelistic Feature:** "Know more about Jesus" button opens Gospel modal – the mission's core
+- **Interactive Verse Finder:** Main CTA leads to emotion grid for personalized verses
+- **Daily Prayer Modal:** Unique daily prayer in a distraction-free window
+- **Random Verse:** Spontaneous encouragement with a single click
+- **Prayer Request Form:** Private space with validation and confirmation
+- **Social Sharing:** Fixed footer for easy sharing and organic growth
+- **Fully Responsive Design:** Mobile-first approach for universal accessibility
 
 ### Future Enhancements
 
-- **Personal Verse Collection**: Save favorites via Local Storage
-- **Secure Prayer Backend**: Storage for submissions and potential "Community Prayer Wall"
-- **Daily Devotional Subscriptions**: Email or push notifications for prayers/verses
+- **Personal Verse Collection:** Save favorites via Local Storage
+- **Secure Prayer Backend:** Storage for submissions and potential "Community Prayer Wall"
+- **Daily Devotional Subscriptions:** Email or push notifications for prayers/verses
 
 ---
 
@@ -130,19 +131,19 @@ The visual identity creates an uplifting spiritual experience that's functionall
 - Prayer request form tested with both valid and invalid inputs
 - Verses and prayers display correctly across all devices
 - Popups tested to open and close without issues
-- Layout tested on Chrome, Safari, Brave and mobile devices
+- Layout tested on Chrome, Safari, Brave, and mobile devices
 
 ### Validator Testing
 
 To ensure the highest quality, the project's code and performance were rigorously tested using official industry-standard tools.
 
-**HTML**: Passed W3C Validator with no errors
+**HTML:** Passed W3C Validator with no errors  
 ![Screenshot of HTML Validator](assets/images/documentation/html-validation/htmlvalidation.png)
 
-**CSS**: Passed Jigsaw Validator with no errors
+**CSS:** Passed Jigsaw Validator with no errors  
 ![Screenshot of CSS Validator](assets/images/documentation/css-validation/cssvalidator.png)
 
-**JavaScript**: Passed JSHint with no significant errors
+**JavaScript:** Passed JSHint with no significant errors  
 ![Screenshot of JS Validator](assets/images/documentation/js-validation/jsvalidator.png)
 
 | Feature | Action | Expected Result |
@@ -184,11 +185,11 @@ Audits via Chrome DevTools show excellence in performance, accessibility, and be
 
 The site was deployed using **GitHub Pages**:
 
-1. Go to the repository on GitHub
-2. Click on the **Settings** tab
-3. Scroll down to **Pages**
-4. Under **Source**, select the `main` branch and set folder to `/ (root)`
-5. Save, and GitHub will provide a deployment link
+1. Go to the repository on GitHub.
+2. Click on the **Settings** tab.
+3. Scroll down to **Pages**.
+4. Under **Source**, select the `main` branch and set folder to `/ (root)`.
+5. Save, and GitHub will provide a deployment link.
 
 👉 [Live Project: The Word of God](https://oliveiracle.github.io/secondproject-the-word-of-god/)
 
@@ -211,28 +212,38 @@ No major unresolved bugs remain in the current version.
 
 ### Concept & Content
 
-- **Core Vision**: Personal vision to create a digital sanctuary of hope inspired by Christian faith
-- **Biblical Verses**: Holy Bible (New International Version)
-- **Daily Prayers**: Inspired by online devotionals and personally written content
-- **Gospel Content**: Traditional Christian Gospel message for the "Know Jesus" feature
+- **Core Vision:** Personal vision to create a digital sanctuary of hope inspired by Christian faith
+- **Biblical Verses:** Holy Bible (New International Version)
+- **Daily Prayers:** Inspired by online devotionals and personally written content
+- **Gospel Content:** Traditional Christian Gospel message for the "Know Jesus" feature
 
 ### Media
 
-- **Background Imagery**: Composite created from royalty-free Pexels resources
-- **Icons**: Sourced from Emojipedia for UI elements and social sharing
+- **Background Imagery:** Composite created from royalty-free Pexels resources
+- **Icons:** Sourced from Emojipedia for UI elements and social sharing
+- **Background Music:**  
+    - Track: "Come Jesus"  
+    - File: `assets/images/audio/music.mp3`
+    - Source: [Come Jesus on Pixabay Music](https://pixabay.com/music/main-title-come-jesus-13760/)  
+    - License: Free for commercial and non-commercial use, no attribution required (Pixabay License)
 
 ### Development, Tools & Acknowledgements
 
-- **Google AI (Gemini)**: UX brainstorming, CSS/JS debugging, and professional documentation assistance
-- **GitHub Copilot**: Real-time code completion and CSS structuring
-- **Stack Overflow & MDN Web Docs**: References for JavaScript event handling and DOM manipulation
-- **Prettier**: Code formatting extension for consistent, readable codebase
-- **Code Institute**: Foundational learning structure and web development best practices
+- **Google AI (Gemini):** UX brainstorming, CSS/JS debugging, and professional documentation assistance
+- **GitHub Copilot:** Real-time code completion and CSS structuring
+- **Stack Overflow & MDN Web Docs:** References for JavaScript event handling and DOM manipulation
+- **Prettier:** Code formatting extension for consistent, readable codebase
+- **Code Institute:** Foundational learning structure and web development best practices
 
 ### Attribution
 
 All code from external sources is properly attributed via comments in the source code. The majority of the codebase was written specifically for this project, with external libraries and frameworks clearly identified where used.
 
 ---
+
+> **Note:** This project was developed for educational purposes only and is not intended for commercial use.
+
+---
+
 
 *Built with faith, hope, and love. May this project continue to glorify Jesus and bless lives.* 🙏

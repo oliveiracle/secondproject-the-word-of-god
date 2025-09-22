@@ -611,20 +611,20 @@ function initializeEventListeners() {
     }
   });
 }
-// MP3 audio
+// MP3 audio functionality
 function playMusic() {
   const music = elements.myMusic;
-  if (music) {
+  if (music && music.paused) {
     music.src = "assets/images/audio/music.mp3"; // Use a more uplifting track
     music.loop = true; // Loop for continuous blessing
-    music.volume = 0.08; // Slightly higher, but still gentle
+    music.volume = 0.05; // Slightly higher, but still gentle
     music.muted = false;
     music.play().catch(() => {});
   }
 }
 
 
-    // Share functionality
+// Share functionality
     if (elements.fb) {
       elements.fb.addEventListener("click", shareOnFacebook);
     }
