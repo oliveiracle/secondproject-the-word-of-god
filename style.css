@@ -100,7 +100,7 @@ main,
   width: 90%;
   max-width: 820px;
   margin-top: 160px;
-  opacity: 0.98;
+  opacity: 0.97;
   border-radius: 2.5em;
   border: 2.5px solid #b3e0ff;
   background: linear-gradient(120deg, #e3f2fd 0%, #b3e5fc 60%, #e0f7fa 100%);
@@ -198,10 +198,19 @@ main,
   border: 1px solid #e6f2ff;
   box-shadow: 0 40px 60px lightblue;
   transition: box-shadow 0.3s ease;
+  opacity: 0.9;
 }
 #verse-display:hover {
-  box-shadow: 0 0 15px 7px #b3e5fc;
+  background: linear-gradient(120deg, #e3f2fd 0%, #90caf9 80%, #e3f2fd 100%);
+  color: #0d47a1;
+  box-shadow:
+    0 0 120px 40px #90caf9,
+    0 12px 48px 0 rgba(179, 224, 255, 0.55),
+    0 2px 40px 15px #fff,
+    0 0px 100px 20px #b3e5fc;
+  border-color: #1976d2;
 }
+
 #verse-display.is-visible {
   display: block;
 }
@@ -470,20 +479,29 @@ main,
   FOOTER & SHARE BUTTONS
 ========================= */
 .footer {
+  height: 70px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 15px;
+  padding: 25px 15px 35px 15px;
   text-align: center;
-  background: rgba(173, 216, 230, 0.9);
+  background: linear-gradient(to top, #e0f7fa 80%, rgba(173,216,230,0.9) 100%);
   z-index: 100;
+  box-shadow: 0 -8px 32px 0 rgba(179, 224, 255, 0.25);
+
 }
 .share-buttons {
   display: flex;
+  margin-top: 10px;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
+
 .share-buttons button {
   border: none;
   background: rgba(255, 255, 255, 0.8);

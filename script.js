@@ -612,15 +612,16 @@ function initializeEventListeners() {
   });
 }
 // MP3 audio
-  function playMusic() {
-    const music = elements.myMusic;
-    if (music) {
-      music.src = "assets/images/audio/music.mp3";
-      music.volume = 0.04; // Volume baixo
-      music.muted = false; // Permite som
-      music.play().catch(() => {});
-    }
+function playMusic() {
+  const music = elements.myMusic;
+  if (music) {
+    music.src = "assets/images/audio/music.mp3"; // Use a more uplifting track
+    music.loop = true; // Loop for continuous blessing
+    music.volume = 0.08; // Slightly higher, but still gentle
+    music.muted = false;
+    music.play().catch(() => {});
   }
+}
 
 
     // Share functionality
